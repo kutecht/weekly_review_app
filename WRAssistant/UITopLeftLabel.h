@@ -1,5 +1,5 @@
 //
-//  Step1ViewController.h
+//  UITopLeftLabel.h
 //  WRAssistant
 //
 //  Created by Kevin Utecht on 7/16/13.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TimeCountdown.h"
 
-@interface Step1ViewController : UIViewController <TimeCountdownDelegate>
+@interface UITopLeftLabel : UILabel
 
 @end

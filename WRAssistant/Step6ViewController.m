@@ -1,20 +1,28 @@
 //
-//  Step1ViewController.m
+//  Step6ViewController.m
 //  WRAssistant
 //
 //  Created by Kevin Utecht on 7/16/13.
 //  Copyright (c) 2013 kevin utecht. All rights reserved.
 //
 
-#import "Step1ViewController.h"
+#import "Step6ViewController.h"
 
-
-@interface Step1ViewController ()
+@interface Step6ViewController ()
 @property (strong, nonatomic) TimeCountdown *timeCountdown;
 @property (weak, nonatomic) IBOutlet UILabel *timeCountdownLabel;
 @end
 
-@implementation Step1ViewController
+@implementation Step6ViewController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
@@ -31,11 +39,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (IBAction)doneWithInfo:(UIStoryboardSegue *)segue
-{
-}
-
 
 - (void)timeChanged:(NSString *)time
 {
@@ -56,7 +59,5 @@
     // toggle selected state
     sender.selected = !sender.selected;
 }
-
-
 
 @end

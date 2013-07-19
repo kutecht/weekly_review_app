@@ -1,5 +1,5 @@
 //
-//  Step1ViewController.h
+//  Step6ViewController.h
 //  WRAssistant
 //
 //  Created by Kevin Utecht on 7/16/13.
@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "TimeCountdown.h"
 
-@interface Step1ViewController : UIViewController <TimeCountdownDelegate>
+@interface Step6ViewController : UIViewController <TimeCountdownDelegate>
 
 @end

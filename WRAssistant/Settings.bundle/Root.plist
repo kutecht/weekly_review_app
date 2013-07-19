@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Step Duration</string>
+			<key>Key</key>
+			<string>step_duration</string>
+			<key>DefaultValue</key>
+			<real>5</real>
+			<key>Values</key>
+			<array>
+				<integer>3</integer>
+				<integer>5</integer>
+				<integer>7</integer>
+				<integer>9</integer>
+				<integer>11</integer>
+				<integer>13</integer>
+				<integer>15</integer>
+			</array>
+			<key>Titles</key>
+			<array>
+				<string>3 minutes</string>
+				<string>5 minutes</string>
+				<string>7 minutes</string>
+				<string>9 minutes</string>
+				<string>11 minutes</string>
+				<string>13 minutes</string>
+				<string>15 minutes</string>
+			</array>
+		</dict>
+	</array>
+	<key>StringsTable</key>
+	<string>Root</string>
+</dict>
+</plist>

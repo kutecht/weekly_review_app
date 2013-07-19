@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		680CDEA31797718700185F31 /* AppInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680CDEA21797718700185F31 /* AppInfoViewController.m */; };
 		6820F0CF1795E9AA00332A80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6820F0CE1795E9AA00332A80 /* Foundation.framework */; };
 		6820F0D11795E9AA00332A80 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6820F0D01795E9AA00332A80 /* CoreGraphics.framework */; };
 		6820F0D31795E9AA00332A80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6820F0D21795E9AA00332A80 /* UIKit.framework */; };
@@ -22,6 +23,20 @@
 		6820F0F31795E9AA00332A80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6820F0D21795E9AA00332A80 /* UIKit.framework */; };
 		6820F0FB1795E9AA00332A80 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6820F0F91795E9AA00332A80 /* InfoPlist.strings */; };
 		6820F0FD1795E9AA00332A80 /* WRAssistantTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820F0FC1795E9AA00332A80 /* WRAssistantTests.m */; };
+		6820F1081795EBF800332A80 /* Step2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820F1071795EBF800332A80 /* Step2ViewController.m */; };
+		6820F10B1795EC2800332A80 /* Step3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820F10A1795EC2800332A80 /* Step3ViewController.m */; };
+		6820F10E1795EC3F00332A80 /* Step4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820F10D1795EC3F00332A80 /* Step4ViewController.m */; };
+		6820F1111795EC6C00332A80 /* Step5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820F1101795EC6C00332A80 /* Step5ViewController.m */; };
+		6820F1141795EC8700332A80 /* Step6ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820F1131795EC8700332A80 /* Step6ViewController.m */; };
+		6820F1171795EC9800332A80 /* Step7ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820F1161795EC9800332A80 /* Step7ViewController.m */; };
+		6820F11A1795ECAF00332A80 /* Step8ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820F1191795ECAF00332A80 /* Step8ViewController.m */; };
+		6820F11D1795ECCA00332A80 /* Step9ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820F11C1795ECCA00332A80 /* Step9ViewController.m */; };
+		6820F1201795ECDD00332A80 /* Step10ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820F11F1795ECDD00332A80 /* Step10ViewController.m */; };
+		6820F1231795ECEC00332A80 /* Step11ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820F1221795ECEC00332A80 /* Step11ViewController.m */; };
+		6859FCA11798F5840045D5CB /* TimeCountdown.m in Sources */ = {isa = PBXBuildFile; fileRef = 6859FCA01798F5840045D5CB /* TimeCountdown.m */; };
+		6863EC9517987A100060E16E /* TriggerListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6863EC9417987A100060E16E /* TriggerListTableViewController.m */; };
+		68A721651796406500BDA9EE /* UITopLeftLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A721641796406500BDA9EE /* UITopLeftLabel.m */; };
+		68CD047B1799C80E00CDCB40 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 68CD047A1799C80E00CDCB40 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		680CDEA11797718700185F31 /* AppInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoViewController.h; sourceTree = "<group>"; };
+		680CDEA21797718700185F31 /* AppInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfoViewController.m; sourceTree = "<group>"; };
 		6820F0CB1795E9AA00332A80 /* WRAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WRAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6820F0CE1795E9AA00332A80 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6820F0D01795E9AA00332A80 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,6 +72,33 @@
 		6820F0F81795E9AA00332A80 /* WRAssistantTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WRAssistantTests-Info.plist"; sourceTree = "<group>"; };
 		6820F0FA1795E9AA00332A80 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6820F0FC1795E9AA00332A80 /* WRAssistantTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRAssistantTests.m; sourceTree = "<group>"; };
+		6820F1061795EBF800332A80 /* Step2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step2ViewController.h; sourceTree = "<group>"; };
+		6820F1071795EBF800332A80 /* Step2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step2ViewController.m; sourceTree = "<group>"; };
+		6820F1091795EC2800332A80 /* Step3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step3ViewController.h; sourceTree = "<group>"; };
+		6820F10A1795EC2800332A80 /* Step3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step3ViewController.m; sourceTree = "<group>"; };
+		6820F10C1795EC3F00332A80 /* Step4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step4ViewController.h; sourceTree = "<group>"; };
+		6820F10D1795EC3F00332A80 /* Step4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step4ViewController.m; sourceTree = "<group>"; };
+		6820F10F1795EC6C00332A80 /* Step5ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step5ViewController.h; sourceTree = "<group>"; };
+		6820F1101795EC6C00332A80 /* Step5ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step5ViewController.m; sourceTree = "<group>"; };
+		6820F1121795EC8700332A80 /* Step6ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step6ViewController.h; sourceTree = "<group>"; };
+		6820F1131795EC8700332A80 /* Step6ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step6ViewController.m; sourceTree = "<group>"; };
+		6820F1151795EC9800332A80 /* Step7ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step7ViewController.h; sourceTree = "<group>"; };
+		6820F1161795EC9800332A80 /* Step7ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step7ViewController.m; sourceTree = "<group>"; };
+		6820F1181795ECAF00332A80 /* Step8ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step8ViewController.h; sourceTree = "<group>"; };
+		6820F1191795ECAF00332A80 /* Step8ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step8ViewController.m; sourceTree = "<group>"; };
+		6820F11B1795ECCA00332A80 /* Step9ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step9ViewController.h; sourceTree = "<group>"; };
+		6820F11C1795ECCA00332A80 /* Step9ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step9ViewController.m; sourceTree = "<group>"; };
+		6820F11E1795ECDD00332A80 /* Step10ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step10ViewController.h; sourceTree = "<group>"; };
+		6820F11F1795ECDD00332A80 /* Step10ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step10ViewController.m; sourceTree = "<group>"; };
+		6820F1211795ECEC00332A80 /* Step11ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step11ViewController.h; sourceTree = "<group>"; };
+		6820F1221795ECEC00332A80 /* Step11ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step11ViewController.m; sourceTree = "<group>"; };
+		6859FC9F1798F5840045D5CB /* TimeCountdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeCountdown.h; path = ../../../TimeCountdown.h; sourceTree = "<group>"; };
+		6859FCA01798F5840045D5CB /* TimeCountdown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeCountdown.m; path = ../../../TimeCountdown.m; sourceTree = "<group>"; };
+		6863EC9317987A100060E16E /* TriggerListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TriggerListTableViewController.h; path = ../TriggerListTableViewController.h; sourceTree = "<group>"; };
+		6863EC9417987A100060E16E /* TriggerListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TriggerListTableViewController.m; path = ../TriggerListTableViewController.m; sourceTree = "<group>"; };
+		68A721631796406500BDA9EE /* UITopLeftLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITopLeftLabel.h; sourceTree = "<group>"; };
+		68A721641796406500BDA9EE /* UITopLeftLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITopLeftLabel.m; sourceTree = "<group>"; };
+		68CD047A1799C80E00CDCB40 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,14 +158,43 @@
 		6820F0D41795E9AA00332A80 /* WRAssistant */ = {
 			isa = PBXGroup;
 			children = (
+				6859FC9F1798F5840045D5CB /* TimeCountdown.h */,
+				6859FCA01798F5840045D5CB /* TimeCountdown.m */,
+				6863EC9317987A100060E16E /* TriggerListTableViewController.h */,
+				6863EC9417987A100060E16E /* TriggerListTableViewController.m */,
 				6820F0DD1795E9AA00332A80 /* Step1AppDelegate.h */,
 				6820F0DE1795E9AA00332A80 /* Step1AppDelegate.m */,
 				6820F0E01795E9AA00332A80 /* Main_iPhone.storyboard */,
+				6820F1061795EBF800332A80 /* Step2ViewController.h */,
+				6820F1071795EBF800332A80 /* Step2ViewController.m */,
+				6820F1091795EC2800332A80 /* Step3ViewController.h */,
+				6820F10A1795EC2800332A80 /* Step3ViewController.m */,
+				6820F10C1795EC3F00332A80 /* Step4ViewController.h */,
+				6820F10D1795EC3F00332A80 /* Step4ViewController.m */,
+				6820F10F1795EC6C00332A80 /* Step5ViewController.h */,
+				6820F1101795EC6C00332A80 /* Step5ViewController.m */,
+				6820F1121795EC8700332A80 /* Step6ViewController.h */,
+				6820F1131795EC8700332A80 /* Step6ViewController.m */,
+				6820F1151795EC9800332A80 /* Step7ViewController.h */,
+				6820F1161795EC9800332A80 /* Step7ViewController.m */,
+				6820F1181795ECAF00332A80 /* Step8ViewController.h */,
+				6820F1191795ECAF00332A80 /* Step8ViewController.m */,
+				6820F11B1795ECCA00332A80 /* Step9ViewController.h */,
+				6820F11C1795ECCA00332A80 /* Step9ViewController.m */,
+				6820F11E1795ECDD00332A80 /* Step10ViewController.h */,
+				6820F11F1795ECDD00332A80 /* Step10ViewController.m */,
+				6820F1211795ECEC00332A80 /* Step11ViewController.h */,
+				6820F1221795ECEC00332A80 /* Step11ViewController.m */,
 				6820F0E31795E9AA00332A80 /* Main_iPad.storyboard */,
 				6820F0E61795E9AA00332A80 /* Step1ViewController.h */,
 				6820F0E71795E9AA00332A80 /* Step1ViewController.m */,
+				680CDEA11797718700185F31 /* AppInfoViewController.h */,
+				680CDEA21797718700185F31 /* AppInfoViewController.m */,
+				68A721631796406500BDA9EE /* UITopLeftLabel.h */,
+				68A721641796406500BDA9EE /* UITopLeftLabel.m */,
 				6820F0E91795E9AA00332A80 /* Images.xcassets */,
 				6820F0D51795E9AA00332A80 /* Supporting Files */,
+				68CD047A1799C80E00CDCB40 /* Settings.bundle */,
 			);
 			path = WRAssistant;
 			sourceTree = "<group>";
@@ -234,6 +307,7 @@
 			files = (
 				6820F0E51795E9AA00332A80 /* Main_iPad.storyboard in Resources */,
 				6820F0EA1795E9AA00332A80 /* Images.xcassets in Resources */,
+				68CD047B1799C80E00CDCB40 /* Settings.bundle in Resources */,
 				6820F0E21795E9AA00332A80 /* Main_iPhone.storyboard in Resources */,
 				6820F0D91795E9AA00332A80 /* InfoPlist.strings in Resources */,
 			);
@@ -255,8 +329,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				6820F0DF1795E9AA00332A80 /* Step1AppDelegate.m in Sources */,
+				680CDEA31797718700185F31 /* AppInfoViewController.m in Sources */,
+				6820F1171795EC9800332A80 /* Step7ViewController.m in Sources */,
+				6820F1141795EC8700332A80 /* Step6ViewController.m in Sources */,
+				6859FCA11798F5840045D5CB /* TimeCountdown.m in Sources */,
+				6863EC9517987A100060E16E /* TriggerListTableViewController.m in Sources */,
+				68A721651796406500BDA9EE /* UITopLeftLabel.m in Sources */,
+				6820F1081795EBF800332A80 /* Step2ViewController.m in Sources */,
+				6820F11D1795ECCA00332A80 /* Step9ViewController.m in Sources */,
+				6820F10B1795EC2800332A80 /* Step3ViewController.m in Sources */,
+				6820F1231795ECEC00332A80 /* Step11ViewController.m in Sources */,
+				6820F10E1795EC3F00332A80 /* Step4ViewController.m in Sources */,
 				6820F0DB1795E9AA00332A80 /* main.m in Sources */,
 				6820F0E81795E9AA00332A80 /* Step1ViewController.m in Sources */,
+				6820F1201795ECDD00332A80 /* Step10ViewController.m in Sources */,
+				6820F1111795EC6C00332A80 /* Step5ViewController.m in Sources */,
+				6820F11A1795ECAF00332A80 /* Step8ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +557,7 @@
 				6820F1021795E9AA00332A80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6820F1031795E9AA00332A80 /* Build configuration list for PBXNativeTarget "WRAssistantTests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +566,7 @@
 				6820F1051795E9AA00332A80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
