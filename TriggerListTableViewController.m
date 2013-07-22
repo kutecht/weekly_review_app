@@ -17,146 +17,153 @@
 
 @implementation TriggerListTableViewController
 
-+ (NSArray *)sectionStrings
+#define CELL_IDENTIFIER  @"TriggerCell"
+
+#define GROUP_KEY        @"group"
+#define TRIGGERS_KEY     @"triggers"
+
+
++ (NSArray *)defaultTriggerList
 {
-    static NSArray *sectionStrings = nil;
-    if (!sectionStrings)
+    static NSArray *triggerList = nil;
+    if (!triggerList)
     {
-        sectionStrings =
-        @[@"Commitments",
-          @"Communications",
-          @"Upcoming events",
-          @"Administration",
-          @"Waiting for",
-          @"Household",
-          @"Computers",
-          @"Health",
-          @"Leisure",
-          @"Errands",
-          @"Community",
-          @"Writing",
-          @"Professional development"];
+        triggerList =
+        @[ @{ GROUP_KEY: @"Commitments",
+              TRIGGERS_KEY: @[@"spouse",
+                             @"children",
+                             @"family",
+                             @"friends",
+                             @"boss/partners",
+                             @"colleagues",
+                             @"subordinates",
+                             @"customers",
+                             @"professionals",
+                             @"other organizations"]
+            },
+           @{ GROUP_KEY: @"Communications",
+              TRIGGERS_KEY: @[@"calls",
+                             @"voice-mail",
+                             @"email",
+                             @"faxes",
+                             @"letters",
+                             @"memos",
+                             @"notes"]
+              },
+           @{ GROUP_KEY: @"Upcoming events",
+              TRIGGERS_KEY: @[@"birthdays",
+                             @"anniversaries",
+                             @"weddings",
+                             @"graduations",
+                             @"holidays",
+                             @"travel",
+                             @"vacations",
+                             @"social events",
+                             @"cultural events",
+                             @"sporting events"]
+              },
+           @{ GROUP_KEY: @"Administration",
+              TRIGGERS_KEY: @[@"budget",
+                             @"bills",
+                             @"banks",
+                             @"investments",
+                             @"loans",
+                             @"taxes",
+                             @"insurance",
+                             @"legal affairs",
+                             @"filing"]
+              },
+           @{ GROUP_KEY: @"Waiting for",
+              TRIGGERS_KEY: @[@"mail",
+                             @"repairs",
+                             @"reimbursements",
+                             @"loaned items",
+                             @"rsvp's"]
+              },
+           @{ GROUP_KEY: @"Household",
+              TRIGGERS_KEY: @[@"property",
+                             @"taxes",
+                             @"builders/contractors",
+                             @"heating/air-conditioning",
+                             @"plumbing",
+                             @"electricity",
+                             @"roofing",
+                             @"landscape",
+                             @"driveway",
+                             @"walls/floors/ceilings",
+                             @"decor",
+                             @"furniture",
+                             @"utilities",
+                             @"kitchen appliances",
+                             @"livingroom appliances",
+                             @"laundry room appliances",
+                             @"lightbulbs/wiring",
+                             @"areas to organize",
+                             @"office equipment",
+                             @"sports equipment",
+                             @"closets/clothes",
+                             @"garage/storage",
+                             @"vehicle repair/maintenance",
+                             @"tools",
+                             @"luggage"]
+              },
+           @{ GROUP_KEY: @"Computers",
+              TRIGGERS_KEY: @[@"software",
+                             @"hardware",
+                             @"perform backup",
+                             @"purge files"]
+              },
+           @{ GROUP_KEY: @"Health",
+              TRIGGERS_KEY: @[@"doctors",
+                             @"dentists",
+                             @"specialists",
+                             @"checkups",
+                             @"diet",
+                             @"exercise"]
+              },
+           @{ GROUP_KEY: @"Leisure",
+              TRIGGERS_KEY: @[@"hobbies",
+                             @"books",
+                             @"music",
+                             @"videos",
+                             @"people to visit",
+                             @"places to visit"]
+              },
+           @{ GROUP_KEY: @"Errands",
+              TRIGGERS_KEY: @[@"department store",
+                             @"drugstore",
+                             @"market",
+                             @"mall",
+                             @"bank"]
+              },
+           @{ GROUP_KEY: @"Community",
+              TRIGGERS_KEY: @[@"neighborhood",
+                             @"schools",
+                             @"spiritual organization",
+                             @"volunteer activities"]
+              },
+           @{ GROUP_KEY: @"Writing",
+              TRIGGERS_KEY: @[@"reports",
+                             @"evaluations/reviews",
+                             @"proposals",
+                             @"articles",
+                             @"promotional materials",
+                             @"manuals/instructions",
+                             @"rewrites and edits"]
+              },
+           @{ GROUP_KEY: @"Professional development",
+              TRIGGERS_KEY: @[@"training",
+                             @"things to learn",
+                             @"things to look up",
+                             @"skills to practice/learn",
+                             @"resume",
+                             @"wardrobe"]
+              }
+           ];
     }
-    return sectionStrings;
+    
+    return triggerList;
 }
-
-+ (NSArray *)itemStrings
-{
-    static NSArray *itemStrings = nil;
-    if (!itemStrings)
-    {
-        itemStrings =
-        @[ @[@"God",                         // Commitments
-             @"spouse",
-             @"children",
-             @"family",
-             @"friends",
-             @"boss/partners",
-             @"colleagues",
-             @"subordinates",
-             @"customers",
-             @"professionals",
-             @"other organizations"],
-           @[@"calls",                      // Communications
-             @"voice-mail",
-             @"email",
-             @"faxes",
-             @"letters",
-             @"memos",
-             @"notes"],
-           @[@"birthdays",                  // Upcoming events
-             @"anniversaries",
-             @"weddings",
-             @"graduations",
-             @"holidays",
-             @"travel",
-             @"vacations",
-             @"social events",
-             @"cultural events",
-             @"sporting events"],
-           @[@"budget",                     // Administration
-             @"bills",
-             @"banks",
-             @"investments",
-             @"loans",
-             @"taxes",
-             @"insurance",
-             @"legal affairs",
-             @"filing"],
-           @[@"mail",                       // Waiting for
-             @"repairs",
-             @"reimbursements",
-             @"loaned items",
-             @"rsvp's"],
-           @[@"property",                   // Household
-             @"taxes",
-             @"builders/contractors",
-             @"heating/air-conditioning",
-             @"plumbing",
-             @"electricity",
-             @"roofing",
-             @"landscape",
-             @"driveway",
-             @"walls/floors/ceilings",
-             @"decor",
-             @"furniture",
-             @"utilities",
-             @"kitchen appliances",
-             @"livingroom appliances",
-             @"laundry room appliances",
-             @"lightbulbs/wiring",
-             @"areas to organize",
-             @"office equipment",
-             @"sports equipment",
-             @"closets/clothes",
-             @"garage/storage",
-             @"vehicle repair/maintenance",
-             @"tools",
-             @"luggage"],
-           @[@"software",                   // Computer
-             @"hardware",
-             @"perform backup",
-             @"purge files"],
-           @[@"doctors",                    // Health
-             @"dentists",
-             @"specialists",
-             @"checkups",
-             @"diet",
-             @"exercise"],
-           @[@"hobbies",                    // Leisure
-             @"books",
-             @"music",
-             @"videos",
-             @"people to visit",
-             @"places to visit"],
-           @[@"department store",           // Errands
-             @"drugstore",
-             @"market",
-             @"mall",
-             @"bank"],
-           @[@"neighborhood",               // Community
-             @"schools",
-             @"spiritual organization",
-             @"volunteer activities"],
-           @[@"reports",                    // Writing
-             @"evaluations/reviews",
-             @"proposals",
-             @"articles",
-             @"promotional materials",
-             @"manuals/instructions",
-             @"rewrites and edits"],
-           @[@"training",                   // Professional development
-             @"things to learn",
-             @"things to look up",
-             @"skills to practice/learn",
-             @"resume",
-             @"wardrobe"]];
-
-    }
-    return itemStrings;
-}
-
-
 
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -190,23 +197,25 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return [TriggerListTableViewController sectionStrings].count;
+    return [TriggerListTableViewController defaultTriggerList].count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSArray *sectionItems = [TriggerListTableViewController itemStrings][section];
-    return sectionItems.count;
+    NSDictionary *triggerDictionary = [TriggerListTableViewController defaultTriggerList][section];
+    NSArray *triggers = [triggerDictionary valueForKey:TRIGGERS_KEY];
+    return triggers.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"TriggerCell";
+    static NSString *CellIdentifier = CELL_IDENTIFIER;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    NSArray *sectionItems = [TriggerListTableViewController itemStrings][indexPath.section];
-    cell.textLabel.text = sectionItems[indexPath.row];
+    NSDictionary *triggerDictionary = [TriggerListTableViewController defaultTriggerList][indexPath.section];
+    NSArray *triggers = [triggerDictionary valueForKey:TRIGGERS_KEY];
+    cell.textLabel.text = triggers[indexPath.row];
     
     return cell;
 }
@@ -214,7 +223,8 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return [TriggerListTableViewController sectionStrings][section];
+    NSDictionary *triggerDictionary = [TriggerListTableViewController defaultTriggerList][section];
+    return [triggerDictionary valueForKey:GROUP_KEY];
 }
 
 /*

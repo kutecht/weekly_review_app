@@ -33,6 +33,7 @@
 		6820F11D1795ECCA00332A80 /* Step9ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820F11C1795ECCA00332A80 /* Step9ViewController.m */; };
 		6820F1201795ECDD00332A80 /* Step10ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820F11F1795ECDD00332A80 /* Step10ViewController.m */; };
 		6820F1231795ECEC00332A80 /* Step11ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820F1221795ECEC00332A80 /* Step11ViewController.m */; };
+		682C397B179C7AB10011EC0D /* TriggerList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 682C3979179C7AB10011EC0D /* TriggerList.xcdatamodeld */; };
 		6859FCA11798F5840045D5CB /* TimeCountdown.m in Sources */ = {isa = PBXBuildFile; fileRef = 6859FCA01798F5840045D5CB /* TimeCountdown.m */; };
 		6863EC9517987A100060E16E /* TriggerListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6863EC9417987A100060E16E /* TriggerListTableViewController.m */; };
 		68A721651796406500BDA9EE /* UITopLeftLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A721641796406500BDA9EE /* UITopLeftLabel.m */; };
@@ -92,6 +93,7 @@
 		6820F11F1795ECDD00332A80 /* Step10ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step10ViewController.m; sourceTree = "<group>"; };
 		6820F1211795ECEC00332A80 /* Step11ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step11ViewController.h; sourceTree = "<group>"; };
 		6820F1221795ECEC00332A80 /* Step11ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step11ViewController.m; sourceTree = "<group>"; };
+		682C397A179C7AB10011EC0D /* TriggerList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TriggerList.xcdatamodel; sourceTree = "<group>"; };
 		6859FC9F1798F5840045D5CB /* TimeCountdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeCountdown.h; path = ../../../TimeCountdown.h; sourceTree = "<group>"; };
 		6859FCA01798F5840045D5CB /* TimeCountdown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeCountdown.m; path = ../../../TimeCountdown.m; sourceTree = "<group>"; };
 		6863EC9317987A100060E16E /* TriggerListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TriggerListTableViewController.h; path = ../TriggerListTableViewController.h; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				6859FCA01798F5840045D5CB /* TimeCountdown.m */,
 				6863EC9317987A100060E16E /* TriggerListTableViewController.h */,
 				6863EC9417987A100060E16E /* TriggerListTableViewController.m */,
+				682C3979179C7AB10011EC0D /* TriggerList.xcdatamodeld */,
 				6820F0DD1795E9AA00332A80 /* Step1AppDelegate.h */,
 				6820F0DE1795E9AA00332A80 /* Step1AppDelegate.m */,
 				6820F0E01795E9AA00332A80 /* Main_iPhone.storyboard */,
@@ -336,6 +339,7 @@
 				6863EC9517987A100060E16E /* TriggerListTableViewController.m in Sources */,
 				68A721651796406500BDA9EE /* UITopLeftLabel.m in Sources */,
 				6820F1081795EBF800332A80 /* Step2ViewController.m in Sources */,
+				682C397B179C7AB10011EC0D /* TriggerList.xcdatamodeld in Sources */,
 				6820F11D1795ECCA00332A80 /* Step9ViewController.m in Sources */,
 				6820F10B1795EC2800332A80 /* Step3ViewController.m in Sources */,
 				6820F1231795ECEC00332A80 /* Step11ViewController.m in Sources */,
@@ -569,6 +573,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		682C3979179C7AB10011EC0D /* TriggerList.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				682C397A179C7AB10011EC0D /* TriggerList.xcdatamodel */,
+			);
+			currentVersion = 682C397A179C7AB10011EC0D /* TriggerList.xcdatamodel */;
+			path = TriggerList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6820F0C31795E9AA00332A80 /* Project object */;
 }

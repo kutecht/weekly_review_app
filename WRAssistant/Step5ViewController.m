@@ -30,6 +30,12 @@
     
     self.timeCountdown = [[TimeCountdown alloc] init];
     self.timeCountdown.delegate = self;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
     self.timeCountdown.minutes = [[NSUserDefaults standardUserDefaults] integerForKey:@"step_duration"];
     self.timeCountdownLabel.text = self.timeCountdown.time;
 }
