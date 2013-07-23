@@ -36,8 +36,11 @@
 {
     [super viewWillAppear:animated];
     
-    self.timeCountdown.minutes = [[NSUserDefaults standardUserDefaults] integerForKey:@"step_duration"];
-    self.timeCountdownLabel.text = self.timeCountdown.time;
+    if ([self.timeCountdown isStopped])
+    {
+        self.timeCountdown.minutes = [[NSUserDefaults standardUserDefaults] integerForKey:@"step_duration"];
+        self.timeCountdownLabel.text = self.timeCountdown.time;
+    }
 }
 
 - (void)didReceiveMemoryWarning
