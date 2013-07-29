@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		680CDEA31797718700185F31 /* AppInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680CDEA21797718700185F31 /* AppInfoViewController.m */; };
 		6812A77B179EDD86007609DC /* Group+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 6812A77A179EDD86007609DC /* Group+Create.m */; };
 		6812A77E179EDDDC007609DC /* Trigger+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 6812A77D179EDDDC007609DC /* Trigger+Create.m */; };
 		6820F0CF1795E9AA00332A80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6820F0CE1795E9AA00332A80 /* Foundation.framework */; };
@@ -41,6 +40,7 @@
 		6840AB2717A0C6C90067D4C9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6840AB2617A0C6C90067D4C9 /* CoreData.framework */; };
 		6859FCA11798F5840045D5CB /* TimeCountdown.m in Sources */ = {isa = PBXBuildFile; fileRef = 6859FCA01798F5840045D5CB /* TimeCountdown.m */; };
 		6863EC9517987A100060E16E /* TriggerListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6863EC9417987A100060E16E /* TriggerListTableViewController.m */; };
+		68884C7017A58E0F0063CF02 /* LogTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68884C6F17A58E0F0063CF02 /* LogTableViewController.m */; };
 		68A721651796406500BDA9EE /* UITopLeftLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A721641796406500BDA9EE /* UITopLeftLabel.m */; };
 		68CD047B1799C80E00CDCB40 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 68CD047A1799C80E00CDCB40 /* Settings.bundle */; };
 /* End PBXBuildFile section */
@@ -56,8 +56,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		680CDEA11797718700185F31 /* AppInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoViewController.h; sourceTree = "<group>"; };
-		680CDEA21797718700185F31 /* AppInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfoViewController.m; sourceTree = "<group>"; };
 		6812A779179EDD86007609DC /* Group+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Group+Create.h"; sourceTree = "<group>"; };
 		6812A77A179EDD86007609DC /* Group+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Group+Create.m"; sourceTree = "<group>"; };
 		6812A77C179EDDDC007609DC /* Trigger+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Trigger+Create.h"; sourceTree = "<group>"; };
@@ -112,6 +110,8 @@
 		6859FCA01798F5840045D5CB /* TimeCountdown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeCountdown.m; path = ../../../TimeCountdown.m; sourceTree = "<group>"; };
 		6863EC9317987A100060E16E /* TriggerListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TriggerListTableViewController.h; path = ../TriggerListTableViewController.h; sourceTree = "<group>"; };
 		6863EC9417987A100060E16E /* TriggerListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TriggerListTableViewController.m; path = ../TriggerListTableViewController.m; sourceTree = "<group>"; };
+		68884C6E17A58E0F0063CF02 /* LogTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogTableViewController.h; sourceTree = "<group>"; };
+		68884C6F17A58E0F0063CF02 /* LogTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogTableViewController.m; sourceTree = "<group>"; };
 		68A721631796406500BDA9EE /* UITopLeftLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITopLeftLabel.h; sourceTree = "<group>"; };
 		68A721641796406500BDA9EE /* UITopLeftLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITopLeftLabel.m; sourceTree = "<group>"; };
 		68CD047A1799C80E00CDCB40 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -215,10 +215,10 @@
 				6820F0E31795E9AA00332A80 /* Main_iPad.storyboard */,
 				6820F0E61795E9AA00332A80 /* Step1ViewController.h */,
 				6820F0E71795E9AA00332A80 /* Step1ViewController.m */,
-				680CDEA11797718700185F31 /* AppInfoViewController.h */,
-				680CDEA21797718700185F31 /* AppInfoViewController.m */,
 				68A721631796406500BDA9EE /* UITopLeftLabel.h */,
 				68A721641796406500BDA9EE /* UITopLeftLabel.m */,
+				68884C6E17A58E0F0063CF02 /* LogTableViewController.h */,
+				68884C6F17A58E0F0063CF02 /* LogTableViewController.m */,
 				6820F0E91795E9AA00332A80 /* Images.xcassets */,
 				6820F0D51795E9AA00332A80 /* Supporting Files */,
 				68CD047A1799C80E00CDCB40 /* Settings.bundle */,
@@ -357,7 +357,6 @@
 			files = (
 				6820F0DF1795E9AA00332A80 /* Step1AppDelegate.m in Sources */,
 				6812A77E179EDDDC007609DC /* Trigger+Create.m in Sources */,
-				680CDEA31797718700185F31 /* AppInfoViewController.m in Sources */,
 				6820F1171795EC9800332A80 /* Step7ViewController.m in Sources */,
 				6840AB2217A0A80A0067D4C9 /* Trigger.m in Sources */,
 				6820F1141795EC8700332A80 /* Step6ViewController.m in Sources */,
@@ -372,6 +371,7 @@
 				6820F1231795ECEC00332A80 /* Step11ViewController.m in Sources */,
 				6820F10E1795EC3F00332A80 /* Step4ViewController.m in Sources */,
 				6820F0DB1795E9AA00332A80 /* main.m in Sources */,
+				68884C7017A58E0F0063CF02 /* LogTableViewController.m in Sources */,
 				6820F0E81795E9AA00332A80 /* Step1ViewController.m in Sources */,
 				6820F1201795ECDD00332A80 /* Step10ViewController.m in Sources */,
 				6820F1111795EC6C00332A80 /* Step5ViewController.m in Sources */,

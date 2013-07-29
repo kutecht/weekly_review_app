@@ -15,6 +15,17 @@
 
 @implementation Step11ViewController
 
+
+- (void)logDateTime
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *log = [[defaults objectForKey:WRA_LOG_KEY] mutableCopy];
+    if (!log) log = [NSMutableArray array];
+    [log addObject:[NSDate date]];
+    [defaults setObject:log forKey:WRA_LOG_KEY];
+    [defaults synchronize];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -30,6 +41,10 @@
     
     self.timeCountdown = [[TimeCountdown alloc] init];
     self.timeCountdown.delegate = self;
+    
+    [self logDateTime];;
+    // TODO: remove debug code
+    NSLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
 }
 
 - (void)viewWillAppear:(BOOL)animated
