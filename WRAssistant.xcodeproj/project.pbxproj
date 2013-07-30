@@ -43,6 +43,9 @@
 		68884C7017A58E0F0063CF02 /* LogTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68884C6F17A58E0F0063CF02 /* LogTableViewController.m */; };
 		68A721651796406500BDA9EE /* UITopLeftLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A721641796406500BDA9EE /* UITopLeftLabel.m */; };
 		68CD047B1799C80E00CDCB40 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 68CD047A1799C80E00CDCB40 /* Settings.bundle */; };
+		68CFBE8C17A86582002C6C6E /* EventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CFBE8A17A86582002C6C6E /* EventTableViewController.m */; };
+		68CFBE8F17A8688E002C6C6E /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68CFBE8D17A8688E002C6C6E /* EventKit.framework */; };
+		68CFBE9017A8688E002C6C6E /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68CFBE8E17A8688E002C6C6E /* EventKitUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +118,10 @@
 		68A721631796406500BDA9EE /* UITopLeftLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITopLeftLabel.h; sourceTree = "<group>"; };
 		68A721641796406500BDA9EE /* UITopLeftLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITopLeftLabel.m; sourceTree = "<group>"; };
 		68CD047A1799C80E00CDCB40 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		68CFBE8A17A86582002C6C6E /* EventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewController.m; sourceTree = "<group>"; };
+		68CFBE8B17A86582002C6C6E /* EventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewController.h; sourceTree = "<group>"; };
+		68CFBE8D17A8688E002C6C6E /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		68CFBE8E17A8688E002C6C6E /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +129,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68CFBE8F17A8688E002C6C6E /* EventKit.framework in Frameworks */,
+				68CFBE9017A8688E002C6C6E /* EventKitUI.framework in Frameworks */,
 				6840AB2717A0C6C90067D4C9 /* CoreData.framework in Frameworks */,
 				6820F0D11795E9AA00332A80 /* CoreGraphics.framework in Frameworks */,
 				6820F0D31795E9AA00332A80 /* UIKit.framework in Frameworks */,
@@ -164,6 +173,8 @@
 		6820F0CD1795E9AA00332A80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				68CFBE8D17A8688E002C6C6E /* EventKit.framework */,
+				68CFBE8E17A8688E002C6C6E /* EventKitUI.framework */,
 				6840AB2617A0C6C90067D4C9 /* CoreData.framework */,
 				6820F0CE1795E9AA00332A80 /* Foundation.framework */,
 				6820F0D01795E9AA00332A80 /* CoreGraphics.framework */,
@@ -178,6 +189,8 @@
 			children = (
 				6859FC9F1798F5840045D5CB /* TimeCountdown.h */,
 				6859FCA01798F5840045D5CB /* TimeCountdown.m */,
+				68CFBE8A17A86582002C6C6E /* EventTableViewController.m */,
+				68CFBE8B17A86582002C6C6E /* EventTableViewController.h */,
 				6863EC9317987A100060E16E /* TriggerListTableViewController.h */,
 				6863EC9417987A100060E16E /* TriggerListTableViewController.m */,
 				682C3979179C7AB10011EC0D /* TriggerList.xcdatamodeld */,
@@ -370,6 +383,7 @@
 				6840AB2517A0A80B0067D4C9 /* Group.m in Sources */,
 				6820F1231795ECEC00332A80 /* Step11ViewController.m in Sources */,
 				6820F10E1795EC3F00332A80 /* Step4ViewController.m in Sources */,
+				68CFBE8C17A86582002C6C6E /* EventTableViewController.m in Sources */,
 				6820F0DB1795E9AA00332A80 /* main.m in Sources */,
 				68884C7017A58E0F0063CF02 /* LogTableViewController.m in Sources */,
 				6820F0E81795E9AA00332A80 /* Step1ViewController.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import "Step6ViewController.h"
+#import "EventTableViewController.h"
 
 @interface Step6ViewController ()
 @property (strong, nonatomic) TimeCountdown *timeCountdown;
@@ -40,6 +41,26 @@
     {
         self.timeCountdown.minutes = [[NSUserDefaults standardUserDefaults] integerForKey:@"step_duration"];
         self.timeCountdownLabel.text = self.timeCountdown.time;
+    }
+}
+
+#define WEEKS_IN_FUTURE 2
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"showFutureEvents"])
+    {
+        // Show events for the next two weeks
+        EventTableViewController* eventTableViewController = (EventTableViewController *)[segue destinationViewController];
+        eventTableViewController.startDate = [NSDate date];
+        NSDateComponents *spanDateComponents = [[NSDateComponents alloc] init];
+        spanDateComponents.week = WEEKS_IN_FUTURE;
+        eventTableViewController.endDate =
+        [[NSCalendar currentCalendar] dateByAddingComponents:spanDateComponents
+                                                      toDate:eventTableViewController.startDate
+                                                     options:0];
+        //NSLog(@"start: %@", [eventTableViewController.startDate description]);
+        //NSLog(@"end: %@", [eventTableViewController.endDate description]);
     }
 }
 

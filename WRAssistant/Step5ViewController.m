@@ -7,6 +7,7 @@
 //
 
 #import "Step5ViewController.h"
+#import "EventTableViewController.h"
 
 @interface Step5ViewController ()
 @property (strong, nonatomic) TimeCountdown *timeCountdown;
@@ -42,6 +43,27 @@
         self.timeCountdownLabel.text = self.timeCountdown.time;
     }
 }
+
+#define WEEKS_IN_PAST -3
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"showPastEvents"])
+    {
+        // Show events for the next two weeks
+        EventTableViewController* eventTableViewController = (EventTableViewController *)[segue destinationViewController];
+        eventTableViewController.endDate = [NSDate date];
+        NSDateComponents *spanDateComponents = [[NSDateComponents alloc] init];
+        spanDateComponents.week = WEEKS_IN_PAST;
+        eventTableViewController.startDate =
+        [[NSCalendar currentCalendar] dateByAddingComponents:spanDateComponents
+                                                      toDate:eventTableViewController.endDate
+                                                     options:0];
+        //NSLog(@"start: %@", [eventTableViewController.startDate description]);
+        //NSLog(@"end: %@", [eventTableViewController.endDate description]);
+    }
+}
+
 
 - (void)didReceiveMemoryWarning
 {
