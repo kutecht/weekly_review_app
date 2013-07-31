@@ -16,11 +16,11 @@
 {
     Trigger *trigger = nil;
     
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:TRIGGER_ENTITY];
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:WRConstantsTriggerEntity];
     
     // sorting
     request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES]];
-    request.predicate = [NSPredicate predicateWithFormat:@"unique = %@", [triggerDictionary[TRIGGER_ID_KEY] description]];
+    request.predicate = [NSPredicate predicateWithFormat:@"unique = %@", [triggerDictionary[WRConstantsTriggerIdKey] description]];
     
     NSError *error = nil;
     NSArray *matches = [context executeFetchRequest:request error:&error];
@@ -32,11 +32,11 @@
     }
     else if (![matches count])
     {
-        trigger = [NSEntityDescription insertNewObjectForEntityForName:TRIGGER_ENTITY inManagedObjectContext:context];
+        trigger = [NSEntityDescription insertNewObjectForEntityForName:WRConstantsTriggerEntity inManagedObjectContext:context];
         
-        trigger.title = [triggerDictionary[TRIGGER_KEY] description];
-        trigger.unique = [triggerDictionary[TRIGGER_ID_KEY] description];
-        NSString *groupTitle = [triggerDictionary[GROUP_KEY] description];
+        trigger.title = [triggerDictionary[WRConstantsTriggerKey] description];
+        trigger.unique = [[NSUUID UUID] UUIDString];
+        NSString *groupTitle = [triggerDictionary[WRConstantsTriggerGroupKey] description];
         Group *group =  [Group groupWithInfo:groupTitle inManagedObjectContex:context];
         trigger.group = group;
     }

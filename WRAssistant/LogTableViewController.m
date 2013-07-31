@@ -31,7 +31,7 @@
     {
         _historyLog = [NSMutableArray array];
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        for (NSDate *date in [defaults objectForKey:WRA_LOG_KEY]) {
+        for (NSDate *date in [defaults objectForKey:WRConstantsLogKey]) {
                 [_historyLog addObject:date];
         }
     }

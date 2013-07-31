@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "TimeCountdown.h"
 
-#define WRA_LOG_KEY @"weekly_review_assistant.log"
-
 @interface Step11ViewController : UIViewController <TimeCountdownDelegate>
 
 @end

@@ -17,7 +17,7 @@
  
     if (groupTitle.length)
     {
-        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:GROUP_ENTITY];
+        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:WRConstantsTriggerGroupEntity];
         
         // sorting
         request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"title"
@@ -35,7 +35,7 @@
         }
         else if (![matches count])
         {
-            group = [NSEntityDescription insertNewObjectForEntityForName:GROUP_ENTITY inManagedObjectContext:context];
+            group = [NSEntityDescription insertNewObjectForEntityForName:WRConstantsTriggerGroupEntity inManagedObjectContext:context];
             group.title = groupTitle;
         }
         else

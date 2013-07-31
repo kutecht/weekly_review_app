@@ -8,7 +8,6 @@
 
 #import "Group.h"
 
-#define GROUP_ENTITY     @"Group"
 
 @interface Group (Create)
 

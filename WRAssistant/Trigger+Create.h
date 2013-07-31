@@ -8,11 +8,6 @@
 
 #import "Trigger.h"
 
-#define GROUP_KEY        @"group"
-#define TRIGGER_KEY      @"trigger"
-#define TRIGGER_ID_KEY   @"trigger_id"
-#define TRIGGER_ENTITY   @"Trigger"
-
 
 @interface Trigger (Create)
 

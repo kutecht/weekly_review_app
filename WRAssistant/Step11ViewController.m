@@ -19,10 +19,10 @@
 - (void)logDateTime
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSMutableArray *log = [[defaults objectForKey:WRA_LOG_KEY] mutableCopy];
+    NSMutableArray *log = [[defaults objectForKey:WRConstantsLogKey] mutableCopy];
     if (!log) log = [NSMutableArray array];
     [log addObject:[NSDate date]];
-    [defaults setObject:log forKey:WRA_LOG_KEY];
+    [defaults setObject:log forKey:WRConstantsLogKey];
     [defaults synchronize];
 }
 
