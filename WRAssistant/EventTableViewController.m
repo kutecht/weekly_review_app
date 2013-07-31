@@ -13,7 +13,7 @@
 @interface EventTableViewController () <EKEventViewDelegate>
 
 @property (nonatomic, strong) EKEventStore *eventStore;
-@property (nonatomic, strong) EKCalendar *defaultCalendar;
+@property (nonatomic, strong) NSArray *allCalendars;
 @property (nonatomic, strong) NSMutableArray *eventsList;
 
 @end
@@ -117,7 +117,7 @@
 
 -(void)accessGrantedForCalendar
 {
-    self.defaultCalendar = self.eventStore.defaultCalendarForNewEvents;
+    self.allCalendars =  [self.eventStore calendarsForEntityType:EKEntityTypeEvent];
     self.eventsList = [self fetchEvents];
     [self.tableView reloadData];
 }
@@ -132,10 +132,9 @@
     
     if (self.startDate && self.endDate)
     {
-        NSArray *calendarArray = [NSArray arrayWithObject:self.defaultCalendar];
         NSPredicate *predicate = [self.eventStore predicateForEventsWithStartDate:self.startDate
                                                                           endDate:self.endDate
-                                                                        calendars:calendarArray];
+                                                                        calendars:self.allCalendars];
 	
 	    events = [NSMutableArray arrayWithArray:[self.eventStore eventsMatchingPredicate:predicate]];
     }
