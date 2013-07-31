@@ -39,7 +39,8 @@
 		6840AB2517A0A80B0067D4C9 /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 6840AB2417A0A80B0067D4C9 /* Group.m */; };
 		6840AB2717A0C6C90067D4C9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6840AB2617A0C6C90067D4C9 /* CoreData.framework */; };
 		6859FCA11798F5840045D5CB /* TimeCountdown.m in Sources */ = {isa = PBXBuildFile; fileRef = 6859FCA01798F5840045D5CB /* TimeCountdown.m */; };
-		6863EC9517987A100060E16E /* TriggerListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6863EC9417987A100060E16E /* TriggerListTableViewController.m */; };
+		68669CB517A96A2E008167FE /* TriggerListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68669CB217A96A2E008167FE /* TriggerListTableViewController.m */; };
+		68669CB617A96A2E008167FE /* ReminderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68669CB317A96A2E008167FE /* ReminderTableViewController.m */; };
 		68884C7017A58E0F0063CF02 /* LogTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68884C6F17A58E0F0063CF02 /* LogTableViewController.m */; };
 		68A721651796406500BDA9EE /* UITopLeftLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A721641796406500BDA9EE /* UITopLeftLabel.m */; };
 		68CD047B1799C80E00CDCB40 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 68CD047A1799C80E00CDCB40 /* Settings.bundle */; };
@@ -111,8 +112,10 @@
 		6840AB2617A0C6C90067D4C9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6859FC9F1798F5840045D5CB /* TimeCountdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeCountdown.h; path = ../../../TimeCountdown.h; sourceTree = "<group>"; };
 		6859FCA01798F5840045D5CB /* TimeCountdown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeCountdown.m; path = ../../../TimeCountdown.m; sourceTree = "<group>"; };
-		6863EC9317987A100060E16E /* TriggerListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TriggerListTableViewController.h; path = ../TriggerListTableViewController.h; sourceTree = "<group>"; };
-		6863EC9417987A100060E16E /* TriggerListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TriggerListTableViewController.m; path = ../TriggerListTableViewController.m; sourceTree = "<group>"; };
+		68669CB117A96A2E008167FE /* TriggerListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TriggerListTableViewController.h; sourceTree = "<group>"; };
+		68669CB217A96A2E008167FE /* TriggerListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TriggerListTableViewController.m; sourceTree = "<group>"; };
+		68669CB317A96A2E008167FE /* ReminderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderTableViewController.m; sourceTree = "<group>"; };
+		68669CB417A96A2E008167FE /* ReminderTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderTableViewController.h; sourceTree = "<group>"; };
 		68884C6E17A58E0F0063CF02 /* LogTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogTableViewController.h; sourceTree = "<group>"; };
 		68884C6F17A58E0F0063CF02 /* LogTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogTableViewController.m; sourceTree = "<group>"; };
 		68A721631796406500BDA9EE /* UITopLeftLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITopLeftLabel.h; sourceTree = "<group>"; };
@@ -187,51 +190,23 @@
 		6820F0D41795E9AA00332A80 /* WRAssistant */ = {
 			isa = PBXGroup;
 			children = (
-				6859FC9F1798F5840045D5CB /* TimeCountdown.h */,
-				6859FCA01798F5840045D5CB /* TimeCountdown.m */,
-				68CFBE8A17A86582002C6C6E /* EventTableViewController.m */,
-				68CFBE8B17A86582002C6C6E /* EventTableViewController.h */,
-				6863EC9317987A100060E16E /* TriggerListTableViewController.h */,
-				6863EC9417987A100060E16E /* TriggerListTableViewController.m */,
-				682C3979179C7AB10011EC0D /* TriggerList.xcdatamodeld */,
-				6840AB2017A0A80A0067D4C9 /* Trigger.h */,
-				6840AB2117A0A80A0067D4C9 /* Trigger.m */,
-				6840AB2317A0A80B0067D4C9 /* Group.h */,
-				6840AB2417A0A80B0067D4C9 /* Group.m */,
-				6812A779179EDD86007609DC /* Group+Create.h */,
-				6812A77A179EDD86007609DC /* Group+Create.m */,
-				6812A77C179EDDDC007609DC /* Trigger+Create.h */,
-				6812A77D179EDDDC007609DC /* Trigger+Create.m */,
+				6820F0E01795E9AA00332A80 /* Main_iPhone.storyboard */,
+				6820F0E31795E9AA00332A80 /* Main_iPad.storyboard */,
 				6820F0DD1795E9AA00332A80 /* Step1AppDelegate.h */,
 				6820F0DE1795E9AA00332A80 /* Step1AppDelegate.m */,
-				6820F0E01795E9AA00332A80 /* Main_iPhone.storyboard */,
-				6820F1061795EBF800332A80 /* Step2ViewController.h */,
-				6820F1071795EBF800332A80 /* Step2ViewController.m */,
-				6820F1091795EC2800332A80 /* Step3ViewController.h */,
-				6820F10A1795EC2800332A80 /* Step3ViewController.m */,
-				6820F10C1795EC3F00332A80 /* Step4ViewController.h */,
-				6820F10D1795EC3F00332A80 /* Step4ViewController.m */,
-				6820F10F1795EC6C00332A80 /* Step5ViewController.h */,
-				6820F1101795EC6C00332A80 /* Step5ViewController.m */,
-				6820F1121795EC8700332A80 /* Step6ViewController.h */,
-				6820F1131795EC8700332A80 /* Step6ViewController.m */,
-				6820F1151795EC9800332A80 /* Step7ViewController.h */,
-				6820F1161795EC9800332A80 /* Step7ViewController.m */,
-				6820F1181795ECAF00332A80 /* Step8ViewController.h */,
-				6820F1191795ECAF00332A80 /* Step8ViewController.m */,
-				6820F11B1795ECCA00332A80 /* Step9ViewController.h */,
-				6820F11C1795ECCA00332A80 /* Step9ViewController.m */,
-				6820F11E1795ECDD00332A80 /* Step10ViewController.h */,
-				6820F11F1795ECDD00332A80 /* Step10ViewController.m */,
-				6820F1211795ECEC00332A80 /* Step11ViewController.h */,
-				6820F1221795ECEC00332A80 /* Step11ViewController.m */,
-				6820F0E31795E9AA00332A80 /* Main_iPad.storyboard */,
-				6820F0E61795E9AA00332A80 /* Step1ViewController.h */,
-				6820F0E71795E9AA00332A80 /* Step1ViewController.m */,
-				68A721631796406500BDA9EE /* UITopLeftLabel.h */,
-				68A721641796406500BDA9EE /* UITopLeftLabel.m */,
-				68884C6E17A58E0F0063CF02 /* LogTableViewController.h */,
-				68884C6F17A58E0F0063CF02 /* LogTableViewController.m */,
+				68669CB717A970CF008167FE /* Common */,
+				68669CBD17A97305008167FE /* Step 1 - Collect Loose Paper */,
+				68669CBE17A97315008167FE /* Step 2 - Get Into Zero */,
+				68669CBF17A9731D008167FE /* Step 3 - Empty Your Head */,
+				68669CC017A97325008167FE /* Step 4 - Review Action Lists */,
+				68669CC117A9732E008167FE /* Step 5 - Review Previous Calendar */,
+				68669CC217A97339008167FE /* Step 6 - Review Upcoming Calendar */,
+				68669CC317A97344008167FE /* Step 7 - Review Waiting-For List */,
+				68669CC417A9734E008167FE /* Step 8 - Review Project Lists */,
+				68669CC517A97356008167FE /* Step 9 - Review Checklists */,
+				68669CC617A9735D008167FE /* Step 10 - Review Someday/Maybe List */,
+				68669CC717A97368008167FE /* Step 11 - Capture New Ideas */,
+				68669CBC17A972B5008167FE /* App Information */,
 				6820F0E91795E9AA00332A80 /* Images.xcassets */,
 				6820F0D51795E9AA00332A80 /* Supporting Files */,
 				68CD047A1799C80E00CDCB40 /* Settings.bundle */,
@@ -266,6 +241,172 @@
 				6820F0F91795E9AA00332A80 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		68669CB717A970CF008167FE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				68A721631796406500BDA9EE /* UITopLeftLabel.h */,
+				68A721641796406500BDA9EE /* UITopLeftLabel.m */,
+				6859FC9F1798F5840045D5CB /* TimeCountdown.h */,
+				6859FCA01798F5840045D5CB /* TimeCountdown.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		68669CB817A9711B008167FE /* TriggerList */ = {
+			isa = PBXGroup;
+			children = (
+				68669CB217A96A2E008167FE /* TriggerListTableViewController.m */,
+				68669CB117A96A2E008167FE /* TriggerListTableViewController.h */,
+				682C3979179C7AB10011EC0D /* TriggerList.xcdatamodeld */,
+				6812A77D179EDDDC007609DC /* Trigger+Create.m */,
+				6812A77C179EDDDC007609DC /* Trigger+Create.h */,
+				6812A77A179EDD86007609DC /* Group+Create.m */,
+				6812A779179EDD86007609DC /* Group+Create.h */,
+				68669CB917A9713A008167FE /* Autogenerated */,
+			);
+			name = TriggerList;
+			sourceTree = "<group>";
+		};
+		68669CB917A9713A008167FE /* Autogenerated */ = {
+			isa = PBXGroup;
+			children = (
+				6840AB2417A0A80B0067D4C9 /* Group.m */,
+				6840AB2317A0A80B0067D4C9 /* Group.h */,
+				6840AB2017A0A80A0067D4C9 /* Trigger.h */,
+				6840AB2117A0A80A0067D4C9 /* Trigger.m */,
+			);
+			name = Autogenerated;
+			sourceTree = "<group>";
+		};
+		68669CBA17A97190008167FE /* Calendar Events */ = {
+			isa = PBXGroup;
+			children = (
+				68CFBE8B17A86582002C6C6E /* EventTableViewController.h */,
+				68CFBE8A17A86582002C6C6E /* EventTableViewController.m */,
+			);
+			name = "Calendar Events";
+			sourceTree = "<group>";
+		};
+		68669CBB17A971AC008167FE /* Reminders */ = {
+			isa = PBXGroup;
+			children = (
+				68669CB417A96A2E008167FE /* ReminderTableViewController.h */,
+				68669CB317A96A2E008167FE /* ReminderTableViewController.m */,
+			);
+			name = Reminders;
+			sourceTree = "<group>";
+		};
+		68669CBC17A972B5008167FE /* App Information */ = {
+			isa = PBXGroup;
+			children = (
+				68884C6F17A58E0F0063CF02 /* LogTableViewController.m */,
+				68884C6E17A58E0F0063CF02 /* LogTableViewController.h */,
+			);
+			name = "App Information";
+			sourceTree = "<group>";
+		};
+		68669CBD17A97305008167FE /* Step 1 - Collect Loose Paper */ = {
+			isa = PBXGroup;
+			children = (
+				6820F0E61795E9AA00332A80 /* Step1ViewController.h */,
+				6820F0E71795E9AA00332A80 /* Step1ViewController.m */,
+				68669CBB17A971AC008167FE /* Reminders */,
+			);
+			name = "Step 1 - Collect Loose Paper";
+			sourceTree = "<group>";
+		};
+		68669CBE17A97315008167FE /* Step 2 - Get Into Zero */ = {
+			isa = PBXGroup;
+			children = (
+				6820F1061795EBF800332A80 /* Step2ViewController.h */,
+				6820F1071795EBF800332A80 /* Step2ViewController.m */,
+			);
+			name = "Step 2 - Get Into Zero";
+			sourceTree = "<group>";
+		};
+		68669CBF17A9731D008167FE /* Step 3 - Empty Your Head */ = {
+			isa = PBXGroup;
+			children = (
+				6820F1091795EC2800332A80 /* Step3ViewController.h */,
+				6820F10A1795EC2800332A80 /* Step3ViewController.m */,
+				68669CB817A9711B008167FE /* TriggerList */,
+			);
+			name = "Step 3 - Empty Your Head";
+			sourceTree = "<group>";
+		};
+		68669CC017A97325008167FE /* Step 4 - Review Action Lists */ = {
+			isa = PBXGroup;
+			children = (
+				6820F10C1795EC3F00332A80 /* Step4ViewController.h */,
+				6820F10D1795EC3F00332A80 /* Step4ViewController.m */,
+			);
+			name = "Step 4 - Review Action Lists";
+			sourceTree = "<group>";
+		};
+		68669CC117A9732E008167FE /* Step 5 - Review Previous Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				6820F10F1795EC6C00332A80 /* Step5ViewController.h */,
+				6820F1101795EC6C00332A80 /* Step5ViewController.m */,
+				68669CBA17A97190008167FE /* Calendar Events */,
+			);
+			name = "Step 5 - Review Previous Calendar";
+			sourceTree = "<group>";
+		};
+		68669CC217A97339008167FE /* Step 6 - Review Upcoming Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				6820F1121795EC8700332A80 /* Step6ViewController.h */,
+				6820F1131795EC8700332A80 /* Step6ViewController.m */,
+			);
+			name = "Step 6 - Review Upcoming Calendar";
+			sourceTree = "<group>";
+		};
+		68669CC317A97344008167FE /* Step 7 - Review Waiting-For List */ = {
+			isa = PBXGroup;
+			children = (
+				6820F1151795EC9800332A80 /* Step7ViewController.h */,
+				6820F1161795EC9800332A80 /* Step7ViewController.m */,
+			);
+			name = "Step 7 - Review Waiting-For List";
+			sourceTree = "<group>";
+		};
+		68669CC417A9734E008167FE /* Step 8 - Review Project Lists */ = {
+			isa = PBXGroup;
+			children = (
+				6820F1181795ECAF00332A80 /* Step8ViewController.h */,
+				6820F1191795ECAF00332A80 /* Step8ViewController.m */,
+			);
+			name = "Step 8 - Review Project Lists";
+			sourceTree = "<group>";
+		};
+		68669CC517A97356008167FE /* Step 9 - Review Checklists */ = {
+			isa = PBXGroup;
+			children = (
+				6820F11B1795ECCA00332A80 /* Step9ViewController.h */,
+				6820F11C1795ECCA00332A80 /* Step9ViewController.m */,
+			);
+			name = "Step 9 - Review Checklists";
+			sourceTree = "<group>";
+		};
+		68669CC617A9735D008167FE /* Step 10 - Review Someday/Maybe List */ = {
+			isa = PBXGroup;
+			children = (
+				6820F11E1795ECDD00332A80 /* Step10ViewController.h */,
+				6820F11F1795ECDD00332A80 /* Step10ViewController.m */,
+			);
+			name = "Step 10 - Review Someday/Maybe List";
+			sourceTree = "<group>";
+		};
+		68669CC717A97368008167FE /* Step 11 - Capture New Ideas */ = {
+			isa = PBXGroup;
+			children = (
+				6820F1211795ECEC00332A80 /* Step11ViewController.h */,
+				6820F1221795ECEC00332A80 /* Step11ViewController.m */,
+			);
+			name = "Step 11 - Capture New Ideas";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,11 +511,12 @@
 			files = (
 				6820F0DF1795E9AA00332A80 /* Step1AppDelegate.m in Sources */,
 				6812A77E179EDDDC007609DC /* Trigger+Create.m in Sources */,
+				68669CB517A96A2E008167FE /* TriggerListTableViewController.m in Sources */,
 				6820F1171795EC9800332A80 /* Step7ViewController.m in Sources */,
 				6840AB2217A0A80A0067D4C9 /* Trigger.m in Sources */,
+				68669CB617A96A2E008167FE /* ReminderTableViewController.m in Sources */,
 				6820F1141795EC8700332A80 /* Step6ViewController.m in Sources */,
 				6859FCA11798F5840045D5CB /* TimeCountdown.m in Sources */,
-				6863EC9517987A100060E16E /* TriggerListTableViewController.m in Sources */,
 				68A721651796406500BDA9EE /* UITopLeftLabel.m in Sources */,
 				6820F1081795EBF800332A80 /* Step2ViewController.m in Sources */,
 				682C397B179C7AB10011EC0D /* TriggerList.xcdatamodeld in Sources */,
