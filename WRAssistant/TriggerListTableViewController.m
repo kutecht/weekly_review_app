@@ -55,7 +55,6 @@
             [Trigger triggerWithInfo:trigger  inManagedObjectContex:self.managedObjectContext];
         }
     }];
-    
 }
 
 - (void)refresh
