@@ -38,3 +38,9 @@ extern NSString *const WRConstantsReminderCellId;
 extern unsigned int const WRConstantsPastEventsInWeeks;
 extern unsigned int const WRConstantsFutureEventsInWeeks;
 
+
+@interface WRConstants : NSObject
+
++ (NSArray *)defaultTriggerList;
+
+@end
