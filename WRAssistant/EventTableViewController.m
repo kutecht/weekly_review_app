@@ -42,7 +42,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"showEventViewController"])
+    if ([[segue identifier] isEqualToString:WRConstantsSegueShowEventViewController])
     {
         EKEventViewController* eventViewController = (EKEventViewController *)[segue destinationViewController];
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
@@ -63,7 +63,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EventCell" forIndexPath:indexPath];
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:WRConstantsEventCellId forIndexPath:indexPath];
     
     // Get the event at the row selected and display its title
     cell.textLabel.text = [[self.eventsList objectAtIndex:indexPath.row] title];

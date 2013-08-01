@@ -16,7 +16,6 @@
 
 @implementation TriggerListTableViewController
 
-#define CELL_IDENTIFIER  @"TriggerCell"
 
 - (void)setManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
 {
@@ -25,10 +24,10 @@
     if (managedObjectContext)
     {
         NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:WRConstantsTriggerEntity];
-        request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"group.title" ascending:YES
+        request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:WRConstantsRelationshipGroupTitleKey ascending:YES
                                                                  selector:@selector(localizedCaseInsensitiveCompare:)]];
         request.predicate = nil; // all Triggers
-        self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:managedObjectContext sectionNameKeyPath:@"group.title" cacheName:nil];
+        self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:managedObjectContext sectionNameKeyPath:WRConstantsRelationshipGroupTitleKey cacheName:nil];
     }
     else
     {
@@ -38,7 +37,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:WRConstantsTriggerCellId];
     
     Trigger *trigger = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = trigger.title;
@@ -178,7 +177,7 @@
 - (void)refresh
 {
     NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
-    url = [url URLByAppendingPathComponent:@"DefaultTriggerList"];
+    url = [url URLByAppendingPathComponent:WRConstantsTriggerListDoc];
     UIManagedDocument *document = [[UIManagedDocument alloc] initWithFileURL:url];
     
     if (![[NSFileManager defaultManager] fileExistsAtPath:[url path]])

@@ -39,22 +39,21 @@
     
     if ([self.timeCountdown isStopped])
     {
-        self.timeCountdown.minutes = [[NSUserDefaults standardUserDefaults] integerForKey:@"step_duration"];
+        self.timeCountdown.minutes = [[NSUserDefaults standardUserDefaults] integerForKey:WRConstantsStepDurationInMinKey];
         self.timeCountdownLabel.text = self.timeCountdown.time;
     }
 }
 
-#define WEEKS_IN_FUTURE 2
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"showFutureEvents"])
+    if ([[segue identifier] isEqualToString:WRConstantsSegueShowFutureEvents])
     {
         // Show events for the next two weeks
         EventTableViewController* eventTableViewController = (EventTableViewController *)[segue destinationViewController];
         eventTableViewController.startDate = [NSDate date];
         NSDateComponents *spanDateComponents = [[NSDateComponents alloc] init];
-        spanDateComponents.week = WEEKS_IN_FUTURE;
+        spanDateComponents.week = WRConstantsFutureEventsInWeeks;
         eventTableViewController.endDate =
         [[NSCalendar currentCalendar] dateByAddingComponents:spanDateComponents
                                                       toDate:eventTableViewController.startDate

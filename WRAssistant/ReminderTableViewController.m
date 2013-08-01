@@ -49,7 +49,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ReminderCell" forIndexPath:indexPath];
+	  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:WRConstantsReminderCellId forIndexPath:indexPath];
     
     // Get the event at the row selected and display its title
     cell.textLabel.text = [[self.remindersList objectAtIndex:indexPath.row] title];

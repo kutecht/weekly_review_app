@@ -15,9 +15,9 @@
     // Override point for customization after application launch.
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if (![defaults objectForKey:@"step_duration"])
+    if (![defaults objectForKey:WRConstantsStepDurationInMinKey])
     {
-        [defaults setInteger:5 forKey:@"step_duration"];
+        [defaults setInteger:5 forKey:WRConstantsStepDurationInMinKey];
     }
     [defaults synchronize];
     

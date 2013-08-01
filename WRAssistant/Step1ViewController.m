@@ -30,7 +30,7 @@
     
     if ([self.timeCountdown isStopped])
     {
-        self.timeCountdown.minutes = [[NSUserDefaults standardUserDefaults] integerForKey:@"step_duration"];
+        self.timeCountdown.minutes = [[NSUserDefaults standardUserDefaults] integerForKey:WRConstantsStepDurationInMinKey];
         self.timeCountdownLabel.text = self.timeCountdown.time;
     }
 }
