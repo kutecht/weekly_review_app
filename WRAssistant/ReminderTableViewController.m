@@ -13,6 +13,7 @@
 @interface ReminderTableViewController () 
 
 @property (nonatomic, strong) EKEventStore *eventStore;
+@property (nonatomic, strong) NSArray *allReminders; // similar to allCalendars
 @property (nonatomic, strong) NSArray *remindersList;
 
 @end
@@ -63,7 +64,7 @@
 -(void)checkEventStoreAccess
 {
     EKAuthorizationStatus status = [EKEventStore authorizationStatusForEntityType:EKEntityTypeReminder];    
- 
+    
     switch (status)
     {
         case EKAuthorizationStatusAuthorized: [self accessGranted];
@@ -103,8 +104,14 @@
 
 -(void)accessGranted
 {
-    self.remindersList = [self.eventStore calendarsForEntityType:EKEntityTypeReminder];
-    [self.tableView reloadData];
+    self.allReminders =  [self.eventStore calendarsForEntityType:EKEntityTypeReminder];
+    NSPredicate *predicate = [self.eventStore predicateForRemindersInCalendars:self.allReminders];
+    [self.eventStore fetchRemindersMatchingPredicate:predicate completion:^(NSArray *reminders) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.remindersList = reminders;
+            [self.tableView reloadData];
+        });
+    }];
 }
 
 
