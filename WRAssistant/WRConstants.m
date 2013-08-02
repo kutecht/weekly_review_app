@@ -29,15 +29,12 @@ static NSString *const kTGAdministration = @"Administration";
 static NSString *const kTGCommitments = @"Commitments";
 static NSString *const kTGCommunications = @"Communications";
 static NSString *const kTGCommunity = @"Community";
-static NSString *const kTGComputers = @"Computers";
 static NSString *const kTGErrands = @"Errands";
 static NSString *const kTGHealth = @"Health";
 static NSString *const kTGHousehold = @"Household";
 static NSString *const kTGLeisure = @"Leisure";
 static NSString *const kTGProfessionalDevelopment = @"Professional development";
 static NSString *const kTGUpcomingEvents = @"Upcoming events";
-static NSString *const kTGWaitingFor = @"Waiting for";
-static NSString *const kTGWriting = @"Writing";
 
 
 @implementation WRConstants
@@ -66,15 +63,11 @@ static NSString *const kTGWriting = @"Writing";
       @{ WRConstantsTriggerKey: @"subordinates", WRConstantsTriggerGroupKey: kTGCommitments},
       @{ WRConstantsTriggerKey: @"customers", WRConstantsTriggerGroupKey: kTGCommitments},
       @{ WRConstantsTriggerKey: @"professionals", WRConstantsTriggerGroupKey: kTGCommitments},
-      @{ WRConstantsTriggerKey: @"other organizations", WRConstantsTriggerGroupKey: kTGCommitments},
       
       // Communications
       @{ WRConstantsTriggerKey: @"calls", WRConstantsTriggerGroupKey: kTGCommunications},
-      @{ WRConstantsTriggerKey: @"voice-mail", WRConstantsTriggerGroupKey: kTGCommunications},
       @{ WRConstantsTriggerKey: @"email", WRConstantsTriggerGroupKey: kTGCommunications},
-      @{ WRConstantsTriggerKey: @"faxes", WRConstantsTriggerGroupKey: kTGCommunications},
       @{ WRConstantsTriggerKey: @"letters", WRConstantsTriggerGroupKey: kTGCommunications},
-      @{ WRConstantsTriggerKey: @"memos", WRConstantsTriggerGroupKey: kTGCommunications},
       @{ WRConstantsTriggerKey: @"notes", WRConstantsTriggerGroupKey: kTGCommunications},
       
       // Community
@@ -82,12 +75,6 @@ static NSString *const kTGWriting = @"Writing";
       @{ WRConstantsTriggerKey: @"schools", WRConstantsTriggerGroupKey: kTGCommunity},
       @{ WRConstantsTriggerKey: @"spiritual organization", WRConstantsTriggerGroupKey: kTGCommunity},
       @{ WRConstantsTriggerKey: @"volunteer activities", WRConstantsTriggerGroupKey: kTGCommunity},
-      
-      // Computers
-      @{ WRConstantsTriggerKey: @"software", WRConstantsTriggerGroupKey: kTGComputers},
-      @{ WRConstantsTriggerKey: @"hardware", WRConstantsTriggerGroupKey: kTGComputers},
-      @{ WRConstantsTriggerKey: @"perform backup", WRConstantsTriggerGroupKey: kTGComputers},
-      @{ WRConstantsTriggerKey: @"purge files", WRConstantsTriggerGroupKey: kTGComputers},
       
       // Errands
       @{ WRConstantsTriggerKey: @"department store", WRConstantsTriggerGroupKey: kTGErrands},
@@ -103,11 +90,11 @@ static NSString *const kTGWriting = @"Writing";
       @{ WRConstantsTriggerKey: @"checkups", WRConstantsTriggerGroupKey: kTGHealth},
       @{ WRConstantsTriggerKey: @"diet", WRConstantsTriggerGroupKey: kTGHealth},
       @{ WRConstantsTriggerKey: @"exercise", WRConstantsTriggerGroupKey: kTGHealth},
+      @{ WRConstantsTriggerKey: @"metrics", WRConstantsTriggerGroupKey: kTGHealth},
       
       // Household
       @{ WRConstantsTriggerKey: @"property", WRConstantsTriggerGroupKey: kTGHousehold},
       @{ WRConstantsTriggerKey: @"taxes", WRConstantsTriggerGroupKey: kTGHousehold},
-      @{ WRConstantsTriggerKey: @"builders/contractors", WRConstantsTriggerGroupKey: kTGHousehold},
       @{ WRConstantsTriggerKey: @"heating/air-conditioning", WRConstantsTriggerGroupKey: kTGHousehold},
       @{ WRConstantsTriggerKey: @"plumbing", WRConstantsTriggerGroupKey: kTGHousehold},
       @{ WRConstantsTriggerKey: @"electricity", WRConstantsTriggerGroupKey: kTGHousehold},
@@ -124,12 +111,12 @@ static NSString *const kTGWriting = @"Writing";
       @{ WRConstantsTriggerKey: @"lightbulbs/wiring", WRConstantsTriggerGroupKey: kTGHousehold},
       @{ WRConstantsTriggerKey: @"areas to organize", WRConstantsTriggerGroupKey: kTGHousehold},
       @{ WRConstantsTriggerKey: @"office equipment", WRConstantsTriggerGroupKey: kTGHousehold},
+      @{ WRConstantsTriggerKey: @"computer backup", WRConstantsTriggerGroupKey: kTGHousehold},
       @{ WRConstantsTriggerKey: @"sports equipment", WRConstantsTriggerGroupKey: kTGHousehold},
       @{ WRConstantsTriggerKey: @"closets/clothes", WRConstantsTriggerGroupKey: kTGHousehold},
       @{ WRConstantsTriggerKey: @"garage/storage", WRConstantsTriggerGroupKey: kTGHousehold},
       @{ WRConstantsTriggerKey: @"vehicle repair/maintenance", WRConstantsTriggerGroupKey: kTGHousehold},
       @{ WRConstantsTriggerKey: @"tools", WRConstantsTriggerGroupKey: kTGHousehold},
-      @{ WRConstantsTriggerKey: @"luggage", WRConstantsTriggerGroupKey: kTGHousehold},
       
       // Leisure
       @{ WRConstantsTriggerKey: @"hobbies", WRConstantsTriggerGroupKey: kTGLeisure},
@@ -158,23 +145,6 @@ static NSString *const kTGWriting = @"Writing";
       @{ WRConstantsTriggerKey: @"social events", WRConstantsTriggerGroupKey: kTGUpcomingEvents},
       @{ WRConstantsTriggerKey: @"cultural events", WRConstantsTriggerGroupKey: kTGUpcomingEvents},
       @{ WRConstantsTriggerKey: @"sporting events", WRConstantsTriggerGroupKey: kTGUpcomingEvents},
-      
-      
-      // Waiting-for
-      @{ WRConstantsTriggerKey: @"mail", WRConstantsTriggerGroupKey: kTGWaitingFor},
-      @{ WRConstantsTriggerKey: @"repairs", WRConstantsTriggerGroupKey: kTGWaitingFor},
-      @{ WRConstantsTriggerKey: @"reimbursements", WRConstantsTriggerGroupKey: kTGWaitingFor},
-      @{ WRConstantsTriggerKey: @"loaned items", WRConstantsTriggerGroupKey: kTGWaitingFor},
-      @{ WRConstantsTriggerKey: @"rsvp's", WRConstantsTriggerGroupKey: kTGWaitingFor},
-      
-      // Writing
-      @{ WRConstantsTriggerKey: @"reports", WRConstantsTriggerGroupKey: kTGWriting},
-      @{ WRConstantsTriggerKey: @"evaluations/reviews", WRConstantsTriggerGroupKey: kTGWriting},
-      @{ WRConstantsTriggerKey: @"proposals", WRConstantsTriggerGroupKey: kTGWriting},
-      @{ WRConstantsTriggerKey: @"articles", WRConstantsTriggerGroupKey: kTGWriting},
-      @{ WRConstantsTriggerKey: @"promotional materials", WRConstantsTriggerGroupKey: kTGWriting},
-      @{ WRConstantsTriggerKey: @"manuals/instructions", WRConstantsTriggerGroupKey: kTGWriting},
-      @{ WRConstantsTriggerKey: @"rewrites and edits", WRConstantsTriggerGroupKey: kTGWriting}
       ];
 }
 
