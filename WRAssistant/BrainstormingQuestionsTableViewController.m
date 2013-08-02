@@ -1,22 +1,21 @@
 //
-//  LogTableViewController.m
+//  BrainstormingQuestionsTableViewController.m
 //  WRAssistant
 //
-//  Created by Kevin Utecht on 7/28/13.
+//  Created by Kevin Utecht on 8/1/13.
 //  Copyright (c) 2013 kevin utecht. All rights reserved.
 //
 
-#import "LogTableViewController.h"
-#import "Step11ViewController.h"
+#import "BrainstormingQuestionsTableViewController.h"
 
-@interface LogTableViewController ()
-@property (strong, nonatomic) NSMutableArray *historyLog;
+@interface BrainstormingQuestionsTableViewController ()
+@property (strong, nonatomic) NSArray *questions;
 @end
 
-static NSString *const kTableCellIdLogDate = @"LogDateCell";
+static NSString *const kTableCellIdBrainstormingQuestion = @"BrainstormingQuestionCell";
 
 
-@implementation LogTableViewController
+@implementation BrainstormingQuestionsTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -27,21 +26,15 @@ static NSString *const kTableCellIdLogDate = @"LogDateCell";
     return self;
 }
 
-
-- (NSMutableArray *)historyLog
+- (NSArray *)questions
 {
-    if (!_historyLog)
+    if (!_questions)
     {
-        _historyLog = [NSMutableArray array];
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        for (NSDate *date in [defaults objectForKey:WRConstantsLogKey]) {
-                [_historyLog addObject:date];
-        }
+        _questions = [WRConstants defaultBrainstormingQuestions];
     }
     
-    return _historyLog;
+    return _questions;
 }
-
 
 - (void)viewDidLoad
 {
@@ -52,7 +45,6 @@ static NSString *const kTableCellIdLogDate = @"LogDateCell";
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,18 +57,19 @@ static NSString *const kTableCellIdLogDate = @"LogDateCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return [self.historyLog count];
+	return self.questions.count;
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTableCellIdLogDate forIndexPath:indexPath];
-
-    cell.textLabel.text = [self.historyLog[indexPath.row] description];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTableCellIdBrainstormingQuestion forIndexPath:indexPath];
     
+    // Get the event at the row selected and display its title
+    cell.textLabel.text = [self.questions objectAtIndex:indexPath.row][WRConstantsBrainstormingQuestionKey];
     return cell;
 }
+
 
 /*
 // Override to support conditional editing of the table view.

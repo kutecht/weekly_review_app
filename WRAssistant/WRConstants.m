@@ -12,49 +12,32 @@
 NSString *const WRConstantsLogKey = @"weekly_review_assistant.log";
 NSString *const WRConstantsStepDurationInMinKey = @"step_duration";
 
-
-// Trigger list dictionary strings
+// Dictionary strings
+NSString *const WRConstantsBrainstormingQuestionKey = @"brainstorming_question";
 NSString *const WRConstantsTriggerGroupKey = @"group";
 NSString *const WRConstantsTriggerKey = @"trigger";
 NSString *const WRConstantsTriggerIdKey = @"trigger_id";
 
-
-// Trigger list CoreData strings
+// CoreData strings
 NSString *const WRConstantsTriggerGroupEntity = @"Group";
 NSString *const WRConstantsTriggerEntity = @"Trigger";
 NSString *const WRConstantsTriggerListDoc = @"TriggerList";
 NSString *const WRConstantsRelationshipGroupTitleKey = @"group.title";
 
-// Segues
-NSString *const WRConstantsSegueShowEventViewController = @"showEventViewController";
-NSString *const WRConstantsSegueShowPastEvents = @"showPastEvents";
-NSString *const WRConstantsSegueShowFutureEvents = @"showFutureEvents";
-
-// Table cell identifier strings
-NSString *const WRConstantsTriggerCellId = @"TriggerCell";
-NSString *const WRConstantsEventCellId = @"EventCell";
-NSString *const WRConstantsLogDateCellId = @"LogDateCell";
-NSString *const WRConstantsReminderCellId = @"ReminderCell";
-
-// Calendar event fetching constants
-unsigned int const WRConstantsPastEventsInWeeks = -3;
-unsigned int const WRConstantsFutureEventsInWeeks = 2;
-
-
-// Trigger group strings
-NSString *const kTGAdministration = @"Administration";
-NSString *const kTGCommitments = @"Commitments";
-NSString *const kTGCommunications = @"Communications";
-NSString *const kTGCommunity = @"Community";
-NSString *const kTGComputers = @"Computers";
-NSString *const kTGErrands = @"Errands";
-NSString *const kTGHealth = @"Health";
-NSString *const kTGHousehold = @"Household";
-NSString *const kTGLeisure = @"Leisure";
-NSString *const kTGProfessionalDevelopment = @"Professional development";
-NSString *const kTGUpcomingEvents = @"Upcoming events";
-NSString *const kTGWaitingFor = @"Waiting for";
-NSString *const kTGWriting = @"Writing";
+// Trigger group title strings
+static NSString *const kTGAdministration = @"Administration";
+static NSString *const kTGCommitments = @"Commitments";
+static NSString *const kTGCommunications = @"Communications";
+static NSString *const kTGCommunity = @"Community";
+static NSString *const kTGComputers = @"Computers";
+static NSString *const kTGErrands = @"Errands";
+static NSString *const kTGHealth = @"Health";
+static NSString *const kTGHousehold = @"Household";
+static NSString *const kTGLeisure = @"Leisure";
+static NSString *const kTGProfessionalDevelopment = @"Professional development";
+static NSString *const kTGUpcomingEvents = @"Upcoming events";
+static NSString *const kTGWaitingFor = @"Waiting for";
+static NSString *const kTGWriting = @"Writing";
 
 
 @implementation WRConstants
@@ -192,6 +175,19 @@ NSString *const kTGWriting = @"Writing";
       @{ WRConstantsTriggerKey: @"promotional materials", WRConstantsTriggerGroupKey: kTGWriting},
       @{ WRConstantsTriggerKey: @"manuals/instructions", WRConstantsTriggerGroupKey: kTGWriting},
       @{ WRConstantsTriggerKey: @"rewrites and edits", WRConstantsTriggerGroupKey: kTGWriting}
+      ];
+}
+
++ (NSArray *)defaultBrainstormingQuestions
+{
+    return
+    @[@{ WRConstantsBrainstormingQuestionKey: @"Any new thought-provoking, creative, risk taking ideas?"},
+      @{ WRConstantsBrainstormingQuestionKey: @"What's really got my attention in my job, family, environment?"},
+      @{ WRConstantsBrainstormingQuestionKey: @"What good have I done in the past week?"},
+      @{ WRConstantsBrainstormingQuestionKey: @"What good shall I do next week?"},
+      @{ WRConstantsBrainstormingQuestionKey: @"What didn't work?"},
+      @{ WRConstantsBrainstormingQuestionKey: @"What am I greatful for?"},
+      @{ WRConstantsBrainstormingQuestionKey: @"Am I reaching my life goals?"}
       ];
 }
 

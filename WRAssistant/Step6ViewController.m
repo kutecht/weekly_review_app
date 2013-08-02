@@ -14,6 +14,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeCountdownLabel;
 @end
 
+static const unsigned int kFutureEventsInWeeks = 2;
+static NSString *const kSegueShowFutureEvents = @"showFutureEvents";
+
+
 @implementation Step6ViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -47,13 +51,13 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:WRConstantsSegueShowFutureEvents])
+    if ([[segue identifier] isEqualToString:kSegueShowFutureEvents])
     {
         // Show events for the next two weeks
         EventTableViewController* eventTableViewController = (EventTableViewController *)[segue destinationViewController];
         eventTableViewController.startDate = [NSDate date];
         NSDateComponents *spanDateComponents = [[NSDateComponents alloc] init];
-        spanDateComponents.week = WRConstantsFutureEventsInWeeks;
+        spanDateComponents.week = kFutureEventsInWeeks;
         eventTableViewController.endDate =
         [[NSCalendar currentCalendar] dateByAddingComponents:spanDateComponents
                                                       toDate:eventTableViewController.startDate

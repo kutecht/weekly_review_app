@@ -14,6 +14,9 @@
 @property (nonatomic) BOOL beganUpdates;
 @end
 
+static NSString *const kTableCellIdTrigger = @"TriggerCell";
+
+
 @implementation TriggerListTableViewController
 
 
@@ -37,7 +40,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:WRConstantsTriggerCellId];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTableCellIdTrigger];
     
     Trigger *trigger = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = trigger.title;

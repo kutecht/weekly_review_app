@@ -42,6 +42,7 @@
 		68669CB517A96A2E008167FE /* TriggerListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68669CB217A96A2E008167FE /* TriggerListTableViewController.m */; };
 		68669CB617A96A2E008167FE /* ReminderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68669CB317A96A2E008167FE /* ReminderTableViewController.m */; };
 		68884C7017A58E0F0063CF02 /* LogTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68884C6F17A58E0F0063CF02 /* LogTableViewController.m */; };
+		6893970417AB687F0042CB14 /* BrainstormingQuestionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6893970317AB687F0042CB14 /* BrainstormingQuestionsTableViewController.m */; };
 		689A07D617A9A2900087A9CC /* WRConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 689A07D517A9A2900087A9CC /* WRConstants.m */; };
 		68A721651796406500BDA9EE /* UITopLeftLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A721641796406500BDA9EE /* UITopLeftLabel.m */; };
 		68CD047B1799C80E00CDCB40 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 68CD047A1799C80E00CDCB40 /* Settings.bundle */; };
@@ -119,6 +120,8 @@
 		68669CB417A96A2E008167FE /* ReminderTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderTableViewController.h; sourceTree = "<group>"; };
 		68884C6E17A58E0F0063CF02 /* LogTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogTableViewController.h; sourceTree = "<group>"; };
 		68884C6F17A58E0F0063CF02 /* LogTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogTableViewController.m; sourceTree = "<group>"; };
+		6893970217AB687F0042CB14 /* BrainstormingQuestionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrainstormingQuestionsTableViewController.h; sourceTree = "<group>"; };
+		6893970317AB687F0042CB14 /* BrainstormingQuestionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrainstormingQuestionsTableViewController.m; sourceTree = "<group>"; };
 		689A07D417A9A2900087A9CC /* WRConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRConstants.h; sourceTree = "<group>"; };
 		689A07D517A9A2900087A9CC /* WRConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRConstants.m; sourceTree = "<group>"; };
 		689A07D717A9A80C0087A9CC /* WRMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRMacros.h; sourceTree = "<group>"; };
@@ -410,6 +413,8 @@
 		68669CC717A97368008167FE /* Step 11 - Capture New Ideas */ = {
 			isa = PBXGroup;
 			children = (
+				6893970217AB687F0042CB14 /* BrainstormingQuestionsTableViewController.h */,
+				6893970317AB687F0042CB14 /* BrainstormingQuestionsTableViewController.m */,
 				6820F1211795ECEC00332A80 /* Step11ViewController.h */,
 				6820F1221795ECEC00332A80 /* Step11ViewController.m */,
 			);
@@ -527,6 +532,7 @@
 				68A721651796406500BDA9EE /* UITopLeftLabel.m in Sources */,
 				6820F1081795EBF800332A80 /* Step2ViewController.m in Sources */,
 				682C397B179C7AB10011EC0D /* TriggerList.xcdatamodeld in Sources */,
+				6893970417AB687F0042CB14 /* BrainstormingQuestionsTableViewController.m in Sources */,
 				6820F11D1795ECCA00332A80 /* Step9ViewController.m in Sources */,
 				6820F10B1795EC2800332A80 /* Step3ViewController.m in Sources */,
 				6840AB2517A0A80B0067D4C9 /* Group.m in Sources */,

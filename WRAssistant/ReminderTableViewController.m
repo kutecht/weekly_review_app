@@ -18,6 +18,8 @@
 
 @end
 
+static NSString *const kTableCellIdReminder = @"ReminderCell";
+
 
 @implementation ReminderTableViewController
 
@@ -50,7 +52,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:WRConstantsReminderCellId forIndexPath:indexPath];
+	  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTableCellIdReminder forIndexPath:indexPath];
     
     // Get the event at the row selected and display its title
     cell.textLabel.text = [[self.remindersList objectAtIndex:indexPath.row] title];
