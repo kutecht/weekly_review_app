@@ -13,7 +13,7 @@ NSString *const WRConstantsLogKey = @"weekly_review_assistant.log";
 NSString *const WRConstantsStepDurationInMinKey = @"step_duration";
 
 // Dictionary strings
-NSString *const WRConstantsBrainstormingQuestionKey = @"brainstorming_question";
+NSString *const WRConstantsThoughtGuideKey = @"thought_guide";
 NSString *const WRConstantsTriggerGroupKey = @"group";
 NSString *const WRConstantsTriggerKey = @"trigger";
 NSString *const WRConstantsTriggerIdKey = @"trigger_id";
@@ -148,16 +148,16 @@ static NSString *const kTGUpcomingEvents = @"Upcoming events";
       ];
 }
 
-+ (NSArray *)defaultBrainstormingQuestions
++ (NSArray *)defaultThoughtGuides
 {
     return
-    @[@{ WRConstantsBrainstormingQuestionKey: @"Any new thought-provoking, creative, risk taking ideas?"},
-      @{ WRConstantsBrainstormingQuestionKey: @"What's really got my attention in my job, family, environment?"},
-      @{ WRConstantsBrainstormingQuestionKey: @"What good have I done in the past week?"},
-      @{ WRConstantsBrainstormingQuestionKey: @"What good shall I do next week?"},
-      @{ WRConstantsBrainstormingQuestionKey: @"What didn't work?"},
-      @{ WRConstantsBrainstormingQuestionKey: @"What am I greatful for?"},
-      @{ WRConstantsBrainstormingQuestionKey: @"Am I reaching my life goals?"}
+    @[@{ WRConstantsThoughtGuideKey: @"Any new thought-provoking, creative, risk taking ideas?"},
+      @{ WRConstantsThoughtGuideKey: @"What's really got my attention in my job, family, environment?"},
+      @{ WRConstantsThoughtGuideKey: @"What good have I done in the past week?"},
+      @{ WRConstantsThoughtGuideKey: @"What good shall I do next week?"},
+      @{ WRConstantsThoughtGuideKey: @"What didn't work?"},
+      @{ WRConstantsThoughtGuideKey: @"What am I greatful for?"},
+      @{ WRConstantsThoughtGuideKey: @"Am I reaching my life goals?"}
       ];
 }
 

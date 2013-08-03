@@ -909,14 +909,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="sIZ-uA-zpK" kind="embed" identifier="showBrainstormingQuestions" id="U8s-dw-TK1"/>
+                                    <segue destination="sIZ-uA-zpK" kind="embed" identifier="showAddThoughtGuide" id="U8s-dw-TK1"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
-                    <navigationItem key="navigationItem" title="11" id="mwV-Uu-E9X"/>
+                    <navigationItem key="navigationItem" title="11" id="mwV-Uu-E9X">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HM4-Qr-Iy6">
+                            <connections>
+                                <segue destination="Hiq-eU-gIF" kind="modal" identifier="showAddThoughtGuide" modalTransitionStyle="coverVertical" id="Nda-cz-AhF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="timeCountdownLabel" destination="FDx-3G-nMu" id="Egk-oK-1Mn"/>
                     </connections>
@@ -925,16 +931,93 @@
             </objects>
             <point key="canvasLocation" x="5573" y="78"/>
         </scene>
-        <!--Brainstorming Questions Table View Controller-->
+        <!--Add Thought Guide View Controller - Add Thought Guide-->
+        <scene sceneID="m1N-pL-Lyx">
+            <objects>
+                <viewController id="Hiq-eU-gIF" customClass="AddThoughtGuideViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MFQ-dN-nJs"/>
+                        <viewControllerLayoutGuide type="bottom" id="ssX-gr-FgA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gkV-Fc-vSk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ikk-aK-L74">
+                                <rect key="frame" x="20" y="65" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Thought Guide" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drm-rq-0B7">
+                                <rect key="frame" x="82" y="20" width="156" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="For example: What adventure will I go on next week?" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="84O-LI-tRH">
+                                <rect key="frame" x="20" y="90" width="280" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZz-y1-gg8">
+                                <rect key="frame" x="213" y="179" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="M71-Qo-KpJ" kind="unwind" unwindAction="doneAddingThoughtGuide:" id="dWi-aB-1QF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZf-Uy-OvX">
+                                <rect key="frame" x="61" y="179" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="M71-Qo-KpJ" kind="unwind" unwindAction="cancelAddingThoughtGuide:" id="4Og-7W-NOp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Thought Guide" id="QcR-7u-quN">
+                        <barButtonItem key="leftBarButtonItem" title="Done" id="zuH-gW-RAJ">
+                            <connections>
+                                <segue destination="M71-Qo-KpJ" kind="unwind" unwindAction="doneAddingThoughtGuide:" id="f5j-vx-FuX"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="7G5-6h-xmE">
+                            <connections>
+                                <segue destination="M71-Qo-KpJ" kind="unwind" unwindAction="cancelAddingThoughtGuide:" id="1B9-Qt-bJU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="thoughtGuideTextField" destination="Ikk-aK-L74" id="fPH-Nr-bB4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qz6-Nh-2HH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="M71-Qo-KpJ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="6024" y="78"/>
+        </scene>
+        <!--Thought Guide Table View Controller-->
         <scene sceneID="Gfy-v7-ro5">
             <objects>
-                <tableViewController id="sIZ-uA-zpK" customClass="BrainstormingQuestionsTableViewController" sceneMemberID="viewController">
+                <tableViewController id="sIZ-uA-zpK" customClass="ThoughtGuideTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="KEy-Eg-ivO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="386"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BrainstormingQuestionCell" textLabel="RPa-eC-Odu" rowHeight="70" style="IBUITableViewCellStyleDefault" id="1Os-W8-F0f">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ThoughtGuideCell" textLabel="RPa-eC-Odu" rowHeight="70" style="IBUITableViewCellStyleDefault" id="1Os-W8-F0f">
                                 <rect key="frame" x="0.0" y="22" width="320" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Os-W8-F0f" id="C4c-Bb-Oag">

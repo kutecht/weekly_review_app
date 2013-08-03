@@ -7,11 +7,13 @@
 //
 
 #import "Step11ViewController.h"
+#import "AddThoughtGuideViewController.h"
 
 @interface Step11ViewController ()
 @property (strong, nonatomic) TimeCountdown *timeCountdown;
 @property (weak, nonatomic) IBOutlet UILabel *timeCountdownLabel;
 @end
+
 
 @implementation Step11ViewController
 
@@ -43,8 +45,6 @@
     self.timeCountdown.delegate = self;
     
     [self logDateTime];;
-    // TODO: remove debug code
-    NSLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -84,4 +84,16 @@
     sender.selected = !sender.selected;
 }
 
+- (IBAction)doneAddingThoughtGuide:(UIStoryboardSegue *)segue
+{
+    if ([[segue sourceViewController] isKindOfClass:[AddThoughtGuideViewController class]])
+    {
+        AddThoughtGuideViewController *addGuideViewController = (AddThoughtGuideViewController *)[segue sourceViewController];
+        NSLog(@"You added guide: %@", addGuideViewController.thoughtGuideTextField.text);
+    }
+}
+
+- (IBAction)cancelAddingThoughtGuide:(UIStoryboardSegue *)segue
+{
+}
 @end

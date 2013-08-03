@@ -13,7 +13,7 @@ extern NSString *const WRConstantsLogKey;
 extern NSString *const WRConstantsStepDurationInMinKey;
 
 // Dictionary strings
-extern NSString *const WRConstantsBrainstormingQuestionKey;
+extern NSString *const WRConstantsThoughtGuideKey;
 extern NSString *const WRConstantsTriggerGroupKey;
 extern NSString *const WRConstantsTriggerKey;
 extern NSString *const WRConstantsTriggerIdKey;
@@ -28,6 +28,6 @@ extern NSString *const WRConstantsRelationshipGroupTitleKey;
 @interface WRConstants : NSObject
 
 + (NSArray *)defaultTriggerList;
-+ (NSArray *)defaultBrainstormingQuestions;
++ (NSArray *)defaultThoughtGuides;
 
 @end
