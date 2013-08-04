@@ -41,8 +41,23 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)logDateTime
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *log = [[defaults objectForKey:WRConstantsLogKey] mutableCopy];
+    if (!log) log = [NSMutableArray array];
+    [log addObject:[NSDate date]];
+    [defaults setObject:log forKey:WRConstantsLogKey];
+    [defaults synchronize];
+}
+
 - (IBAction)doneWithInfo:(UIStoryboardSegue *)segue
 {
+}
+
+- (IBAction)doneWithWeeklyReview:(UIStoryboardSegue *)segue
+{
+    [self logDateTime];
 }
 
 

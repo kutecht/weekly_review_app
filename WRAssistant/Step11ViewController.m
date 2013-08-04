@@ -21,15 +21,6 @@ static NSString *const kSegueShowThoughtGuideTable = @"showThoughtGuideTable";
 @implementation Step11ViewController
 
 
-- (void)logDateTime
-{
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSMutableArray *log = [[defaults objectForKey:WRConstantsLogKey] mutableCopy];
-    if (!log) log = [NSMutableArray array];
-    [log addObject:[NSDate date]];
-    [defaults setObject:log forKey:WRConstantsLogKey];
-    [defaults synchronize];
-}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,8 +37,6 @@ static NSString *const kSegueShowThoughtGuideTable = @"showThoughtGuideTable";
     
     self.timeCountdown = [[TimeCountdown alloc] init];
     self.timeCountdown.delegate = self;
-    
-    [self logDateTime];;
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
