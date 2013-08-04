@@ -7,13 +7,16 @@
 //
 
 #import "Step11ViewController.h"
+#import "ThoughtGuideTableViewController.h"
 #import "AddThoughtGuideViewController.h"
 
 @interface Step11ViewController ()
 @property (strong, nonatomic) TimeCountdown *timeCountdown;
 @property (weak, nonatomic) IBOutlet UILabel *timeCountdownLabel;
+@property (strong, nonatomic) ThoughtGuideTableViewController *thoughtGuideTVC;
 @end
 
+static NSString *const kSegueShowThoughtGuideTable = @"showThoughtGuideTable";
 
 @implementation Step11ViewController
 
@@ -46,6 +49,18 @@
     
     [self logDateTime];;
 }
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:kSegueShowThoughtGuideTable])
+    {
+        if ([segue.destinationViewController isKindOfClass:[ThoughtGuideTableViewController class]])
+        {
+            self.thoughtGuideTVC = segue.destinationViewController;
+        }
+    }
+}
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -89,7 +104,7 @@
     if ([[segue sourceViewController] isKindOfClass:[AddThoughtGuideViewController class]])
     {
         AddThoughtGuideViewController *addGuideViewController = (AddThoughtGuideViewController *)[segue sourceViewController];
-        NSLog(@"You added guide: %@", addGuideViewController.thoughtGuideTextField.text);
+        [self.thoughtGuideTVC addThoughtGuide:addGuideViewController.thoughtGuideTextField.text];
     }
 }
 

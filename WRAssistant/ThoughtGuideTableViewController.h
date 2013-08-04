@@ -10,4 +10,6 @@
 
 @interface ThoughtGuideTableViewController : UITableViewController
 
+- (void)addThoughtGuide:(NSString *)message;
+
 @end

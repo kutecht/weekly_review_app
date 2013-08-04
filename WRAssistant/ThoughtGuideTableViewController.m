@@ -93,6 +93,14 @@ static NSString *const kTableCellIdThoughtGuide = @"ThoughtGuideCell";
     }   
 }
 
+- (void)addThoughtGuide:(NSString *)message
+{
+    [self.guides addObject:@{WRConstantsThoughtGuideKey: message}];
+    [self.tableView reloadData];
+}
+
+
+
 /*
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath

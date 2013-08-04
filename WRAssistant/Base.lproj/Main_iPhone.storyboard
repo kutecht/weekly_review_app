@@ -909,7 +909,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="sIZ-uA-zpK" kind="embed" identifier="showAddThoughtGuide" id="U8s-dw-TK1"/>
+                                    <segue destination="sIZ-uA-zpK" kind="embed" identifier="showThoughtGuideTable" id="U8s-dw-TK1"/>
                                 </connections>
                             </containerView>
                         </subviews>
