@@ -7,11 +7,19 @@
 //
 
 #import "Step3ViewController.h"
+#import "TriggerListTableViewController.h"
+#import "AddTriggerViewController.h"
 
 @interface Step3ViewController ()
 @property (strong, nonatomic) TimeCountdown *timeCountdown;
 @property (weak, nonatomic) IBOutlet UILabel *timeCountdownLabel;
+@property (strong, nonatomic) TriggerListTableViewController *triggerTVC;
 @end
+
+
+static NSString *const kSegueShowTriggerList = @"showTriggerList";
+static NSString *const kSegueShowAddTrigger = @"showAddTrigger";
+
 
 @implementation Step3ViewController
 
@@ -43,6 +51,25 @@
     }
 }
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:kSegueShowTriggerList])
+    {
+        if ([segue.destinationViewController isKindOfClass:[TriggerListTableViewController class]])
+        {
+            self.triggerTVC = segue.destinationViewController;
+        }
+    }
+    if ([segue.identifier isEqualToString:kSegueShowAddTrigger])
+    {
+        if ([segue.destinationViewController isKindOfClass:[AddTriggerViewController class]])
+        {
+            AddTriggerViewController *addTriggerController = (AddTriggerViewController *)[segue destinationViewController];
+            addTriggerController.sections = self.triggerTVC.sections;
+        }
+    }
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -67,6 +94,23 @@
     
     // toggle selected state
     sender.selected = !sender.selected;
+}
+
+
+
+- (IBAction)doneAddingTrigger:(UIStoryboardSegue *)segue
+{
+    if ([[segue sourceViewController] isKindOfClass:[AddTriggerViewController class]])
+    {
+        AddTriggerViewController *addTriggerController = (AddTriggerViewController *)[segue sourceViewController];
+        [self.triggerTVC addTrigger:@{WRConstantsTriggerKey:addTriggerController.trigger,
+                                      WRConstantsTriggerGroupKey:addTriggerController.section}];
+    }
+    
+}
+
+- (IBAction)cancelAddingTrigger:(UIStoryboardSegue *)segue
+{
 }
 
 @end

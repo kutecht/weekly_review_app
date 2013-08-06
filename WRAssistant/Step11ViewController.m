@@ -16,7 +16,7 @@
 @property (strong, nonatomic) ThoughtGuideTableViewController *thoughtGuideTVC;
 @end
 
-static NSString *const kSegueShowThoughtGuideTable = @"showThoughtGuideTable";
+static NSString *const kSegueShowThoughtGuideTable = @"showThoughtGuideList";
 
 @implementation Step11ViewController
 
@@ -93,7 +93,7 @@ static NSString *const kSegueShowThoughtGuideTable = @"showThoughtGuideTable";
     if ([[segue sourceViewController] isKindOfClass:[AddThoughtGuideViewController class]])
     {
         AddThoughtGuideViewController *addGuideViewController = (AddThoughtGuideViewController *)[segue sourceViewController];
-        [self.thoughtGuideTVC addThoughtGuide:addGuideViewController.thoughtGuideTextField.text];
+        [self.thoughtGuideTVC addThoughtGuide:addGuideViewController.thoughtGuide];
     }
 }
 

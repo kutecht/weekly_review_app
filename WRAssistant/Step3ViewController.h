@@ -11,4 +11,6 @@
 
 @interface Step3ViewController : UIViewController <TimeCountdownDelegate>
 
+@property (strong, nonatomic) NSArray *sections;
+
 @end

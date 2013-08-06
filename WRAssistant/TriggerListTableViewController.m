@@ -161,6 +161,11 @@ static NSString *const kTableCellIdTrigger = @"TriggerCell";
     }
 }
 
+- (NSArray *)sections
+{
+    return [self.fetchedResultsController sections];
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -266,6 +271,13 @@ static NSString *const kTableCellIdTrigger = @"TriggerCell";
     } else {
         [self performSelector:@selector(endSuspensionOfUpdatesDueToContextChanges) withObject:0 afterDelay:0];
     }
+}
+
+- (void)addTrigger:(NSDictionary *)trigger
+{
+    [self.managedObjectContext performBlock:^{
+            [Trigger triggerWithInfo:trigger  inManagedObjectContex:self.managedObjectContext];
+    }];
 }
 
 

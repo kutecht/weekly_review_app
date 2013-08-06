@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface AddThoughtGuideViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextField *thoughtGuideTextField;
+@property (nonatomic, readonly) NSString *thoughtGuide;
 @end

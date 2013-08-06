@@ -37,6 +37,7 @@
 		6820F1201795ECDD00332A80 /* Step10ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820F11F1795ECDD00332A80 /* Step10ViewController.m */; };
 		6820F1231795ECEC00332A80 /* Step11ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820F1221795ECEC00332A80 /* Step11ViewController.m */; };
 		682C397B179C7AB10011EC0D /* TriggerList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 682C3979179C7AB10011EC0D /* TriggerList.xcdatamodeld */; };
+		68301DE217B04C05009DA35B /* AddTriggerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68301DE117B04C05009DA35B /* AddTriggerViewController.m */; };
 		6840AB2217A0A80A0067D4C9 /* Trigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6840AB2117A0A80A0067D4C9 /* Trigger.m */; };
 		6840AB2517A0A80B0067D4C9 /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 6840AB2417A0A80B0067D4C9 /* Group.m */; };
 		6840AB2717A0C6C90067D4C9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6840AB2617A0C6C90067D4C9 /* CoreData.framework */; };
@@ -112,6 +113,8 @@
 		6820F1211795ECEC00332A80 /* Step11ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step11ViewController.h; sourceTree = "<group>"; };
 		6820F1221795ECEC00332A80 /* Step11ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step11ViewController.m; sourceTree = "<group>"; };
 		682C397A179C7AB10011EC0D /* TriggerList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TriggerList.xcdatamodel; sourceTree = "<group>"; };
+		68301DE017B04C05009DA35B /* AddTriggerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTriggerViewController.h; sourceTree = "<group>"; };
+		68301DE117B04C05009DA35B /* AddTriggerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTriggerViewController.m; sourceTree = "<group>"; };
 		6840AB2017A0A80A0067D4C9 /* Trigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trigger.h; sourceTree = "<group>"; };
 		6840AB2117A0A80A0067D4C9 /* Trigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trigger.m; sourceTree = "<group>"; };
 		6840AB2317A0A80B0067D4C9 /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
@@ -270,6 +273,8 @@
 		68669CB817A9711B008167FE /* TriggerList */ = {
 			isa = PBXGroup;
 			children = (
+				68301DE017B04C05009DA35B /* AddTriggerViewController.h */,
+				68301DE117B04C05009DA35B /* AddTriggerViewController.m */,
 				68669CB217A96A2E008167FE /* TriggerListTableViewController.m */,
 				68669CB117A96A2E008167FE /* TriggerListTableViewController.h */,
 				682C3979179C7AB10011EC0D /* TriggerList.xcdatamodeld */,
@@ -543,6 +548,7 @@
 				6820F1231795ECEC00332A80 /* Step11ViewController.m in Sources */,
 				6806B8B617ACADFD007F7A37 /* ThoughtGuideTableViewController.m in Sources */,
 				6820F10E1795EC3F00332A80 /* Step4ViewController.m in Sources */,
+				68301DE217B04C05009DA35B /* AddTriggerViewController.m in Sources */,
 				6806B8B917ACB164007F7A37 /* AddThoughtGuideViewController.m in Sources */,
 				68CFBE8C17A86582002C6C6E /* EventTableViewController.m in Sources */,
 				689A07D617A9A2900087A9CC /* WRConstants.m in Sources */,
