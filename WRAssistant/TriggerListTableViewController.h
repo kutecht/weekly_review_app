@@ -49,7 +49,7 @@
 // Set to YES to get some debugging output in the console.
 @property BOOL debug;
 
-@property (nonatomic, readonly) NSArray *sections;
+@property (nonatomic, readonly) NSArray *triggerGroups;
 
 - (void)addTrigger:(NSDictionary *)trigger;
 

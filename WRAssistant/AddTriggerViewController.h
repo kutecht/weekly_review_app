@@ -10,8 +10,8 @@
 
 @interface AddTriggerViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate>
 
-// init sections prior to loading (preferrably in prepareForSegue)
-@property (nonatomic, strong) NSArray *sections;
+// init triggerGroups prior to loading (preferrably in prepareForSegue)
+@property (nonatomic, strong) NSArray *triggerGroups;
 
 // resulting added trigger information
 @property (nonatomic, readonly) NSString *trigger;

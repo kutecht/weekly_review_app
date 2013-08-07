@@ -21,8 +21,11 @@ NSString *const WRConstantsTriggerIdKey = @"trigger_id";
 // CoreData strings
 NSString *const WRConstantsTriggerGroupEntity = @"Group";
 NSString *const WRConstantsTriggerEntity = @"Trigger";
+NSString *const WRConstantsThoughtGuideEntity = @"ThoughtGuide";
 NSString *const WRConstantsTriggerListDoc = @"TriggerList";
+NSString *const WRConstantsThoughtGuidesDoc = @"ThoughtGuides";
 NSString *const WRConstantsRelationshipGroupTitleKey = @"group.title";
+NSString *const WRConstantsThoughtGuideTitleKey = @"title";
 
 // Trigger group title strings
 static NSString *const kTGAdministration = @"Administration";

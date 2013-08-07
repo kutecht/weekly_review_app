@@ -65,7 +65,7 @@ static NSString *const kSegueShowAddTrigger = @"showAddTrigger";
         if ([segue.destinationViewController isKindOfClass:[AddTriggerViewController class]])
         {
             AddTriggerViewController *addTriggerController = (AddTriggerViewController *)[segue destinationViewController];
-            addTriggerController.sections = self.triggerTVC.sections;
+            addTriggerController.triggerGroups = self.triggerTVC.triggerGroups;
         }
     }
 }

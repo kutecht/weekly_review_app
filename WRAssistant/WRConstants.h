@@ -21,8 +21,11 @@ extern NSString *const WRConstantsTriggerIdKey;
 // CoreData strings
 extern NSString *const WRConstantsTriggerGroupEntity;
 extern NSString *const WRConstantsTriggerEntity;
+extern NSString *const WRConstantsThoughtGuideEntity;
 extern NSString *const WRConstantsTriggerListDoc;
+extern NSString *const WRConstantsThoughtGuidesDoc;
 extern NSString *const WRConstantsRelationshipGroupTitleKey;
+extern NSString *const WRConstantsThoughtGuideTitleKey;
 
 
 @interface WRConstants : NSObject

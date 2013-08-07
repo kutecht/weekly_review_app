@@ -114,6 +114,18 @@ static NSString *const kTableCellIdTrigger = @"TriggerCell";
     }
 }
 
+- (NSArray *)triggerGroups
+{
+    return [self.fetchedResultsController sections];
+}
+
+- (void)addTrigger:(NSDictionary *)trigger
+{
+    [self.managedObjectContext performBlock:^{
+        [Trigger triggerWithInfo:trigger  inManagedObjectContex:self.managedObjectContext];
+    }];
+}
+
 //
 // Following is based on CS193P lecture #14 Feb. 2013 -- TODO: remove debug (instructor code) before ship, research what NSFetchRequest docs say to add
 //
@@ -159,11 +171,6 @@ static NSString *const kTableCellIdTrigger = @"TriggerCell";
             [self.tableView reloadData];
         }
     }
-}
-
-- (NSArray *)sections
-{
-    return [self.fetchedResultsController sections];
 }
 
 #pragma mark - UITableViewDataSource
@@ -271,13 +278,6 @@ static NSString *const kTableCellIdTrigger = @"TriggerCell";
     } else {
         [self performSelector:@selector(endSuspensionOfUpdatesDueToContextChanges) withObject:0 afterDelay:0];
     }
-}
-
-- (void)addTrigger:(NSDictionary *)trigger
-{
-    [self.managedObjectContext performBlock:^{
-            [Trigger triggerWithInfo:trigger  inManagedObjectContex:self.managedObjectContext];
-    }];
 }
 
 

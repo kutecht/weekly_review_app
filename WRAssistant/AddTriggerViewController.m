@@ -75,12 +75,12 @@
 
 // Total rows in our component.
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-    return [self.sections count];
+    return [self.triggerGroups count];
 }
 
 // Display each row's data.
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    return [[self.sections objectAtIndex:row] name];
+    return [[self.triggerGroups objectAtIndex:row] name];
 }
 
 - (void)checkIfDone
@@ -99,7 +99,7 @@
 // Do something with the selected row.
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    self.sectionTextField.text = [[self.sections objectAtIndex:row] name];
+    self.sectionTextField.text = [[self.triggerGroups objectAtIndex:row] name];
     [self.sectionTextField resignFirstResponder];
     [self checkIfDone];
 }
