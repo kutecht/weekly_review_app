@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddThoughtGuideViewController : UIViewController
+@interface AddThoughtGuideViewController : UIViewController <UITextFieldDelegate>
 @property (nonatomic, readonly) NSString *thoughtGuide;
 @end

@@ -10,6 +10,7 @@
 
 @interface AddThoughtGuideViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *thoughtGuideTextField;
+@property (weak, nonatomic) IBOutlet UIButton *doneButton;
 @end
 
 @implementation AddThoughtGuideViewController
@@ -28,6 +29,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.thoughtGuideTextField.text = nil;
+    self.doneButton.enabled = NO;
+    [self.thoughtGuideTextField becomeFirstResponder];
+    [self.thoughtGuideTextField setDelegate:self];
     [self.thoughtGuideTextField becomeFirstResponder];
 }
 
@@ -40,6 +44,27 @@
 - (NSString *)thoughtGuide
 {
     return self.thoughtGuideTextField.text;
+}
+
+- (void)checkIfDone
+{
+    if (self.thoughtGuideTextField.text)
+    {
+        self.doneButton.enabled = YES;
+    }
+    else
+    {
+        self.doneButton.enabled = NO;
+    }
+}
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)sender
+{
+    [sender resignFirstResponder];
+    [self checkIfDone];
+    
+    return YES;
 }
 
 

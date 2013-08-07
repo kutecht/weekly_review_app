@@ -1056,6 +1056,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="doneButton" destination="pZz-y1-gg8" id="p1J-Uc-KxB"/>
                         <outlet property="thoughtGuideTextField" destination="Ikk-aK-L74" id="fPH-Nr-bB4"/>
                     </connections>
                 </viewController>
@@ -1201,7 +1202,7 @@
                                 <rect key="frame" x="20" y="62" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r3Y-0P-W4u">
@@ -1221,6 +1222,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="doneButton" destination="kT8-OX-vf6" id="hXM-dM-QKI"/>
                         <outlet property="sectionTextField" destination="r3Y-0P-W4u" id="Tjo-va-RGf"/>
                         <outlet property="triggerTextField" destination="e2p-yW-sUu" id="tTQ-c7-MdL"/>
                     </connections>

@@ -36,10 +36,7 @@
 		6820F11D1795ECCA00332A80 /* Step9ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820F11C1795ECCA00332A80 /* Step9ViewController.m */; };
 		6820F1201795ECDD00332A80 /* Step10ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820F11F1795ECDD00332A80 /* Step10ViewController.m */; };
 		6820F1231795ECEC00332A80 /* Step11ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820F1221795ECEC00332A80 /* Step11ViewController.m */; };
-		682C397B179C7AB10011EC0D /* TriggerList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 682C3979179C7AB10011EC0D /* TriggerList.xcdatamodeld */; };
 		68301DE217B04C05009DA35B /* AddTriggerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68301DE117B04C05009DA35B /* AddTriggerViewController.m */; };
-		6840AB2217A0A80A0067D4C9 /* Trigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6840AB2117A0A80A0067D4C9 /* Trigger.m */; };
-		6840AB2517A0A80B0067D4C9 /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 6840AB2417A0A80B0067D4C9 /* Group.m */; };
 		6840AB2717A0C6C90067D4C9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6840AB2617A0C6C90067D4C9 /* CoreData.framework */; };
 		6859FCA11798F5840045D5CB /* TimeCountdown.m in Sources */ = {isa = PBXBuildFile; fileRef = 6859FCA01798F5840045D5CB /* TimeCountdown.m */; };
 		68669CB517A96A2E008167FE /* TriggerListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68669CB217A96A2E008167FE /* TriggerListTableViewController.m */; };
@@ -47,10 +44,13 @@
 		68884C7017A58E0F0063CF02 /* LogTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68884C6F17A58E0F0063CF02 /* LogTableViewController.m */; };
 		689A07D617A9A2900087A9CC /* WRConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 689A07D517A9A2900087A9CC /* WRConstants.m */; };
 		68A721651796406500BDA9EE /* UITopLeftLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A721641796406500BDA9EE /* UITopLeftLabel.m */; };
+		68BA01AF17B1DEA40097F704 /* WeeklyReview.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68BA01AD17B1DEA40097F704 /* WeeklyReview.xcdatamodeld */; };
 		68CD047B1799C80E00CDCB40 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 68CD047A1799C80E00CDCB40 /* Settings.bundle */; };
 		68CFBE8C17A86582002C6C6E /* EventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CFBE8A17A86582002C6C6E /* EventTableViewController.m */; };
 		68CFBE8F17A8688E002C6C6E /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68CFBE8D17A8688E002C6C6E /* EventKit.framework */; };
 		68CFBE9017A8688E002C6C6E /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68CFBE8E17A8688E002C6C6E /* EventKitUI.framework */; };
+		68FDE0C117B1E5F300A60A53 /* Trigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FDE0C017B1E5F300A60A53 /* Trigger.m */; };
+		68FDE0C417B1E5F300A60A53 /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FDE0C317B1E5F300A60A53 /* Group.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,13 +112,8 @@
 		6820F11F1795ECDD00332A80 /* Step10ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step10ViewController.m; sourceTree = "<group>"; };
 		6820F1211795ECEC00332A80 /* Step11ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step11ViewController.h; sourceTree = "<group>"; };
 		6820F1221795ECEC00332A80 /* Step11ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step11ViewController.m; sourceTree = "<group>"; };
-		682C397A179C7AB10011EC0D /* TriggerList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TriggerList.xcdatamodel; sourceTree = "<group>"; };
 		68301DE017B04C05009DA35B /* AddTriggerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTriggerViewController.h; sourceTree = "<group>"; };
 		68301DE117B04C05009DA35B /* AddTriggerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTriggerViewController.m; sourceTree = "<group>"; };
-		6840AB2017A0A80A0067D4C9 /* Trigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trigger.h; sourceTree = "<group>"; };
-		6840AB2117A0A80A0067D4C9 /* Trigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trigger.m; sourceTree = "<group>"; };
-		6840AB2317A0A80B0067D4C9 /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
-		6840AB2417A0A80B0067D4C9 /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
 		6840AB2617A0C6C90067D4C9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6859FC9F1798F5840045D5CB /* TimeCountdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeCountdown.h; path = ../../../TimeCountdown.h; sourceTree = "<group>"; };
 		6859FCA01798F5840045D5CB /* TimeCountdown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeCountdown.m; path = ../../../TimeCountdown.m; sourceTree = "<group>"; };
@@ -133,11 +128,16 @@
 		689A07D717A9A80C0087A9CC /* WRMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRMacros.h; sourceTree = "<group>"; };
 		68A721631796406500BDA9EE /* UITopLeftLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITopLeftLabel.h; sourceTree = "<group>"; };
 		68A721641796406500BDA9EE /* UITopLeftLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITopLeftLabel.m; sourceTree = "<group>"; };
+		68BA01AE17B1DEA40097F704 /* WeeklyReview.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeeklyReview.xcdatamodel; sourceTree = "<group>"; };
 		68CD047A1799C80E00CDCB40 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		68CFBE8A17A86582002C6C6E /* EventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewController.m; sourceTree = "<group>"; };
 		68CFBE8B17A86582002C6C6E /* EventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewController.h; sourceTree = "<group>"; };
 		68CFBE8D17A8688E002C6C6E /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		68CFBE8E17A8688E002C6C6E /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		68FDE0BF17B1E5F300A60A53 /* Trigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trigger.h; sourceTree = "<group>"; };
+		68FDE0C017B1E5F300A60A53 /* Trigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trigger.m; sourceTree = "<group>"; };
+		68FDE0C217B1E5F300A60A53 /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
+		68FDE0C317B1E5F300A60A53 /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +205,7 @@
 			children = (
 				6820F0E01795E9AA00332A80 /* Main_iPhone.storyboard */,
 				6820F0E31795E9AA00332A80 /* Main_iPad.storyboard */,
+				68BA01AD17B1DEA40097F704 /* WeeklyReview.xcdatamodeld */,
 				6820F0DD1795E9AA00332A80 /* Step1AppDelegate.h */,
 				6820F0DE1795E9AA00332A80 /* Step1AppDelegate.m */,
 				68669CB717A970CF008167FE /* Common */,
@@ -277,7 +278,6 @@
 				68301DE117B04C05009DA35B /* AddTriggerViewController.m */,
 				68669CB217A96A2E008167FE /* TriggerListTableViewController.m */,
 				68669CB117A96A2E008167FE /* TriggerListTableViewController.h */,
-				682C3979179C7AB10011EC0D /* TriggerList.xcdatamodeld */,
 				6812A77C179EDDDC007609DC /* Trigger+Create.h */,
 				6812A77D179EDDDC007609DC /* Trigger+Create.m */,
 				6812A779179EDD86007609DC /* Group+Create.h */,
@@ -290,10 +290,10 @@
 		68669CB917A9713A008167FE /* Autogenerated */ = {
 			isa = PBXGroup;
 			children = (
-				6840AB2417A0A80B0067D4C9 /* Group.m */,
-				6840AB2317A0A80B0067D4C9 /* Group.h */,
-				6840AB2017A0A80A0067D4C9 /* Trigger.h */,
-				6840AB2117A0A80A0067D4C9 /* Trigger.m */,
+				68FDE0C217B1E5F300A60A53 /* Group.h */,
+				68FDE0C317B1E5F300A60A53 /* Group.m */,
+				68FDE0BF17B1E5F300A60A53 /* Trigger.h */,
+				68FDE0C017B1E5F300A60A53 /* Trigger.m */,
 			);
 			name = Autogenerated;
 			sourceTree = "<group>";
@@ -531,23 +531,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68BA01AF17B1DEA40097F704 /* WeeklyReview.xcdatamodeld in Sources */,
 				6820F0DF1795E9AA00332A80 /* Step1AppDelegate.m in Sources */,
 				6812A77E179EDDDC007609DC /* Trigger+Create.m in Sources */,
 				68669CB517A96A2E008167FE /* TriggerListTableViewController.m in Sources */,
 				6820F1171795EC9800332A80 /* Step7ViewController.m in Sources */,
-				6840AB2217A0A80A0067D4C9 /* Trigger.m in Sources */,
 				68669CB617A96A2E008167FE /* ReminderTableViewController.m in Sources */,
 				6820F1141795EC8700332A80 /* Step6ViewController.m in Sources */,
 				6859FCA11798F5840045D5CB /* TimeCountdown.m in Sources */,
 				68A721651796406500BDA9EE /* UITopLeftLabel.m in Sources */,
 				6820F1081795EBF800332A80 /* Step2ViewController.m in Sources */,
-				682C397B179C7AB10011EC0D /* TriggerList.xcdatamodeld in Sources */,
 				6820F11D1795ECCA00332A80 /* Step9ViewController.m in Sources */,
 				6820F10B1795EC2800332A80 /* Step3ViewController.m in Sources */,
-				6840AB2517A0A80B0067D4C9 /* Group.m in Sources */,
 				6820F1231795ECEC00332A80 /* Step11ViewController.m in Sources */,
 				6806B8B617ACADFD007F7A37 /* ThoughtGuideTableViewController.m in Sources */,
 				6820F10E1795EC3F00332A80 /* Step4ViewController.m in Sources */,
+				68FDE0C117B1E5F300A60A53 /* Trigger.m in Sources */,
 				68301DE217B04C05009DA35B /* AddTriggerViewController.m in Sources */,
 				6806B8B917ACB164007F7A37 /* AddThoughtGuideViewController.m in Sources */,
 				68CFBE8C17A86582002C6C6E /* EventTableViewController.m in Sources */,
@@ -555,6 +554,7 @@
 				6820F0DB1795E9AA00332A80 /* main.m in Sources */,
 				68884C7017A58E0F0063CF02 /* LogTableViewController.m in Sources */,
 				6820F0E81795E9AA00332A80 /* Step1ViewController.m in Sources */,
+				68FDE0C417B1E5F300A60A53 /* Group.m in Sources */,
 				6820F1201795ECDD00332A80 /* Step10ViewController.m in Sources */,
 				6820F1111795EC6C00332A80 /* Step5ViewController.m in Sources */,
 				6812A77B179EDD86007609DC /* Group+Create.m in Sources */,
@@ -785,13 +785,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		682C3979179C7AB10011EC0D /* TriggerList.xcdatamodeld */ = {
+		68BA01AD17B1DEA40097F704 /* WeeklyReview.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				682C397A179C7AB10011EC0D /* TriggerList.xcdatamodel */,
+				68BA01AE17B1DEA40097F704 /* WeeklyReview.xcdatamodel */,
 			);
-			currentVersion = 682C397A179C7AB10011EC0D /* TriggerList.xcdatamodel */;
-			path = TriggerList.xcdatamodeld;
+			currentVersion = 68BA01AE17B1DEA40097F704 /* WeeklyReview.xcdatamodel */;
+			path = WeeklyReview.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

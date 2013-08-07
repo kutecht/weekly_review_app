@@ -11,6 +11,7 @@
 @interface AddTriggerViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *triggerTextField;
 @property (weak, nonatomic) IBOutlet UITextField *sectionTextField;
+@property (weak, nonatomic) IBOutlet UIButton *doneButton;
 @property (nonatomic, strong) UIPickerView *pickerView;
 @end
 
@@ -22,9 +23,6 @@
     if (!_pickerView)
     {
         _pickerView = [[UIPickerView alloc] init];
-#if 0
-    initWithFrame:CGRectMake(0.0f, 480.0f, 320.0f, 270.0f)];
-#endif
     }
     
     return _pickerView;
@@ -44,10 +42,11 @@
     [super viewDidLoad];
 
     self.triggerTextField.text = nil;
+    self.sectionTextField.text = nil;
+    self.doneButton.enabled = NO;
     [self.triggerTextField becomeFirstResponder];
     [self.triggerTextField setDelegate:self];
     [self.sectionTextField setDelegate:self];
-    self.sectionTextField.text = nil;
     [self.pickerView setDataSource:self];
     [self.pickerView setDelegate:self];    
     [self.sectionTextField setInputAccessoryView:self.pickerView];
@@ -70,31 +69,45 @@
 }
 
 // Number of components.
--(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return 1;
 }
 
 // Total rows in our component.
--(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     return [self.sections count];
 }
 
 // Display each row's data.
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     return [[self.sections objectAtIndex:row] name];
 }
+
+- (void)checkIfDone
+{
+    if (self.triggerTextField.text && self.sectionTextField)
+    {
+        self.doneButton.enabled = YES;
+    }
+    else
+    {
+        self.doneButton.enabled = NO;
+    }
+}
+
 
 // Do something with the selected row.
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    NSLog(@"You selected this: %@", [[self.sections objectAtIndex:row] name]);
     self.sectionTextField.text = [[self.sections objectAtIndex:row] name];
     [self.sectionTextField resignFirstResponder];
+    [self checkIfDone];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)sender
 {
     [sender resignFirstResponder];
+    [self checkIfDone];
     
     return YES;
 }
