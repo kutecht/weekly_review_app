@@ -30,8 +30,7 @@
         
         if (!matches || ([matches count] > 1))
         {
-            // handle error
-            NSLog(@"Error: Thought group fetch match result was unexpected");
+            NSLog(@"Error: ThoughtGuide fetch result was unexpected");
         }
         else if (![matches count])
         {
@@ -45,7 +44,7 @@
     }
     
     return thoughtGuide;
-    
 }
+
 
 @end
