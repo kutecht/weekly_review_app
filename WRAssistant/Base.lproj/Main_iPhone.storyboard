@@ -48,7 +48,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="toggleTimeCountdown:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nbT-PU-IUt"/>
+                                    <action selector="toggleTimeCountdown:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="UyN-vg-dVy"/>
                                 </connections>
                             </button>
                             <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xJS-cg-b3Q">
@@ -87,7 +87,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="1" id="rxz-h9-twa"/>
                     <connections>
-                        <outlet property="timeCountdownLabel" destination="Af3-xa-kal" id="XGZ-bz-FJq"/>
+                        <outlet property="timeCountdownLabel" destination="Af3-xa-kal" id="aKy-xZ-pBp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

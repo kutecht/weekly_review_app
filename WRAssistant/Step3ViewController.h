@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TimeCountdown.h"
+#import "WRStepViewController.h"
 
-@interface Step3ViewController : UIViewController <TimeCountdownDelegate>
 
-@property (strong, nonatomic) NSArray *sections;
+@interface Step3ViewController : WRStepViewController
 
 @end

@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TimeCountdown.h"
+#import "WRStepViewController.h"
 
-@interface Step4ViewController : UIViewController <TimeCountdownDelegate>
+@interface Step4ViewController : WRStepViewController
 
 @end

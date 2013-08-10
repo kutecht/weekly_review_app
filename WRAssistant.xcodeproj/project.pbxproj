@@ -36,6 +36,7 @@
 		6820F11D1795ECCA00332A80 /* Step9ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820F11C1795ECCA00332A80 /* Step9ViewController.m */; };
 		6820F1201795ECDD00332A80 /* Step10ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820F11F1795ECDD00332A80 /* Step10ViewController.m */; };
 		6820F1231795ECEC00332A80 /* Step11ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820F1221795ECEC00332A80 /* Step11ViewController.m */; };
+		6821575417B6C1B60000E1A1 /* WRStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6821575317B6C1B60000E1A1 /* WRStepViewController.m */; };
 		68301DE217B04C05009DA35B /* AddTriggerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68301DE117B04C05009DA35B /* AddTriggerViewController.m */; };
 		6831668A17B2A81D00BABF39 /* ThoughtGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831668917B2A81D00BABF39 /* ThoughtGuide.m */; };
 		6831668D17B2A99100BABF39 /* ThoughtGuide+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831668C17B2A99100BABF39 /* ThoughtGuide+Create.m */; };
@@ -114,6 +115,8 @@
 		6820F11F1795ECDD00332A80 /* Step10ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step10ViewController.m; sourceTree = "<group>"; };
 		6820F1211795ECEC00332A80 /* Step11ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step11ViewController.h; sourceTree = "<group>"; };
 		6820F1221795ECEC00332A80 /* Step11ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step11ViewController.m; sourceTree = "<group>"; };
+		6821575217B6C1B60000E1A1 /* WRStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRStepViewController.h; sourceTree = "<group>"; };
+		6821575317B6C1B60000E1A1 /* WRStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRStepViewController.m; sourceTree = "<group>"; };
 		68301DE017B04C05009DA35B /* AddTriggerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTriggerViewController.h; sourceTree = "<group>"; };
 		68301DE117B04C05009DA35B /* AddTriggerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTriggerViewController.m; sourceTree = "<group>"; };
 		6831668817B2A81D00BABF39 /* ThoughtGuide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThoughtGuide.h; sourceTree = "<group>"; };
@@ -267,6 +270,8 @@
 			children = (
 				6820F0DD1795E9AA00332A80 /* WRAppDelegate.h */,
 				6820F0DE1795E9AA00332A80 /* WRAppDelegate.m */,
+				6821575217B6C1B60000E1A1 /* WRStepViewController.h */,
+				6821575317B6C1B60000E1A1 /* WRStepViewController.m */,
 				68A721631796406500BDA9EE /* UITopLeftLabel.h */,
 				68A721641796406500BDA9EE /* UITopLeftLabel.m */,
 				6859FC9F1798F5840045D5CB /* TimeCountdown.h */,
@@ -536,6 +541,7 @@
 				68BA01AF17B1DEA40097F704 /* WeeklyReview.xcdatamodeld in Sources */,
 				6820F0DF1795E9AA00332A80 /* WRAppDelegate.m in Sources */,
 				6812A77E179EDDDC007609DC /* Trigger+Create.m in Sources */,
+				6821575417B6C1B60000E1A1 /* WRStepViewController.m in Sources */,
 				68669CB517A96A2E008167FE /* TriggerListTableViewController.m in Sources */,
 				6820F1171795EC9800332A80 /* Step7ViewController.m in Sources */,
 				68669CB617A96A2E008167FE /* ReminderTableViewController.m in Sources */,

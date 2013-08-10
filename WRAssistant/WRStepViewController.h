@@ -1,5 +1,5 @@
 //
-//  Step8ViewController.h
+//  WRStepViewController.h
 //  WRAssistant
 //
 //  Created by Kevin Utecht on 7/16/13.
@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WRStepViewController.h"
+#import "TimeCountdown.h"
 
-@interface Step8ViewController : WRStepViewController
+@interface WRStepViewController : UIViewController <TimeCountdownDelegate>
 
 @end

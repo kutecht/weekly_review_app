@@ -11,8 +11,6 @@
 #import "AddThoughtGuideViewController.h"
 
 @interface Step11ViewController ()
-@property (strong, nonatomic) TimeCountdown *timeCountdown;
-@property (weak, nonatomic) IBOutlet UILabel *timeCountdownLabel;
 @property (strong, nonatomic) ThoughtGuideTableViewController *thoughtGuideTVC;
 @end
 
@@ -35,8 +33,7 @@ static NSString *const kSegueShowThoughtGuideTable = @"showThoughtGuideList";
 {
     [super viewDidLoad];
     
-    self.timeCountdown = [[TimeCountdown alloc] init];
-    self.timeCountdown.delegate = self;
+
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -55,37 +52,12 @@ static NSString *const kSegueShowThoughtGuideTable = @"showThoughtGuideList";
 {
     [super viewWillAppear:animated];
     
-    if ([self.timeCountdown isStopped])
-    {
-        self.timeCountdown.minutes = [[NSUserDefaults standardUserDefaults] integerForKey:WRConstantsStepDurationInMinKey];
-        self.timeCountdownLabel.text = self.timeCountdown.time;
-    }
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)timeChanged:(NSString *)time
-{
-    self.timeCountdownLabel.text = time;
-}
-
-- (IBAction)toggleTimeCountdown:(UIButton *)sender
-{
-    if (!sender.selected)
-    {
-        [self.timeCountdown start];
-    }
-    else
-    {
-        [self.timeCountdown stop];
-    }
-    
-    // toggle selected state
-    sender.selected = !sender.selected;
 }
 
 - (IBAction)doneAddingThoughtGuide:(UIStoryboardSegue *)segue
@@ -100,4 +72,5 @@ static NSString *const kSegueShowThoughtGuideTable = @"showThoughtGuideList";
 - (IBAction)cancelAddingThoughtGuide:(UIStoryboardSegue *)segue
 {
 }
+
 @end
