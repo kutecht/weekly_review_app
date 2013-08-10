@@ -20,19 +20,15 @@
 {
     [super viewDidLoad];
     
-    self.timeCountdown = [[TimeCountdown alloc] init];
+    self.timeCountdown = [[TimeCountdown alloc]
+                          initWithDurationInMinutes:[[NSUserDefaults standardUserDefaults] integerForKey:WRConstantsStepDurationInMinKey]];
+    self.timeCountdownLabel.text = [self.timeCountdown description];
     self.timeCountdown.delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    if ([self.timeCountdown isStopped])
-    {
-        self.timeCountdown.minutes = [[NSUserDefaults standardUserDefaults] integerForKey:WRConstantsStepDurationInMinKey];
-        self.timeCountdownLabel.text = self.timeCountdown.time;
-    }
 }
 
 - (void)didReceiveMemoryWarning

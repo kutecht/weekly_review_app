@@ -41,7 +41,7 @@
 		6831668A17B2A81D00BABF39 /* ThoughtGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831668917B2A81D00BABF39 /* ThoughtGuide.m */; };
 		6831668D17B2A99100BABF39 /* ThoughtGuide+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831668C17B2A99100BABF39 /* ThoughtGuide+Create.m */; };
 		6840AB2717A0C6C90067D4C9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6840AB2617A0C6C90067D4C9 /* CoreData.framework */; };
-		6859FCA11798F5840045D5CB /* TimeCountdown.m in Sources */ = {isa = PBXBuildFile; fileRef = 6859FCA01798F5840045D5CB /* TimeCountdown.m */; };
+		685240B017B6D93400BBE97E /* TimeCountdown.m in Sources */ = {isa = PBXBuildFile; fileRef = 685240AF17B6D93400BBE97E /* TimeCountdown.m */; };
 		68669CB517A96A2E008167FE /* TriggerListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68669CB217A96A2E008167FE /* TriggerListTableViewController.m */; };
 		68669CB617A96A2E008167FE /* ReminderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68669CB317A96A2E008167FE /* ReminderTableViewController.m */; };
 		68884C7017A58E0F0063CF02 /* LogTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68884C6F17A58E0F0063CF02 /* LogTableViewController.m */; };
@@ -124,8 +124,8 @@
 		6831668B17B2A99100BABF39 /* ThoughtGuide+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ThoughtGuide+Create.h"; sourceTree = "<group>"; };
 		6831668C17B2A99100BABF39 /* ThoughtGuide+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ThoughtGuide+Create.m"; sourceTree = "<group>"; };
 		6840AB2617A0C6C90067D4C9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		6859FC9F1798F5840045D5CB /* TimeCountdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeCountdown.h; path = ../../../TimeCountdown.h; sourceTree = "<group>"; };
-		6859FCA01798F5840045D5CB /* TimeCountdown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeCountdown.m; path = ../../../TimeCountdown.m; sourceTree = "<group>"; };
+		685240AE17B6D93400BBE97E /* TimeCountdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeCountdown.h; sourceTree = "<group>"; };
+		685240AF17B6D93400BBE97E /* TimeCountdown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeCountdown.m; sourceTree = "<group>"; };
 		68669CB117A96A2E008167FE /* TriggerListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TriggerListTableViewController.h; sourceTree = "<group>"; };
 		68669CB217A96A2E008167FE /* TriggerListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TriggerListTableViewController.m; sourceTree = "<group>"; };
 		68669CB317A96A2E008167FE /* ReminderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderTableViewController.m; sourceTree = "<group>"; };
@@ -272,10 +272,10 @@
 				6820F0DE1795E9AA00332A80 /* WRAppDelegate.m */,
 				6821575217B6C1B60000E1A1 /* WRStepViewController.h */,
 				6821575317B6C1B60000E1A1 /* WRStepViewController.m */,
+				685240AE17B6D93400BBE97E /* TimeCountdown.h */,
+				685240AF17B6D93400BBE97E /* TimeCountdown.m */,
 				68A721631796406500BDA9EE /* UITopLeftLabel.h */,
 				68A721641796406500BDA9EE /* UITopLeftLabel.m */,
-				6859FC9F1798F5840045D5CB /* TimeCountdown.h */,
-				6859FCA01798F5840045D5CB /* TimeCountdown.m */,
 				689A07D417A9A2900087A9CC /* WRConstants.h */,
 				689A07D517A9A2900087A9CC /* WRConstants.m */,
 				689A07D717A9A80C0087A9CC /* WRMacros.h */,
@@ -546,7 +546,6 @@
 				6820F1171795EC9800332A80 /* Step7ViewController.m in Sources */,
 				68669CB617A96A2E008167FE /* ReminderTableViewController.m in Sources */,
 				6820F1141795EC8700332A80 /* Step6ViewController.m in Sources */,
-				6859FCA11798F5840045D5CB /* TimeCountdown.m in Sources */,
 				6831668A17B2A81D00BABF39 /* ThoughtGuide.m in Sources */,
 				68A721651796406500BDA9EE /* UITopLeftLabel.m in Sources */,
 				6820F1081795EBF800332A80 /* Step2ViewController.m in Sources */,
@@ -567,6 +566,7 @@
 				68FDE0C417B1E5F300A60A53 /* Group.m in Sources */,
 				6820F1201795ECDD00332A80 /* Step10ViewController.m in Sources */,
 				6820F1111795EC6C00332A80 /* Step5ViewController.m in Sources */,
+				685240B017B6D93400BBE97E /* TimeCountdown.m in Sources */,
 				6812A77B179EDD86007609DC /* Group+Create.m in Sources */,
 				6820F11A1795ECAF00332A80 /* Step8ViewController.m in Sources */,
 			);
