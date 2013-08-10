@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "Step1AppDelegate.h"
+#import "WRAppDelegate.h"
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([Step1AppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([WRAppDelegate class]));
     }
 }

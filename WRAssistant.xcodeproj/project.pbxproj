@@ -16,7 +16,7 @@
 		6820F0D31795E9AA00332A80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6820F0D21795E9AA00332A80 /* UIKit.framework */; };
 		6820F0D91795E9AA00332A80 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6820F0D71795E9AA00332A80 /* InfoPlist.strings */; };
 		6820F0DB1795E9AA00332A80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820F0DA1795E9AA00332A80 /* main.m */; };
-		6820F0DF1795E9AA00332A80 /* Step1AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820F0DE1795E9AA00332A80 /* Step1AppDelegate.m */; };
+		6820F0DF1795E9AA00332A80 /* WRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820F0DE1795E9AA00332A80 /* WRAppDelegate.m */; };
 		6820F0E21795E9AA00332A80 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6820F0E01795E9AA00332A80 /* Main_iPhone.storyboard */; };
 		6820F0E51795E9AA00332A80 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6820F0E31795E9AA00332A80 /* Main_iPad.storyboard */; };
 		6820F0E81795E9AA00332A80 /* Step1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6820F0E71795E9AA00332A80 /* Step1ViewController.m */; };
@@ -82,8 +82,8 @@
 		6820F0D81795E9AA00332A80 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6820F0DA1795E9AA00332A80 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6820F0DC1795E9AA00332A80 /* WRAssistant-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WRAssistant-Prefix.pch"; sourceTree = "<group>"; };
-		6820F0DD1795E9AA00332A80 /* Step1AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Step1AppDelegate.h; sourceTree = "<group>"; };
-		6820F0DE1795E9AA00332A80 /* Step1AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Step1AppDelegate.m; sourceTree = "<group>"; };
+		6820F0DD1795E9AA00332A80 /* WRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRAppDelegate.h; sourceTree = "<group>"; };
+		6820F0DE1795E9AA00332A80 /* WRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRAppDelegate.m; sourceTree = "<group>"; };
 		6820F0E11795E9AA00332A80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		6820F0E41795E9AA00332A80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		6820F0E61795E9AA00332A80 /* Step1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Step1ViewController.h; sourceTree = "<group>"; };
@@ -265,8 +265,8 @@
 		68669CB717A970CF008167FE /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				6820F0DD1795E9AA00332A80 /* Step1AppDelegate.h */,
-				6820F0DE1795E9AA00332A80 /* Step1AppDelegate.m */,
+				6820F0DD1795E9AA00332A80 /* WRAppDelegate.h */,
+				6820F0DE1795E9AA00332A80 /* WRAppDelegate.m */,
 				68A721631796406500BDA9EE /* UITopLeftLabel.h */,
 				68A721641796406500BDA9EE /* UITopLeftLabel.m */,
 				6859FC9F1798F5840045D5CB /* TimeCountdown.h */,
@@ -534,7 +534,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68BA01AF17B1DEA40097F704 /* WeeklyReview.xcdatamodeld in Sources */,
-				6820F0DF1795E9AA00332A80 /* Step1AppDelegate.m in Sources */,
+				6820F0DF1795E9AA00332A80 /* WRAppDelegate.m in Sources */,
 				6812A77E179EDDDC007609DC /* Trigger+Create.m in Sources */,
 				68669CB517A96A2E008167FE /* TriggerListTableViewController.m in Sources */,
 				6820F1171795EC9800332A80 /* Step7ViewController.m in Sources */,
