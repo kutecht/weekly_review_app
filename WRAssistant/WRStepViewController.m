@@ -12,7 +12,10 @@
 @interface WRStepViewController ()
 @property (strong, nonatomic) TimeCountdown *timeCountdown;
 @property (weak, nonatomic) IBOutlet UILabel *timeCountdownLabel;
+@property (weak, nonatomic) IBOutlet UIButton *goButton;
 @end
+
+
 
 @implementation WRStepViewController
 
@@ -40,6 +43,10 @@
 - (void)timeChanged:(NSString *)time
 {
     self.timeCountdownLabel.text = time;
+    if ([time isEqualToString:TimeCountdownTimesUp])
+    {
+        self.goButton.enabled = NO;
+    }
 }
 
 - (IBAction)toggleTimeCountdown:(UIButton *)sender

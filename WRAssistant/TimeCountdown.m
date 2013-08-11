@@ -14,6 +14,7 @@
 @property (nonatomic) int minutes;
 @end
 
+NSString *const TimeCountdownTimesUp = @"0:00";
 static const int kDefaultDurationInMinutes = 5;
 
 
@@ -24,8 +25,8 @@ static const int kDefaultDurationInMinutes = 5;
 {
     if ((self = [super init]))
     {
-        _minutes = minutes;
-        _seconds = 0;
+        self.minutes = minutes;
+        self.seconds = 0;
     }
     return self;
 }
@@ -53,7 +54,7 @@ static const int kDefaultDurationInMinutes = 5;
         
         if (self.minutes >- 1)
         {
-            [self.delegate timeChanged:[NSString stringWithFormat:@"%d:%02d", self.minutes, self.seconds]];
+            [self.delegate timeChanged:[self description]];
         }
     }
     else

@@ -87,6 +87,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="1" id="rxz-h9-twa"/>
                     <connections>
+                        <outlet property="goButton" destination="7eW-j1-xVQ" id="2my-PD-5oL"/>
                         <outlet property="timeCountdownLabel" destination="Af3-xa-kal" id="aKy-xZ-pBp"/>
                     </connections>
                 </viewController>
@@ -195,6 +196,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="2" id="hTF-A9-T3E"/>
                     <connections>
+                        <outlet property="goButton" destination="yb9-CL-MnW" id="ZgN-l7-pu5"/>
                         <outlet property="timeCountdownLabel" destination="2s5-Mh-o9N" id="heg-LV-TFa"/>
                     </connections>
                 </viewController>
@@ -280,6 +282,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="goButton" destination="BTN-Cr-rAr" id="SO4-pb-Jus"/>
                         <outlet property="timeCountdownLabel" destination="pvS-qa-4lf" id="ZTa-ek-w1D"/>
                     </connections>
                 </viewController>
@@ -393,6 +396,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="4" id="vEd-pv-akJ"/>
                     <connections>
+                        <outlet property="goButton" destination="MKi-XB-k9f" id="vDj-Aj-FZJ"/>
                         <outlet property="timeCountdownLabel" destination="Rg8-Oa-XDV" id="Q88-0r-aKV"/>
                     </connections>
                 </viewController>
@@ -472,6 +476,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="5" id="BAY-hq-bYL"/>
                     <connections>
+                        <outlet property="goButton" destination="Pw1-XX-alv" id="UmJ-8F-Gxq"/>
                         <outlet property="timeCountdownLabel" destination="gZ7-NC-RWo" id="50G-bV-DkM"/>
                     </connections>
                 </viewController>
@@ -552,6 +557,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="6" id="cil-eH-MRL"/>
                     <connections>
+                        <outlet property="goButton" destination="Qqs-Rx-e0X" id="Yr7-dh-48x"/>
                         <outlet property="timeCountdownLabel" destination="Zt4-uY-nfn" id="aXv-iW-9bv"/>
                     </connections>
                 </viewController>
@@ -682,6 +688,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="7" id="Ft4-FS-pDo"/>
                     <connections>
+                        <outlet property="goButton" destination="idK-f6-Xrz" id="89g-uZ-4Ub"/>
                         <outlet property="timeCountdownLabel" destination="W3K-8o-p8f" id="eRv-8t-JuZ"/>
                     </connections>
                 </viewController>
@@ -753,6 +760,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="8" id="UaC-LG-a83"/>
                     <connections>
+                        <outlet property="goButton" destination="hfa-rz-eNB" id="B3c-TE-KbT"/>
                         <outlet property="timeCountdownLabel" destination="lbZ-pL-nNG" id="vWJ-aU-H9O"/>
                     </connections>
                 </viewController>
@@ -825,6 +833,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="9" id="rGG-Ae-0sc"/>
                     <connections>
+                        <outlet property="goButton" destination="T5P-A0-Pcv" id="DwG-s0-eru"/>
                         <outlet property="timeCountdownLabel" destination="icB-5k-Ddc" id="c0r-iI-DfO"/>
                     </connections>
                 </viewController>
@@ -897,6 +906,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="10" id="kYe-zs-aIg"/>
                     <connections>
+                        <outlet property="goButton" destination="BTq-x4-5Ph" id="5wl-sX-UMe"/>
                         <outlet property="timeCountdownLabel" destination="wGm-1y-EuC" id="2tF-iU-xhB"/>
                     </connections>
                 </viewController>
@@ -976,6 +986,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="goButton" destination="jbY-r5-oC6" id="ZWA-yW-wBz"/>
                         <outlet property="timeCountdownLabel" destination="FDx-3G-nMu" id="Egk-oK-1Mn"/>
                     </connections>
                 </viewController>

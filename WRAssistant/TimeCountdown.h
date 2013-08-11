@@ -11,6 +11,9 @@
 @end
 
 
+extern NSString *const TimeCountdownTimesUp;
+
+
 @interface TimeCountdown : NSObject 
 
 @property (weak, nonatomic) id <TimeCountdownDelegate> delegate;
