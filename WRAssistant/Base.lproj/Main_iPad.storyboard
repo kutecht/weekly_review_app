@@ -1,21 +1,634 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4488.2" systemVersion="12E55" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="pOr-Cj-WUH">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3676"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3715.3"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Steps Table View Controller - Root View Controller-->
+        <scene sceneID="SIF-1W-PVg">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="Step1ViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="RqR-1O-9Ap" customClass="WRStepsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="BwI-t9-INQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="KJ4-7I-EJ9">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="rGc-p3-p8K" style="IBUITableViewCellStyleDefault" id="d33-dH-xrn">
+                                        <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d33-dH-xrn">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="1. Collect Loose Paper" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rGc-p3-p8K">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Unv-Ol-0JT" kind="replace" splitViewControllerTargetIndex="1" id="vlv-IM-UMd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="v9I-Ti-IS4" style="IBUITableViewCellStyleDefault" id="VCz-3Z-Xz4">
+                                        <rect key="frame" x="0.0" y="108" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VCz-3Z-Xz4">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="2. Get Into Zero" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="v9I-Ti-IS4">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="bPL-Fl-ZV2" kind="replace" splitViewControllerTargetIndex="1" id="oCd-HG-rJB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="QLA-nT-soN" style="IBUITableViewCellStyleDefault" id="P9i-NS-ZJH">
+                                        <rect key="frame" x="0.0" y="152" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P9i-NS-ZJH">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="3. Empty Your Head" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QLA-nT-soN">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="GqO-Si-1ur" kind="replace" splitViewControllerTargetIndex="1" id="6fz-cR-HMd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="MfT-4r-em5" style="IBUITableViewCellStyleDefault" id="zOE-SR-ViT">
+                                        <rect key="frame" x="0.0" y="196" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="zOE-SR-ViT" id="ZND-ei-w5N">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="4. Review Action Lists" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MfT-4r-em5">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="a0d-oR-9xn" kind="replace" splitViewControllerTargetIndex="1" id="xAJ-yb-cen"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="m6v-sR-oZm" style="IBUITableViewCellStyleDefault" id="vek-tO-1rr">
+                                        <rect key="frame" x="0.0" y="240" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="vek-tO-1rr" id="jeh-hK-Ec0">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="5. Review Previous Calendar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m6v-sR-oZm">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="wr2-Ny-nH8" kind="replace" splitViewControllerTargetIndex="1" id="QrX-is-lqm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="9io-29-aW3" style="IBUITableViewCellStyleDefault" id="0NG-c1-w3l">
+                                        <rect key="frame" x="0.0" y="284" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="0NG-c1-w3l" id="tP8-VR-0OZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="6. Review Upcoming Calendar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9io-29-aW3">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="UkR-2s-DYW" kind="replace" splitViewControllerTargetIndex="1" id="EeD-kv-3Vv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="oVE-hl-oXD" style="IBUITableViewCellStyleDefault" id="MRf-Sb-71Z">
+                                        <rect key="frame" x="0.0" y="328" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="MRf-Sb-71Z" id="0aI-BD-V85">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="7. Review Waiting-For List" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oVE-hl-oXD">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="yuF-M9-kNf" kind="replace" splitViewControllerTargetIndex="1" id="gEy-ql-T8y"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="ivY-Q4-hcs" style="IBUITableViewCellStyleDefault" id="TV0-vm-qqL">
+                                        <rect key="frame" x="0.0" y="372" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="TV0-vm-qqL" id="T78-2f-qct">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="8. Review Project Lists" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ivY-Q4-hcs">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="zat-mn-akz" kind="replace" splitViewControllerTargetIndex="1" id="3j7-Yf-Ubc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="EfP-qy-HyO" style="IBUITableViewCellStyleDefault" id="AXq-Vh-kLd">
+                                        <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="AXq-Vh-kLd" id="yZx-4Q-2Tr">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="9. Review Checklists" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EfP-qy-HyO">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="3Qu-Ma-AAj" kind="replace" splitViewControllerTargetIndex="1" id="XzA-Yh-YUs"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="abS-uY-T8S" style="IBUITableViewCellStyleDefault" id="yLN-qM-HiJ">
+                                        <rect key="frame" x="0.0" y="460" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="yLN-qM-HiJ" id="LRK-V8-WKO">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="10. Review Someday/Maybe List" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="abS-uY-T8S">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="UrV-mz-CkO" kind="replace" splitViewControllerTargetIndex="1" id="UX3-Fj-MSA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Y5W-cG-b64" style="IBUITableViewCellStyleDefault" id="G2Z-wU-vzI">
+                                        <rect key="frame" x="0.0" y="504" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="G2Z-wU-vzI" id="u2u-Fm-M4H">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="11. Capture New Ideas" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Y5W-cG-b64">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="rNP-mS-jW2" kind="replace" splitViewControllerTargetIndex="1" id="nEB-tw-xMQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="RqR-1O-9Ap" id="zfM-7d-AWl"/>
+                            <outlet property="delegate" destination="RqR-1O-9Ap" id="pVq-GB-xpE"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="4hm-Io-kG2"/>
+                        <barButtonItem title="0:00" id="s21-I3-R4I"/>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="cVH-4u-Z3x"/>
+                        <barButtonItem title="Go!" id="wkY-jq-fkp"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="oYM-bX-b6Y"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3a9-ZS-AxE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="530" y="610"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yoW-1x-vg0">
+            <objects>
+                <navigationController toolbarHidden="NO" id="5pt-LZ-jo3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="7e0-sm-nnz">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="UTV-uP-IY8">
+                        <rect key="frame" x="0.0" y="808" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="RqR-1O-9Ap" kind="relationship" relationship="rootViewController" id="4Me-ES-tkC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qXp-Bo-eh6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4" y="527"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="BXs-SV-Vlf">
+            <objects>
+                <splitViewController id="pOr-Cj-WUH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <connections>
+                        <segue destination="5pt-LZ-jo3" kind="relationship" relationship="masterViewController" id="Yct-v1-fyw"/>
+                        <segue destination="Unv-Ol-0JT" kind="relationship" relationship="detailViewController" id="F4M-xU-fQz"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aE5-fm-gDt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1070" y="415"/>
+        </scene>
+        <!--Step1 View Controller - 1-->
+        <scene sceneID="0kI-hS-31q">
+            <objects>
+                <viewController id="Unv-Ol-0JT" customClass="Step1ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p0b-vr-SNF"/>
+                        <viewControllerLayoutGuide type="bottom" id="TtT-3T-kda"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aoK-wc-RMU">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gather everything that's loose into an inbox, tray, or folder.  Below are your reminders." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="728" translatesAutoresizingMaskIntoConstraints="NO" id="qGw-9C-wQl" customClass="UITopLeftLabel">
+                                <rect key="frame" x="20" y="90" width="728" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tmx-J3-4hG">
+                                <rect key="frame" x="0.0" y="181" width="768" height="785"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pl5-ER-Xsf">
+                                <rect key="frame" x="20" y="982" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                    </view>
+                    <navigationItem key="navigationItem" title="1" id="aTY-ce-BuS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cRL-h8-Qnh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-621" y="-2260"/>
+        </scene>
+        <!--Step2 View Controller - 2-->
+        <scene sceneID="Umx-uG-BRi">
+            <objects>
+                <viewController id="bPL-Fl-ZV2" customClass="Step2ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="38z-n1-TNy"/>
+                        <viewControllerLayoutGuide type="bottom" id="HoE-xq-ZvL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JEN-9b-1Ss">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose the inbox (i.e email, paper, voice mail, ...) that you can make good progress on in the allotted time." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="728" translatesAutoresizingMaskIntoConstraints="NO" id="mfU-AU-qjV" customClass="UITopLeftLabel">
+                                <rect key="frame" x="20" y="60" width="728" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                    </view>
+                    <navigationItem key="navigationItem" title="2" id="Yiq-o8-8VI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A1W-kN-wGP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="925" y="-2178"/>
+        </scene>
+        <!--Step3 View Controller - 3-->
+        <scene sceneID="M4E-LI-xPF">
+            <objects>
+                <viewController id="GqO-Si-1ur" customClass="Step3ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y19-AM-9CS"/>
+                        <viewControllerLayoutGuide type="bottom" id="b9X-xV-GE0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oMb-k8-Gcr">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Open a document, or grab a pad and clear your head. Below is a list of trigger terms." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="728" translatesAutoresizingMaskIntoConstraints="NO" id="uwc-sZ-5RO" customClass="UITopLeftLabel">
+                                <rect key="frame" x="20" y="89" width="728" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lH3-FU-YbY">
+                                <rect key="frame" x="0.0" y="209" width="768" height="815"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                    </view>
+                    <navigationItem key="navigationItem" title="3" id="byk-cr-0EU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="8oK-MF-dyu"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6eR-Ml-OYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2012" y="-2205"/>
+        </scene>
+        <!--Step4 View Controller - 4-->
+        <scene sceneID="a7x-AE-1Dk">
+            <objects>
+                <viewController id="a0d-oR-9xn" customClass="Step4ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c6c-RX-y2G"/>
+                        <viewControllerLayoutGuide type="bottom" id="MRP-rV-6Ry"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sO2-nX-ylG">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Are they current? Anything to mark done? anything trigger you to add?" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="728" translatesAutoresizingMaskIntoConstraints="NO" id="sAF-tZ-7wq" customClass="UITopLeftLabel">
+                                <rect key="frame" x="26" y="76" width="728" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                    </view>
+                    <navigationItem key="navigationItem" title="4" id="eh0-b5-aKh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i2e-NG-SQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3373" y="-2135"/>
+        </scene>
+        <!--Step5 View Controller - 5-->
+        <scene sceneID="foi-ts-ImV">
+            <objects>
+                <viewController id="wr2-Ny-nH8" customClass="Step5ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xhR-pe-RJV"/>
+                        <viewControllerLayoutGuide type="bottom" id="xTL-OJ-fcN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yZg-8R-ZC9">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Go back about 3 weeks.  Catches things you meant to do.  Any triggers?" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="728" translatesAutoresizingMaskIntoConstraints="NO" id="QYs-9I-igI" customClass="UITopLeftLabel">
+                                <rect key="frame" x="20" y="73" width="728" height="107"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SXw-9p-SpF">
+                                <rect key="frame" x="0.0" y="225" width="768" height="799"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                    </view>
+                    <navigationItem key="navigationItem" title="5" id="Gjk-fB-T6l"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PyW-Lf-OVu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4565" y="-2119"/>
+        </scene>
+        <!--Step6 View Controller - 6-->
+        <scene sceneID="HE8-eT-jWG">
+            <objects>
+                <viewController id="UkR-2s-DYW" customClass="Step6ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Isf-rq-iGw"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ru0-fB-QJx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v30-2H-mhb">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="728" translatesAutoresizingMaskIntoConstraints="NO" id="cF6-Mq-mYW" customClass="UITopLeftLabel">
+                                <rect key="frame" x="20" y="52" width="728" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Anything you should start getting ready for?  If you find something you need to process, you can add it to your mindsweep for now.</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Im-Q1-oJQ">
+                                <rect key="frame" x="0.0" y="187" width="768" height="837"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                    </view>
+                    <navigationItem key="navigationItem" title="6" id="22O-xg-3EZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hC3-Ah-kyz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3759" y="431"/>
+        </scene>
+        <!--Step7 View Controller - 7-->
+        <scene sceneID="Nrx-t0-tpx">
+            <objects>
+                <viewController id="yuF-M9-kNf" customClass="Step7ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="euO-bV-ymX"/>
+                        <viewControllerLayoutGuide type="bottom" id="hvg-5O-cHE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="052-9k-dNf">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What are you waiting on?  For some, their Sent email folder contains hidden waiting-for's." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="728" translatesAutoresizingMaskIntoConstraints="NO" id="Lfe-nP-VuY" customClass="UITopLeftLabel">
+                                <rect key="frame" x="20" y="61" width="728" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                    </view>
+                    <navigationItem key="navigationItem" title="7" id="p20-QJ-rk8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EzJ-Gp-tAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4949" y="450"/>
+        </scene>
+        <!--Step8 View Controller - 8-->
+        <scene sceneID="vOG-Kx-zL9">
+            <objects>
+                <viewController id="zat-mn-akz" customClass="Step8ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a6P-oL-BHq"/>
+                        <viewControllerLayoutGuide type="bottom" id="I2z-Ec-cXA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EAW-0o-8LI">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="If you are not willing to take any next action on a current project, are you sure it's not a Someday/Maybe?" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="728" translatesAutoresizingMaskIntoConstraints="NO" id="mta-u3-DDL" customClass="UITopLeftLabel">
+                                <rect key="frame" x="20" y="49" width="728" height="131"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                    </view>
+                    <navigationItem key="navigationItem" title="8" id="iWi-Bd-UJh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D3n-I6-fkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-939" y="2222"/>
+        </scene>
+        <!--Step9 View Controller - 9-->
+        <scene sceneID="4bM-RT-qbE">
+            <objects>
+                <viewController id="3Qu-Ma-AAj" customClass="Step9ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5av-7O-Rg2"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qw0-DR-IQP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mwN-QL-1JN">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="728" translatesAutoresizingMaskIntoConstraints="NO" id="HdN-af-JAO" customClass="UITopLeftLabel">
+                                <rect key="frame" x="20" y="53" width="728" height="127"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Birthday checklist? Travel checklist? Home maintenance? ...  Maybe, you want to create a checklist? Anything recurring that would be good?</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                    </view>
+                    <navigationItem key="navigationItem" title="9" id="k3T-29-o7p"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4HV-Xm-L89" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120" y="2254"/>
+        </scene>
+        <!--Step10 View Controller - 10-->
+        <scene sceneID="H2s-fQ-Q8W">
+            <objects>
+                <viewController id="UrV-mz-CkO" customClass="Step10ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OMq-Sp-X6B"/>
+                        <viewControllerLayoutGuide type="bottom" id="lM8-26-rwf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5ZW-dl-nrh">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Someday/Maybe list not just a &quot;fantasy wish&quot; list.  It can be a fantastic place to stage &quot;not yet&quot; projects." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="728" translatesAutoresizingMaskIntoConstraints="NO" id="7sN-9X-Le5" customClass="UITopLeftLabel">
+                                <rect key="frame" x="20" y="62" width="728" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="10" id="i0V-4D-bue"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ac-sN-Zrj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1367" y="2310"/>
+        </scene>
+        <!--Step11 View Controller - 11-->
+        <scene sceneID="ire-3P-bAr">
+            <objects>
+                <viewController id="rNP-mS-jW2" customClass="Step11ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VsL-ke-4yM"/>
+                        <viewControllerLayoutGuide type="bottom" id="CTK-gu-Vyg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rfw-61-Yub">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lwu-9u-Mvb">
+                                <rect key="frame" x="0.0" y="84" width="768" height="940"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                    </view>
+                    <navigationItem key="navigationItem" title="11" id="8vu-D2-q0q">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="EvT-HV-Xjs"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hJC-UL-wYF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2581" y="2310"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -23,4 +636,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="vlv-IM-UMd"/>
+    </inferredMetricsTieBreakers>
 </document>
