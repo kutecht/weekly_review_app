@@ -13,9 +13,9 @@
 @property (nonatomic) int seconds;
 @property (nonatomic) int minutes;
 @property (nonatomic) int initialDurationInMinutes;
+@property (nonatomic) TimeCountdownState currentState;
 @end
 
-NSString *const TimeCountdownTimesUp = @"0:00";
 static const int kDefaultDurationInMinutes = 5;
 
 
@@ -26,6 +26,7 @@ static const int kDefaultDurationInMinutes = 5;
 {
     if ((self = [super init]))
     {
+        self.currentState = TimeCountdownNotStarted;
         self.initialDurationInMinutes = minutes;
         self.minutes = minutes;
         self.seconds = 0;
@@ -42,7 +43,12 @@ static const int kDefaultDurationInMinutes = 5;
 
 -(void)timerFired
 {
-    if ((self.minutes > 0 || self.seconds >= 0) && self.minutes >= 0)
+    if (self.minutes == 0 && self.seconds == 0)
+    {
+        [self.timer invalidate];
+        self.currentState = TimeCountdownDone;
+    }
+    else
     {
         if (self.seconds == 0)
         {
@@ -53,16 +59,9 @@ static const int kDefaultDurationInMinutes = 5;
         {
             self.seconds -=1 ;
         }
-        
-        if (self.minutes >- 1)
-        {
-            [self.delegate timeChanged:[self description]];
-        }
     }
-    else
-    {
-        [self.timer invalidate];
-    }
+    
+    [self.delegate timeChanged:self];
 }
 
 - (NSString *)description
@@ -72,28 +71,29 @@ static const int kDefaultDurationInMinutes = 5;
 
 - (void)reset
 {
+    [self.timer invalidate];
+    self.currentState = TimeCountdownNotStarted;
     self.minutes = self.initialDurationInMinutes;
     self.seconds = 0;
+    [self.delegate timeChanged:self];
 }
 
-- (void)start
+- (void)run
 {
     self.timer=[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerFired) userInfo:nil repeats:YES];
+    self.currentState = TimeCountdownRunning;
 }
 
-- (void)stop
+- (void)pause
 {
     [self.timer invalidate];
+    self.currentState = TimeCountdownPaused;
+    [self.delegate timeChanged:self];
 }
 
-- (BOOL)isStopped
+- (TimeCountdownState)state
 {
-    if (self.timer)
-    {
-        return NO;
-    }
-    
-    return YES;
+    return self.currentState;
 }
 
 @end

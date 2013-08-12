@@ -12,6 +12,7 @@
 
 @interface Step11ViewController ()
 @property (strong, nonatomic) ThoughtGuideTableViewController *thoughtGuideTVC;
+
 @end
 
 static NSString *const kSegueShowThoughtGuideTable = @"showThoughtGuideList";

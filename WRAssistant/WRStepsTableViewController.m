@@ -10,10 +10,8 @@
 
 @interface WRStepsTableViewController () <UISplitViewControllerDelegate>
 @property (strong, nonatomic) TimeCountdown *timeCountdown;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *goButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *timerButton;
 @end
-
-static NSString *const kGoButtonStoppedTitle = @"Go!";
 
 
 @implementation WRStepsTableViewController
@@ -38,7 +36,14 @@ static NSString *const kGoButtonStoppedTitle = @"Go!";
 
     self.timeCountdown = [[TimeCountdown alloc]
                           initWithDurationInMinutes:[[NSUserDefaults standardUserDefaults] integerForKey:WRConstantsStepDurationInMinKey]];
+    self.timerButton.title = [self.timeCountdown description];
     self.timeCountdown.delegate = self;
+
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    [self.timeCountdown reset];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,30 +52,26 @@ static NSString *const kGoButtonStoppedTitle = @"Go!";
     // Dispose of any resources that can be recreated.
 }
 
-- (void)timeChanged:(NSString *)time
+
+- (void)timeChanged:(TimeCountdown *)sender
 {
-    if ([time isEqualToString:TimeCountdownTimesUp])
-    {
-        self.goButton.title = kGoButtonStoppedTitle;
-        [self.timeCountdown stop];
-        [self.timeCountdown reset];
-    }
-    else
-    {
-        self.goButton.title = time;
-    }
+    self.timerButton.title = [sender description];
 }
 
 - (IBAction)toggleTimer:(UIBarButtonItem *)sender
 {
-    if ([sender.title isEqualToString:kGoButtonStoppedTitle])
+    switch ([self.timeCountdown state])
     {
-        [self.timeCountdown start];
-    }
-    else
-    {
-        [self.timeCountdown stop];
-        self.goButton.title =  kGoButtonStoppedTitle;
+        case TimeCountdownNotStarted:
+        case TimeCountdownPaused:
+            [self.timeCountdown run];
+            break;
+        case TimeCountdownRunning:
+            [self.timeCountdown pause];
+            break;
+        case TimeCountdownDone:
+            // do nothing
+            break;
     }
 }
 

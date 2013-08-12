@@ -245,7 +245,7 @@
                     </tableView>
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="RaV-ch-DL0"/>
-                        <barButtonItem title="Go!" id="wkY-jq-fkp">
+                        <barButtonItem title="0:00" id="wkY-jq-fkp">
                             <connections>
                                 <action selector="toggleTimer:" destination="RqR-1O-9Ap" id="W24-qg-yeK"/>
                             </connections>
@@ -254,7 +254,7 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Weekly Review" id="oYM-bX-b6Y"/>
                     <connections>
-                        <outlet property="goButton" destination="wkY-jq-fkp" id="F0u-A2-r4j"/>
+                        <outlet property="timerButton" destination="wkY-jq-fkp" id="pBJ-Oi-ZmK"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3a9-ZS-AxE" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -6,12 +6,20 @@
 //  Copyright (c) 2013 kevin utecht. All rights reserved.
 //
 
+@class TimeCountdown;
+
 @protocol TimeCountdownDelegate
-- (void)timeChanged:(NSString *)time;
+- (void)timeChanged:(TimeCountdown *)sender;
 @end
 
 
-extern NSString *const TimeCountdownTimesUp;
+typedef NS_ENUM(NSUInteger, TimeCountdownState)
+{
+    TimeCountdownNotStarted,
+    TimeCountdownRunning,
+    TimeCountdownPaused,
+    TimeCountdownDone
+};
 
 
 @interface TimeCountdown : NSObject 
@@ -19,9 +27,9 @@ extern NSString *const TimeCountdownTimesUp;
 @property (weak, nonatomic) id <TimeCountdownDelegate> delegate;
 
 - (id)initWithDurationInMinutes:(int)minutes;
-- (void)start;
-- (void)stop;
+- (void)run;
+- (void)pause;
 - (void)reset;
-- (BOOL)isStopped;
+- (TimeCountdownState)state;
 
 @end

@@ -54,7 +54,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="c9v-9N-8xh"/>
-                        <barButtonItem title="Go!" id="tBr-OD-mfE">
+                        <barButtonItem title="0:00" id="tBr-OD-mfE">
                             <connections>
                                 <action selector="toggleTimer:" destination="vXZ-lx-hvc" id="n7D-hR-dIV"/>
                             </connections>
@@ -68,7 +68,7 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="1" id="rxz-h9-twa"/>
                     <connections>
-                        <outlet property="goButton" destination="tBr-OD-mfE" id="pHk-VN-7hM"/>
+                        <outlet property="timerButton" destination="tBr-OD-mfE" id="dqj-ja-BSt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -141,7 +141,9 @@
                         <gestureRecognizers/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="Go!" id="eMw-cz-CpN">
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Swd-D7-be5"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="STg-Ee-QcO"/>
+                        <barButtonItem title="0:00" id="eMw-cz-CpN">
                             <connections>
                                 <action selector="toggleTimer:" destination="B5r-65-V1F" id="aoP-cF-GtD"/>
                             </connections>
@@ -155,7 +157,7 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="2" id="hTF-A9-T3E"/>
                     <connections>
-                        <outlet property="goButton" destination="eMw-cz-CpN" id="Ai1-Rj-CzZ"/>
+                        <outlet property="timerButton" destination="eMw-cz-CpN" id="cR8-Zd-K1n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bdM-ic-84D" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -199,7 +201,9 @@
                         <gestureRecognizers/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="Go!" id="8SA-h9-rjE">
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Og5-JO-VqA"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="eLO-9D-MQU"/>
+                        <barButtonItem title="0:00" id="8SA-h9-rjE">
                             <connections>
                                 <action selector="toggleTimer:" destination="pjr-Fx-tE0" id="QkB-ec-7nl"/>
                             </connections>
@@ -219,7 +223,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="goButton" destination="8SA-h9-rjE" id="uo7-ue-pvY"/>
+                        <outlet property="timerButton" destination="8SA-h9-rjE" id="Q3v-ne-gEZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vFb-Ab-K3E" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -297,7 +301,9 @@
                         <gestureRecognizers/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="Go!" id="YYb-Lz-qqJ">
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="nta-RY-OTi"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="pup-ce-L4a"/>
+                        <barButtonItem title="0:00" id="YYb-Lz-qqJ">
                             <connections>
                                 <action selector="toggleTimer:" destination="qiY-ei-8BN" id="orn-Jb-JJO"/>
                             </connections>
@@ -311,7 +317,7 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="4" id="vEd-pv-akJ"/>
                     <connections>
-                        <outlet property="goButton" destination="YYb-Lz-qqJ" id="7vi-gD-luf"/>
+                        <outlet property="timerButton" destination="YYb-Lz-qqJ" id="Ll2-1Y-Or3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fuJ-G3-msl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -355,7 +361,9 @@
                         <gestureRecognizers/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="Go!" id="S7s-ZP-b7s">
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="yOU-wO-yYc"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="WW8-RE-zdW"/>
+                        <barButtonItem title="0:00" id="S7s-ZP-b7s">
                             <connections>
                                 <action selector="toggleTimer:" destination="fyK-eD-dl7" id="gTy-Y6-GuI"/>
                             </connections>
@@ -369,7 +377,7 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="5" id="BAY-hq-bYL"/>
                     <connections>
-                        <outlet property="goButton" destination="S7s-ZP-b7s" id="zHQ-pu-HdI"/>
+                        <outlet property="timerButton" destination="S7s-ZP-b7s" id="nRC-MP-j3l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUb-Km-J8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -414,7 +422,9 @@
                         <gestureRecognizers/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="Go!" id="9pQ-Ix-hKn">
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="7hE-vV-ACo"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="HaX-dI-aOt"/>
+                        <barButtonItem title="0:00" id="9pQ-Ix-hKn">
                             <connections>
                                 <action selector="toggleTimer:" destination="pSz-7r-iHf" id="gNB-QI-huo"/>
                             </connections>
@@ -428,7 +438,7 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="6" id="cil-eH-MRL"/>
                     <connections>
-                        <outlet property="goButton" destination="9pQ-Ix-hKn" id="FMu-8o-ddp"/>
+                        <outlet property="timerButton" destination="9pQ-Ix-hKn" id="hSO-vn-Zxl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gr7-7f-aqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -523,7 +533,9 @@
                         <gestureRecognizers/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="Go!" id="LdE-Hc-2yo">
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Hg3-Rk-aAT"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="HzB-An-eKB"/>
+                        <barButtonItem title="0:00" id="LdE-Hc-2yo">
                             <connections>
                                 <action selector="toggleTimer:" destination="RLS-4f-Aks" id="scN-Ug-W1q"/>
                             </connections>
@@ -537,7 +549,7 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="7" id="Ft4-FS-pDo"/>
                     <connections>
-                        <outlet property="goButton" destination="LdE-Hc-2yo" id="uwr-Qk-ajo"/>
+                        <outlet property="timerButton" destination="LdE-Hc-2yo" id="aPv-Qo-fTk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ccd-PZ-nRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -573,7 +585,9 @@
                         <gestureRecognizers/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="Go!" id="bEJ-wz-K8v">
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="11Q-F7-IVI"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Q4Q-u3-uXY"/>
+                        <barButtonItem title="0:00" id="bEJ-wz-K8v">
                             <connections>
                                 <action selector="toggleTimer:" destination="97b-bP-4Ky" id="0PU-1U-FTG"/>
                             </connections>
@@ -587,7 +601,7 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="8" id="UaC-LG-a83"/>
                     <connections>
-                        <outlet property="goButton" destination="bEJ-wz-K8v" id="4bV-9l-fcO"/>
+                        <outlet property="timerButton" destination="bEJ-wz-K8v" id="q7q-EY-h7T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w0n-yZ-k5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -624,7 +638,9 @@
                         <gestureRecognizers/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="Go!" id="rIn-W8-fR4">
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="MqJ-YN-ODd"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Jsy-9C-RE3"/>
+                        <barButtonItem title="0:00" id="rIn-W8-fR4">
                             <connections>
                                 <action selector="toggleTimer:" destination="J4X-9o-bQa" id="CJh-uR-FRV"/>
                             </connections>
@@ -638,7 +654,7 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="9" id="rGG-Ae-0sc"/>
                     <connections>
-                        <outlet property="goButton" destination="rIn-W8-fR4" id="deY-O9-Zuq"/>
+                        <outlet property="timerButton" destination="rIn-W8-fR4" id="WAy-u7-nBt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1eA-ot-J7o" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -674,7 +690,9 @@
                         <gestureRecognizers/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="Go!" id="P8w-kb-zYQ">
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="ie7-0n-grf"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="aEI-OW-r0e"/>
+                        <barButtonItem title="0:00" id="P8w-kb-zYQ">
                             <connections>
                                 <action selector="toggleTimer:" destination="VhK-n0-QdD" id="kWE-a3-nB5"/>
                             </connections>
@@ -688,7 +706,7 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="10" id="kYe-zs-aIg"/>
                     <connections>
-                        <outlet property="goButton" destination="P8w-kb-zYQ" id="rys-TE-Xj2"/>
+                        <outlet property="timerButton" destination="P8w-kb-zYQ" id="sbi-84-2qV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BKi-3d-cj2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -714,7 +732,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cl6-7d-OHu">
-                                <rect key="frame" x="0.0" y="133" width="320" height="386"/>
+                                <rect key="frame" x="0.0" y="137" width="320" height="386"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
@@ -726,13 +744,15 @@
                         <gestureRecognizers/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="Go!" id="rpT-Eh-4Bu">
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="JMR-Ex-q7O"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="mb5-kC-qla"/>
+                        <barButtonItem title="0:00" id="rpT-Eh-4Bu">
                             <connections>
                                 <action selector="toggleTimer:" destination="PJF-Xm-NYJ" id="0Yq-ul-lZE"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="liI-0g-NTh"/>
-                        <barButtonItem title="Finished" id="iFx-AD-ZRl">
+                        <barButtonItem title="Done" id="iFx-AD-ZRl">
                             <connections>
                                 <segue destination="1CA-1l-tB5" kind="unwind" unwindAction="doneWithWeeklyReview:" id="2RP-Tf-4lg"/>
                             </connections>
@@ -746,7 +766,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="goButton" destination="rpT-Eh-4Bu" id="cgD-gR-kHo"/>
+                        <outlet property="timerButton" destination="rpT-Eh-4Bu" id="O7M-Yv-rIP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qzn-N2-3hx" userLabel="First Responder" sceneMemberID="firstResponder"/>
