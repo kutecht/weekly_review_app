@@ -12,6 +12,7 @@
 @property (strong, nonatomic) NSTimer *timer;
 @property (nonatomic) int seconds;
 @property (nonatomic) int minutes;
+@property (nonatomic) int initialDurationInMinutes;
 @end
 
 NSString *const TimeCountdownTimesUp = @"0:00";
@@ -25,6 +26,7 @@ static const int kDefaultDurationInMinutes = 5;
 {
     if ((self = [super init]))
     {
+        self.initialDurationInMinutes = minutes;
         self.minutes = minutes;
         self.seconds = 0;
     }
@@ -66,6 +68,12 @@ static const int kDefaultDurationInMinutes = 5;
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"%d:%02d", self.minutes, self.seconds];
+}
+
+- (void)reset
+{
+    self.minutes = self.initialDurationInMinutes;
+    self.seconds = 0;
 }
 
 - (void)start

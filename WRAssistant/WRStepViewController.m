@@ -11,10 +11,10 @@
 
 @interface WRStepViewController ()
 @property (strong, nonatomic) TimeCountdown *timeCountdown;
-@property (weak, nonatomic) IBOutlet UILabel *timeCountdownLabel;
-@property (weak, nonatomic) IBOutlet UIButton *goButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *goButton;
 @end
 
+static NSString *const kGoButtonStoppedTitle = @"Go!";
 
 
 @implementation WRStepViewController
@@ -25,7 +25,6 @@
     
     self.timeCountdown = [[TimeCountdown alloc]
                           initWithDurationInMinutes:[[NSUserDefaults standardUserDefaults] integerForKey:WRConstantsStepDurationInMinKey]];
-    self.timeCountdownLabel.text = [self.timeCountdown description];
     self.timeCountdown.delegate = self;
 }
 
@@ -42,26 +41,24 @@
 
 - (void)timeChanged:(NSString *)time
 {
-    self.timeCountdownLabel.text = time;
+    self.goButton.title = time;
     if ([time isEqualToString:TimeCountdownTimesUp])
     {
         self.goButton.enabled = NO;
     }
 }
 
-- (IBAction)toggleTimeCountdown:(UIButton *)sender
+- (IBAction)toggleTimer:(UIBarButtonItem *)sender
 {
-    if (!sender.selected)
+    if ([sender.title isEqualToString:kGoButtonStoppedTitle])
     {
         [self.timeCountdown start];
     }
     else
     {
         [self.timeCountdown stop];
+        self.goButton.title =  kGoButtonStoppedTitle;
     }
-    
-    // toggle selected state
-    sender.selected = !sender.selected;
 }
 
 

@@ -29,28 +29,6 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Af3-xa-kal">
-                                <rect key="frame" x="80" y="527" width="60" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eW-j1-xVQ">
-                                <rect key="frame" x="154" y="516" width="73" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Go!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="selected" title="Pause"/>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="toggleTimeCountdown:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="UyN-vg-dVy"/>
-                                </connections>
-                            </button>
                             <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xJS-cg-b3Q">
                                 <rect key="frame" x="0.0" y="226" width="320" height="284"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -59,36 +37,38 @@
                                     <segue destination="2B1-EQ-BJy" kind="embed" id="dpe-su-0lS"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buz-0a-y4q">
-                                <rect key="frame" x="241" y="521" width="59" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="B5r-65-V1F" kind="push" id="Woz-fw-Bk5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHZ-6v-66R">
-                                <rect key="frame" x="20" y="526" width="22" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="cHc-dg-PuB" kind="modal" modalTransitionStyle="coverVertical" id="q5B-iu-m3L"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="About" id="sai-yE-yGi">
+                            <connections>
+                                <segue destination="2zO-ij-yMj" kind="push" id="ixh-5g-3fT"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="vFf-hX-6x8"/>
+                        <barButtonItem title="Log" id="Oka-vW-93B">
+                            <connections>
+                                <segue destination="uBk-GX-Gh8" kind="push" id="1eD-Ml-CVo"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="c9v-9N-8xh"/>
+                        <barButtonItem title="Go!" id="tBr-OD-mfE">
+                            <connections>
+                                <action selector="toggleTimer:" destination="vXZ-lx-hvc" id="n7D-hR-dIV"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="VDE-lb-9gc"/>
+                        <barButtonItem title="Next" id="QAn-5o-a6q">
+                            <connections>
+                                <segue destination="B5r-65-V1F" kind="push" id="aKj-gG-W9B"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="1" id="rxz-h9-twa"/>
                     <connections>
-                        <outlet property="goButton" destination="7eW-j1-xVQ" id="2my-PD-5oL"/>
-                        <outlet property="timeCountdownLabel" destination="Af3-xa-kal" id="aKy-xZ-pBp"/>
+                        <outlet property="goButton" destination="tBr-OD-mfE" id="pHk-VN-7hM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -156,48 +136,26 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2s5-Mh-o9N">
-                                <rect key="frame" x="20" y="528" width="60" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yb9-CL-MnW">
-                                <rect key="frame" x="124" y="517" width="73" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Go!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="selected" title="Pause"/>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="toggleTimeCountdown:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="j7k-BL-fJq"/>
-                                    <action selector="toggleTimeCountdown:" destination="B5r-65-V1F" eventType="touchUpInside" id="rTy-C0-xe8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEl-xb-vHU">
-                                <rect key="frame" x="229" y="522" width="71" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="pjr-Fx-tE0" kind="push" id="i8W-Yu-FCO"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Go!" id="eMw-cz-CpN">
+                            <connections>
+                                <action selector="toggleTimer:" destination="B5r-65-V1F" id="aoP-cF-GtD"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="TYj-Ja-I3E"/>
+                        <barButtonItem title="Next" id="Dhm-jq-LJs">
+                            <connections>
+                                <segue destination="pjr-Fx-tE0" kind="push" id="sW4-po-x3B"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="2" id="hTF-A9-T3E"/>
                     <connections>
-                        <outlet property="goButton" destination="yb9-CL-MnW" id="ZgN-l7-pu5"/>
-                        <outlet property="timeCountdownLabel" destination="2s5-Mh-o9N" id="heg-LV-TFa"/>
+                        <outlet property="goButton" destination="eMw-cz-CpN" id="Ai1-Rj-CzZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bdM-ic-84D" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -228,29 +186,6 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvS-qa-4lf">
-                                <rect key="frame" x="20" y="527" width="60" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTN-Cr-rAr">
-                                <rect key="frame" x="119" y="516" width="73" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Go!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="selected" title="Pause"/>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="toggleTimeCountdown:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0k8-hi-bIO"/>
-                                    <action selector="toggleTimeCountdown:" destination="pjr-Fx-tE0" eventType="touchUpInside" id="hvb-RY-UpA"/>
-                                </connections>
-                            </button>
                             <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZHy-cy-bIy">
                                 <rect key="frame" x="0.0" y="209" width="320" height="312"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -259,21 +194,23 @@
                                     <segue destination="LIP-fl-4bZ" kind="embed" identifier="showTriggerList" id="6kx-Gc-b6M"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5C-FW-Dy3">
-                                <rect key="frame" x="229" y="521" width="71" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="qiY-ei-8BN" kind="push" id="kWd-EB-dyk"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Go!" id="8SA-h9-rjE">
+                            <connections>
+                                <action selector="toggleTimer:" destination="pjr-Fx-tE0" id="QkB-ec-7nl"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="6ZL-nf-xGO"/>
+                        <barButtonItem title="Next" id="aaI-gr-Uzl">
+                            <connections>
+                                <segue destination="qiY-ei-8BN" kind="push" id="2uT-Se-J2e"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="3" id="heF-Zd-rhO">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0l1-6w-1V1">
                             <connections>
@@ -282,8 +219,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="goButton" destination="BTN-Cr-rAr" id="SO4-pb-Jus"/>
-                        <outlet property="timeCountdownLabel" destination="pvS-qa-4lf" id="ZTa-ek-w1D"/>
+                        <outlet property="goButton" destination="8SA-h9-rjE" id="uo7-ue-pvY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vFb-Ab-K3E" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -356,48 +292,26 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rg8-Oa-XDV">
-                                <rect key="frame" x="20" y="526" width="60" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKi-XB-k9f">
-                                <rect key="frame" x="124" y="516" width="73" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Go!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="selected" title="Pause"/>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="toggleTimeCountdown:" destination="qiY-ei-8BN" eventType="touchUpInside" id="05k-g2-D4c"/>
-                                    <action selector="toggleTimeCountdown:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3kP-xG-aBP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uP7-6S-ldc">
-                                <rect key="frame" x="229" y="520" width="71" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="fyK-eD-dl7" kind="push" id="qtj-no-08n"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Go!" id="YYb-Lz-qqJ">
+                            <connections>
+                                <action selector="toggleTimer:" destination="qiY-ei-8BN" id="orn-Jb-JJO"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="CoN-b2-JgN"/>
+                        <barButtonItem title="Next" id="99m-wU-eYi">
+                            <connections>
+                                <segue destination="fyK-eD-dl7" kind="push" id="RRv-tw-8HM"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="4" id="vEd-pv-akJ"/>
                     <connections>
-                        <outlet property="goButton" destination="MKi-XB-k9f" id="vDj-Aj-FZJ"/>
-                        <outlet property="timeCountdownLabel" destination="Rg8-Oa-XDV" id="Q88-0r-aKV"/>
+                        <outlet property="goButton" destination="YYb-Lz-qqJ" id="7vi-gD-luf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fuJ-G3-msl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -428,29 +342,6 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZ7-NC-RWo">
-                                <rect key="frame" x="20" y="526" width="59" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pw1-XX-alv">
-                                <rect key="frame" x="124" y="516" width="73" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Go!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="selected" title="Pause"/>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="toggleTimeCountdown:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MFB-Qj-hcu"/>
-                                    <action selector="toggleTimeCountdown:" destination="fyK-eD-dl7" eventType="touchUpInside" id="ppl-qN-OU2"/>
-                                </connections>
-                            </button>
                             <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eD7-Jj-Lwc">
                                 <rect key="frame" x="0.0" y="225" width="320" height="294"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -459,25 +350,26 @@
                                     <segue destination="um9-Ug-Fev" kind="embed" identifier="showPastEvents" id="dBX-hA-aZD"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJD-Te-gQy">
-                                <rect key="frame" x="229" y="521" width="71" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="pSz-7r-iHf" kind="push" id="hwD-Mc-AIT"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Go!" id="S7s-ZP-b7s">
+                            <connections>
+                                <action selector="toggleTimer:" destination="fyK-eD-dl7" id="gTy-Y6-GuI"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="nIT-Uh-KFn"/>
+                        <barButtonItem title="Next" id="gJI-M9-nDe">
+                            <connections>
+                                <segue destination="pSz-7r-iHf" kind="push" id="yDE-NK-V4e"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="5" id="BAY-hq-bYL"/>
                     <connections>
-                        <outlet property="goButton" destination="Pw1-XX-alv" id="UmJ-8F-Gxq"/>
-                        <outlet property="timeCountdownLabel" destination="gZ7-NC-RWo" id="50G-bV-DkM"/>
+                        <outlet property="goButton" destination="S7s-ZP-b7s" id="zHQ-pu-HdI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUb-Km-J8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -509,29 +401,6 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zt4-uY-nfn">
-                                <rect key="frame" x="15" y="527" width="60" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qqs-Rx-e0X">
-                                <rect key="frame" x="124" y="516" width="73" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Go!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="selected" title="Pause"/>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="toggleTimeCountdown:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="BOf-Ba-tVd"/>
-                                    <action selector="toggleTimeCountdown:" destination="pSz-7r-iHf" eventType="touchUpInside" id="gaL-N3-m3d"/>
-                                </connections>
-                            </button>
                             <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mj1-ug-psb">
                                 <rect key="frame" x="0.0" y="250" width="320" height="269"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -540,25 +409,26 @@
                                     <segue destination="um9-Ug-Fev" kind="embed" identifier="showFutureEvents" id="qcC-rU-J6V"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKO-3s-7MD">
-                                <rect key="frame" x="229" y="521" width="71" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="RLS-4f-Aks" kind="push" id="Lpv-nK-8yU"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Go!" id="9pQ-Ix-hKn">
+                            <connections>
+                                <action selector="toggleTimer:" destination="pSz-7r-iHf" id="gNB-QI-huo"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="4yy-fR-Foj"/>
+                        <barButtonItem title="Next" id="JHN-IV-LRN">
+                            <connections>
+                                <segue destination="RLS-4f-Aks" kind="push" id="WOL-px-biH"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="6" id="cil-eH-MRL"/>
                     <connections>
-                        <outlet property="goButton" destination="Qqs-Rx-e0X" id="Yr7-dh-48x"/>
-                        <outlet property="timeCountdownLabel" destination="Zt4-uY-nfn" id="aXv-iW-9bv"/>
+                        <outlet property="goButton" destination="9pQ-Ix-hKn" id="FMu-8o-ddp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gr7-7f-aqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -648,48 +518,26 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3K-8o-p8f">
-                                <rect key="frame" x="20" y="527" width="60" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idK-f6-Xrz">
-                                <rect key="frame" x="124" y="516" width="73" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Go!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="selected" title="Pause"/>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="toggleTimeCountdown:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Mgi-24-yWn"/>
-                                    <action selector="toggleTimeCountdown:" destination="RLS-4f-Aks" eventType="touchUpInside" id="X8U-7B-RDZ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kN6-b6-hY5">
-                                <rect key="frame" x="229" y="521" width="71" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="97b-bP-4Ky" kind="push" id="av4-81-54F"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Go!" id="LdE-Hc-2yo">
+                            <connections>
+                                <action selector="toggleTimer:" destination="RLS-4f-Aks" id="scN-Ug-W1q"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="FWf-wJ-rjt"/>
+                        <barButtonItem title="Next" id="kgX-lY-Uwb">
+                            <connections>
+                                <segue destination="97b-bP-4Ky" kind="push" id="HYD-2N-sSY"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="7" id="Ft4-FS-pDo"/>
                     <connections>
-                        <outlet property="goButton" destination="idK-f6-Xrz" id="89g-uZ-4Ub"/>
-                        <outlet property="timeCountdownLabel" destination="W3K-8o-p8f" id="eRv-8t-JuZ"/>
+                        <outlet property="goButton" destination="LdE-Hc-2yo" id="uwr-Qk-ajo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ccd-PZ-nRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -720,48 +568,26 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbZ-pL-nNG">
-                                <rect key="frame" x="20" y="527" width="60" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfa-rz-eNB">
-                                <rect key="frame" x="124" y="516" width="73" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Go!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="selected" title="Pause"/>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="toggleTimeCountdown:" destination="97b-bP-4Ky" eventType="touchUpInside" id="q0a-pj-GPD"/>
-                                    <action selector="toggleTimeCountdown:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ye0-TT-Cnj"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unM-2m-0pL">
-                                <rect key="frame" x="229" y="521" width="71" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="J4X-9o-bQa" kind="push" id="iD2-Fq-HSi"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Go!" id="bEJ-wz-K8v">
+                            <connections>
+                                <action selector="toggleTimer:" destination="97b-bP-4Ky" id="0PU-1U-FTG"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="6J3-wq-KRn"/>
+                        <barButtonItem title="Next" id="JxL-bs-GDV">
+                            <connections>
+                                <segue destination="J4X-9o-bQa" kind="push" id="6Mk-2Z-0et"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="8" id="UaC-LG-a83"/>
                     <connections>
-                        <outlet property="goButton" destination="hfa-rz-eNB" id="B3c-TE-KbT"/>
-                        <outlet property="timeCountdownLabel" destination="lbZ-pL-nNG" id="vWJ-aU-H9O"/>
+                        <outlet property="goButton" destination="bEJ-wz-K8v" id="4bV-9l-fcO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w0n-yZ-k5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -793,48 +619,26 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icB-5k-Ddc">
-                                <rect key="frame" x="20" y="527" width="59" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5P-A0-Pcv">
-                                <rect key="frame" x="124" y="516" width="73" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Go!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="selected" title="Pause"/>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="toggleTimeCountdown:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fcH-Se-cYn"/>
-                                    <action selector="toggleTimeCountdown:" destination="J4X-9o-bQa" eventType="touchUpInside" id="wkm-u6-t0G"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1l-Ps-pff">
-                                <rect key="frame" x="229" y="521" width="71" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="VhK-n0-QdD" kind="push" id="AxX-k3-zeA"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Go!" id="rIn-W8-fR4">
+                            <connections>
+                                <action selector="toggleTimer:" destination="J4X-9o-bQa" id="CJh-uR-FRV"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="nj7-vh-Omx"/>
+                        <barButtonItem title="Next" id="MFM-OI-pSH">
+                            <connections>
+                                <segue destination="VhK-n0-QdD" kind="push" id="HvS-bu-HfV"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="9" id="rGG-Ae-0sc"/>
                     <connections>
-                        <outlet property="goButton" destination="T5P-A0-Pcv" id="DwG-s0-eru"/>
-                        <outlet property="timeCountdownLabel" destination="icB-5k-Ddc" id="c0r-iI-DfO"/>
+                        <outlet property="goButton" destination="rIn-W8-fR4" id="deY-O9-Zuq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1eA-ot-J7o" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -865,49 +669,26 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGm-1y-EuC">
-                                <rect key="frame" x="20" y="527" width="60" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTq-x4-5Ph">
-                                <rect key="frame" x="124" y="516" width="73" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Go!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="selected" title="Pause"/>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="toggleTimeCountdown:" destination="VhK-n0-QdD" eventType="touchUpInside" id="1K6-hK-lEs"/>
-                                    <action selector="toggleTimeCountdown:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="W6C-CE-PfB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWi-Xs-6Sp">
-                                <rect key="frame" x="229" y="521" width="71" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="PJF-Xm-NYJ" kind="push" id="p4r-oM-31Z"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
-                    <toolbarItems/>
+                    <toolbarItems>
+                        <barButtonItem title="Go!" id="P8w-kb-zYQ">
+                            <connections>
+                                <action selector="toggleTimer:" destination="VhK-n0-QdD" id="kWE-a3-nB5"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="4p2-fL-XvR"/>
+                        <barButtonItem title="Next" id="LAZ-y2-gHM">
+                            <connections>
+                                <segue destination="PJF-Xm-NYJ" kind="push" id="ELn-9m-1lD"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="10" id="kYe-zs-aIg"/>
                     <connections>
-                        <outlet property="goButton" destination="BTq-x4-5Ph" id="5wl-sX-UMe"/>
-                        <outlet property="timeCountdownLabel" destination="wGm-1y-EuC" id="2tF-iU-xhB"/>
+                        <outlet property="goButton" destination="P8w-kb-zYQ" id="rys-TE-Xj2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BKi-3d-cj2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -932,29 +713,6 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline1"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDx-3G-nMu">
-                                <rect key="frame" x="20" y="527" width="60" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbY-r5-oC6">
-                                <rect key="frame" x="124" y="516" width="73" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Go!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="selected" title="Pause"/>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="toggleTimeCountdown:" destination="PJF-Xm-NYJ" eventType="touchUpInside" id="GWn-n3-g9y"/>
-                                    <action selector="toggleTimeCountdown:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xr0-pK-RLZ"/>
-                                </connections>
-                            </button>
                             <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cl6-7d-OHu">
                                 <rect key="frame" x="0.0" y="133" width="320" height="386"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -963,21 +721,23 @@
                                     <segue destination="sIZ-uA-zpK" kind="embed" identifier="showThoughtGuideList" id="U8s-dw-TK1"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFB-gt-ZG1">
-                                <rect key="frame" x="263" y="523" width="37" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Done">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="1CA-1l-tB5" kind="unwind" unwindAction="doneWithWeeklyReview:" id="ZYo-L3-ST8"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Go!" id="rpT-Eh-4Bu">
+                            <connections>
+                                <action selector="toggleTimer:" destination="PJF-Xm-NYJ" id="0Yq-ul-lZE"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="liI-0g-NTh"/>
+                        <barButtonItem title="Finished" id="iFx-AD-ZRl">
+                            <connections>
+                                <segue destination="1CA-1l-tB5" kind="unwind" unwindAction="doneWithWeeklyReview:" id="2RP-Tf-4lg"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="11" id="mwV-Uu-E9X">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="HM4-Qr-Iy6">
                             <connections>
@@ -986,8 +746,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="goButton" destination="jbY-r5-oC6" id="ZWA-yW-wBz"/>
-                        <outlet property="timeCountdownLabel" destination="FDx-3G-nMu" id="Egk-oK-1Mn"/>
+                        <outlet property="goButton" destination="rpT-Eh-4Bu" id="cgD-gR-kHo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qzn-N2-3hx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1113,7 +872,7 @@
         <!--Navigation Controller-->
         <scene sceneID="oES-7A-qoj">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vbe-vK-1Xr" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="Vbe-vK-1Xr" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="8T7-Jy-A3f"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="n1B-gr-jR7">
@@ -1121,6 +880,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="tsf-8c-JbR">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="bL0-WP-BS2"/>
                     </connections>
@@ -1152,18 +915,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Weekly Review Assistant" id="yiX-bX-zEc">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="qwq-UI-tbn">
-                            <connections>
-                                <segue destination="TJW-uc-aYz" kind="unwind" unwindAction="doneWithInfo:" id="zlM-7Y-yrm"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Weekly Review Assistant" id="yiX-bX-zEc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cqw-9c-MFq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="TJW-uc-aYz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1924" y="1311"/>
+            <point key="canvasLocation" x="1432" y="1299"/>
         </scene>
         <!--Add Trigger View Controller-->
         <scene sceneID="c1N-BQ-Y3g">
@@ -1240,25 +997,6 @@
             </objects>
             <point key="canvasLocation" x="2870" y="808"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="2Qs-DB-U9x">
-            <objects>
-                <tabBarController definesPresentationContext="YES" id="cHc-dg-PuB" sceneMemberID="viewController">
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="QHy-ts-fZN">
-                        <rect key="frame" x="129" y="330" width="163" height="49"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="auc-eL-D5k" kind="relationship" relationship="viewControllers" id="peN-rK-HnS"/>
-                        <segue destination="Fzq-rM-YC2" kind="relationship" relationship="viewControllers" id="GG2-Te-zaD"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rcO-Ac-uRC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1108" y="971"/>
-        </scene>
         <!--Log Table View Controller - Log-->
         <scene sceneID="ow4-sK-2b5">
             <objects>
@@ -1291,56 +1029,12 @@
                             <outlet property="delegate" destination="uBk-GX-Gh8" id="SGb-rM-vc8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Log" id="uwF-wO-KPa">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="V0Z-yz-0i3">
-                            <connections>
-                                <segue destination="5Um-y5-mcp" kind="unwind" unwindAction="doneWithInfo:" id="teq-Yi-Hi3"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Log" id="uwF-wO-KPa"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0kP-AI-pcI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="5Um-y5-mcp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1898" y="2151"/>
-        </scene>
-        <!--Navigation Controller - About-->
-        <scene sceneID="Q6c-hI-1si">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="auc-eL-D5k" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="About" id="gkS-mD-mNX"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cu7-Zs-1LI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="2zO-ij-yMj" kind="relationship" relationship="rootViewController" id="Doj-7w-jax"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4x6-QU-Vqj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1491" y="1311"/>
-        </scene>
-        <!--Navigation Controller - History-->
-        <scene sceneID="Rcn-5k-BGL">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fzq-rM-YC2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="History" id="rkn-9F-NlS"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sh2-aR-vSj">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="uBk-GX-Gh8" kind="relationship" relationship="rootViewController" id="B5e-sC-ZfO"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cVl-TP-pUa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1432" y="2151"/>
+            <point key="canvasLocation" x="1935" y="1299"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

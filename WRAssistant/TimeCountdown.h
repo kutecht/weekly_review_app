@@ -21,6 +21,7 @@ extern NSString *const TimeCountdownTimesUp;
 - (id)initWithDurationInMinutes:(int)minutes;
 - (void)start;
 - (void)stop;
+- (void)reset;
 - (BOOL)isStopped;
 
 @end
