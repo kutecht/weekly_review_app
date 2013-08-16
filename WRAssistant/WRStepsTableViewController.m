@@ -38,7 +38,13 @@
                           initWithDurationInMinutes:[[NSUserDefaults standardUserDefaults] integerForKey:WRConstantsStepDurationInMinKey]];
     self.timerButton.title = [self.timeCountdown description];
     self.timeCountdown.delegate = self;
+}
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    [self.tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionTop];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
