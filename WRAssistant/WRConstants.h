@@ -32,5 +32,6 @@ extern NSString *const WRConstantsThoughtGuideTitleKey;
 
 + (NSArray *)defaultTriggerList;
 + (NSArray *)defaultThoughtGuides;
++ (void)logDateTime;
 
 @end

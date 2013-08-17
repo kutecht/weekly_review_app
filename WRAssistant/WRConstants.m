@@ -164,5 +164,16 @@ static NSString *const kTGUpcomingEvents = @"Upcoming events";
       ];
 }
 
++ (void)logDateTime
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *log = [[defaults objectForKey:WRConstantsLogKey] mutableCopy];
+    if (!log) log = [NSMutableArray array];
+    [log addObject:[NSDate date]];
+    [defaults setObject:log forKey:WRConstantsLogKey];
+    [defaults synchronize];
+}
+
+
 @end
 

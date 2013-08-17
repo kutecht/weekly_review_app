@@ -70,8 +70,16 @@ static NSString *const kSegueShowThoughtGuideTable = @"showThoughtGuideList";
     }
 }
 
+- (IBAction)weeklyReviewCompletedPressed:(UIBarButtonItem *)sender
+{
+    [WRConstants logDateTime];
+    // TODO: Add an alert that time was logged -- popup
+}
+
 - (IBAction)cancelAddingThoughtGuide:(UIStoryboardSegue *)segue
 {
 }
+
+
 
 @end

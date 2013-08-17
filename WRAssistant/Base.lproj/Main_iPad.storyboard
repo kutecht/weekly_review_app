@@ -235,6 +235,46 @@
                                             <segue destination="b27-Ue-kNi" kind="replace" splitViewControllerTargetIndex="1" id="nEB-tw-xMQ"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="0zK-7N-6RP" style="IBUITableViewCellStyleDefault" id="NCn-EP-QkV">
+                                        <rect key="frame" x="0.0" y="548" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="NCn-EP-QkV" id="Qb3-iA-NLT">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="About Weekly Review Assistant" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0zK-7N-6RP">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="J3r-Qs-P3f" kind="replace" splitViewControllerTargetIndex="1" id="v13-gz-8SK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="beX-8b-Web" style="IBUITableViewCellStyleDefault" id="jya-9g-cwl">
+                                        <rect key="frame" x="0.0" y="592" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="jya-9g-cwl" id="2Cy-Sb-XB1">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="Log" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="beX-8b-Web">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="AMC-Kl-TnY" kind="replace" splitViewControllerTargetIndex="1" id="799-1M-OUC"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -244,7 +284,6 @@
                         </connections>
                     </tableView>
                     <toolbarItems>
-                        <barButtonItem title="About" id="ulK-z8-HW9"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="RaV-ch-DL0"/>
                         <barButtonItem title="0:00" id="wkY-jq-fkp">
                             <connections>
@@ -252,7 +291,6 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="D85-Ja-bgD"/>
-                        <barButtonItem title="Log" id="1PK-v7-d7w"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Weekly Review" id="oYM-bX-b6Y"/>
                     <connections>
@@ -261,7 +299,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3a9-ZS-AxE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="530" y="610"/>
+            <point key="canvasLocation" x="546" y="2"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yoW-1x-vg0">
@@ -280,7 +318,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qXp-Bo-eh6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4" y="527"/>
+            <point key="canvasLocation" x="-292" y="-17"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="BXs-SV-Vlf">
@@ -294,7 +332,7 @@
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aE5-fm-gDt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1070" y="415"/>
+            <point key="canvasLocation" x="-1310" y="-113"/>
         </scene>
         <!--Step1 View Controller - Collect Loose Paper-->
         <scene sceneID="0kI-hS-31q">
@@ -501,7 +539,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hC3-Ah-kyz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4733" y="431"/>
+            <point key="canvasLocation" x="6681" y="431"/>
         </scene>
         <!--Step7 View Controller - Review Waiting-For List-->
         <scene sceneID="Nrx-t0-tpx">
@@ -529,7 +567,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EzJ-Gp-tAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6897" y="450"/>
+            <point key="canvasLocation" x="8845" y="450"/>
         </scene>
         <!--Step8 View Controller - Review Project Lists-->
         <scene sceneID="vOG-Kx-zL9">
@@ -557,7 +595,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3n-I6-fkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="2222"/>
+            <point key="canvasLocation" x="59" y="2534"/>
         </scene>
         <!--Step9 View Controller - Review Checklists-->
         <scene sceneID="4bM-RT-qbE">
@@ -586,7 +624,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4HV-Xm-L89" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2068" y="2254"/>
+            <point key="canvasLocation" x="2092" y="2446"/>
         </scene>
         <!--Step10 View Controller - Review Someday/Maybe List-->
         <scene sceneID="H2s-fQ-Q8W">
@@ -615,7 +653,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ac-sN-Zrj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4289" y="2310"/>
+            <point key="canvasLocation" x="4249" y="2422"/>
         </scene>
         <!--Step11 View Controller - Capture New Ideas-->
         <scene sceneID="ire-3P-bAr">
@@ -642,6 +680,11 @@
                         <gestureRecognizers/>
                     </view>
                     <navigationItem key="navigationItem" title="Capture New Ideas" id="8vu-D2-q0q">
+                        <barButtonItem key="leftBarButtonItem" title="Weekly Review Completed" id="gI4-81-xDt">
+                            <connections>
+                                <action selector="weeklyReviewCompletedPressed:" destination="rNP-mS-jW2" id="VpU-se-VtQ"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="EvT-HV-Xjs">
                             <connections>
                                 <segue destination="jhP-AV-eoB" kind="modal" identifier="showAddThoughtGuide" modalTransitionStyle="coverVertical" id="qx2-3o-bHg"/>
@@ -651,7 +694,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJC-UL-wYF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6477" y="2310"/>
+            <point key="canvasLocation" x="6341" y="2414"/>
         </scene>
         <!--Reminder Table View Controller-->
         <scene sceneID="hwe-KO-z0d">
@@ -826,7 +869,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eu2-dG-QKx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7621" y="2323"/>
+            <point key="canvasLocation" x="7413" y="2430"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UxA-XL-G8E">
@@ -934,7 +977,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bss-QW-WqN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3759" y="431"/>
+            <point key="canvasLocation" x="5707" y="431"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="guN-3b-jBb">
@@ -952,7 +995,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lr7-zw-sqk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5923" y="450"/>
+            <point key="canvasLocation" x="7871" y="450"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XgE-bE-uzO">
@@ -970,7 +1013,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Xq-33-STa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-939" y="2222"/>
+            <point key="canvasLocation" x="-907" y="2526"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Bg-sc-FAJ">
@@ -988,7 +1031,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c02-KW-Mha" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1094" y="2254"/>
+            <point key="canvasLocation" x="1126" y="2478"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dha-cs-5FA">
@@ -1006,7 +1049,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vij-L2-Nvk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3315" y="2310"/>
+            <point key="canvasLocation" x="3275" y="2430"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3fS-Cf-VKE">
@@ -1024,7 +1067,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l4C-0k-EZi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5503" y="2310"/>
+            <point key="canvasLocation" x="5271" y="2414"/>
         </scene>
         <!--Add Thought Guide View Controller - Add Thought Guide-->
         <scene sceneID="mcn-ds-pqZ">
@@ -1102,7 +1145,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a30-05-tP4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="r53-jb-vTT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="8576" y="1094"/>
+            <point key="canvasLocation" x="10164" y="1334"/>
         </scene>
         <!--Add Trigger View Controller-->
         <scene sceneID="JLh-Kp-rcN">
@@ -1178,6 +1221,111 @@
                 <exit id="Lm4-iw-zEL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2942" y="-784"/>
+        </scene>
+        <!--View Controller - About Weekly Review Assistant-->
+        <scene sceneID="lTP-BK-ZTH">
+            <objects>
+                <viewController id="tZn-R1-103" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kvK-GM-NfZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="qlj-sB-5iC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CNn-22-VJ7">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="728" translatesAutoresizingMaskIntoConstraints="NO" id="SRN-Ox-YPe" customClass="UITopLeftLabel">
+                                <rect key="frame" x="20" y="86" width="728" height="424"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">A Weekly Review is described by David Allen, in "Getting Things DONE" (GTD™), as a weekly behavior to review all open loops (i.e., projects), active project plans, and "Next Actions," "Agendas,"  ...  This app assists in performing a Weekly Review following David's outline with the addition of timers and customizable lists.</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="About Weekly Review Assistant" id="eB3-E9-yMt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GQy-4F-d3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2366" y="873"/>
+        </scene>
+        <!--Log Table View Controller - Log-->
+        <scene sceneID="IIU-ui-eiQ">
+            <objects>
+                <tableViewController id="S9g-rR-TKW" customClass="LogTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Xfe-aF-znk">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LogDateCell" textLabel="Ei5-NK-QNg" style="IBUITableViewCellStyleDefault" id="jws-6G-ZFC">
+                                <rect key="frame" x="0.0" y="86" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="jws-6G-ZFC" id="xKL-fV-5vP">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ei5-NK-QNg">
+                                            <rect key="frame" x="15" y="0.0" width="738" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="S9g-rR-TKW" id="Vit-qH-UMb"/>
+                            <outlet property="delegate" destination="S9g-rR-TKW" id="yJr-yU-ToC"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Log" id="Gax-9L-hvO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X6Q-5j-cnW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2295" y="2189"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fq7-zN-w2h">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J3r-Qs-P3f" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="esM-zI-qxg">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tZn-R1-103" kind="relationship" relationship="rootViewController" id="3xc-Ym-UpI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ki6-2j-mLU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3260" y="873"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HdX-kD-y2f">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AMC-Kl-TnY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xFs-rU-maR">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="S9g-rR-TKW" kind="relationship" relationship="rootViewController" id="2AO-q2-s7n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mMR-lP-ZL8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3260" y="2165"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
