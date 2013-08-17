@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 kevin utecht. All rights reserved.
 //
 
+#include <AudioToolbox/AudioToolbox.h>
 #import "TimeCountdown.h"
 
 @interface TimeCountdown ()
@@ -14,6 +15,10 @@
 @property (nonatomic) int minutes;
 @property (nonatomic) int initialDurationInMinutes;
 @property (nonatomic) TimeCountdownState currentState;
+@property (nonatomic) CFURLRef beepFinishedURLRef;
+@property (nonatomic)  SystemSoundID beepFinishedObject;
+@property (nonatomic) CFURLRef beep1MinLeftURLRef;
+@property (nonatomic)  SystemSoundID beep1MinLeftObject;
 @end
 
 static const int kDefaultDurationInMinutes = 5;
@@ -30,6 +35,18 @@ static const int kDefaultDurationInMinutes = 5;
         self.initialDurationInMinutes = minutes;
         self.minutes = minutes;
         self.seconds = 0;
+        
+        NSURL *beepFinishedSound   = [[NSBundle mainBundle] URLForResource: @"BeepFinished"
+                                                             withExtension: @"aif"];
+        self.beepFinishedURLRef = (__bridge CFURLRef) beepFinishedSound;
+        
+        AudioServicesCreateSystemSoundID (_beepFinishedURLRef, &_beepFinishedObject);
+        
+        NSURL *beep1MinLeftSound   = [[NSBundle mainBundle] URLForResource: @"Beep1MinLeft"
+                                                             withExtension: @"aif"];
+        self.beep1MinLeftURLRef = (__bridge CFURLRef) beep1MinLeftSound;
+        
+        AudioServicesCreateSystemSoundID (_beep1MinLeftURLRef, &_beep1MinLeftObject);
     }
     return self;
 }
@@ -46,6 +63,9 @@ static const int kDefaultDurationInMinutes = 5;
     if (self.minutes == 0 && self.seconds == 0)
     {
         [self.timer invalidate];
+        
+        // play 2 beeps when times-up
+        AudioServicesPlaySystemSound(self.beepFinishedObject);
         self.currentState = TimeCountdownDone;
     }
     else
@@ -59,8 +79,14 @@ static const int kDefaultDurationInMinutes = 5;
         {
             self.seconds -=1 ;
         }
+        
+        // 1 beep when 1 minute to go
+        if (self.minutes == 1 && self.seconds == 0)
+        {
+            AudioServicesPlaySystemSound(self.beep1MinLeftObject);
+        }
     }
-    
+        
     [self.delegate timeChanged:self];
 }
 
