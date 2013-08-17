@@ -53,6 +53,9 @@
 		68CFBE8C17A86582002C6C6E /* EventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CFBE8A17A86582002C6C6E /* EventTableViewController.m */; };
 		68CFBE8F17A8688E002C6C6E /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68CFBE8D17A8688E002C6C6E /* EventKit.framework */; };
 		68CFBE9017A8688E002C6C6E /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68CFBE8E17A8688E002C6C6E /* EventKitUI.framework */; };
+		68F3667D17BECE7D00CBD657 /* BeepFinished.aif in Resources */ = {isa = PBXBuildFile; fileRef = 68F3667B17BECE7D00CBD657 /* BeepFinished.aif */; };
+		68F3667E17BECE7D00CBD657 /* Beep1MinLeft.aif in Resources */ = {isa = PBXBuildFile; fileRef = 68F3667C17BECE7D00CBD657 /* Beep1MinLeft.aif */; };
+		68F3668017BED13200CBD657 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F3667F17BED13200CBD657 /* AudioToolbox.framework */; };
 		68FDE0C117B1E5F300A60A53 /* Trigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FDE0C017B1E5F300A60A53 /* Trigger.m */; };
 		68FDE0C417B1E5F300A60A53 /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FDE0C317B1E5F300A60A53 /* Group.m */; };
 /* End PBXBuildFile section */
@@ -146,6 +149,9 @@
 		68CFBE8B17A86582002C6C6E /* EventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewController.h; sourceTree = "<group>"; };
 		68CFBE8D17A8688E002C6C6E /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		68CFBE8E17A8688E002C6C6E /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		68F3667B17BECE7D00CBD657 /* BeepFinished.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = BeepFinished.aif; sourceTree = "<group>"; };
+		68F3667C17BECE7D00CBD657 /* Beep1MinLeft.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = Beep1MinLeft.aif; sourceTree = "<group>"; };
+		68F3667F17BED13200CBD657 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		68FDE0BF17B1E5F300A60A53 /* Trigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trigger.h; sourceTree = "<group>"; };
 		68FDE0C017B1E5F300A60A53 /* Trigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trigger.m; sourceTree = "<group>"; };
 		68FDE0C217B1E5F300A60A53 /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
@@ -157,6 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68F3668017BED13200CBD657 /* AudioToolbox.framework in Frameworks */,
 				68CFBE8F17A8688E002C6C6E /* EventKit.framework in Frameworks */,
 				68CFBE9017A8688E002C6C6E /* EventKitUI.framework in Frameworks */,
 				6840AB2717A0C6C90067D4C9 /* CoreData.framework in Frameworks */,
@@ -201,6 +208,7 @@
 		6820F0CD1795E9AA00332A80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				68F3667F17BED13200CBD657 /* AudioToolbox.framework */,
 				68CFBE8D17A8688E002C6C6E /* EventKit.framework */,
 				68CFBE8E17A8688E002C6C6E /* EventKitUI.framework */,
 				6840AB2617A0C6C90067D4C9 /* CoreData.framework */,
@@ -246,6 +254,8 @@
 		6820F0D51795E9AA00332A80 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				68F3667B17BECE7D00CBD657 /* BeepFinished.aif */,
+				68F3667C17BECE7D00CBD657 /* Beep1MinLeft.aif */,
 				6820F0D61795E9AA00332A80 /* WRAssistant-Info.plist */,
 				6820F0D71795E9AA00332A80 /* InfoPlist.strings */,
 				6820F0DA1795E9AA00332A80 /* main.m */,
@@ -520,10 +530,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68F3667E17BECE7D00CBD657 /* Beep1MinLeft.aif in Resources */,
 				6820F0E51795E9AA00332A80 /* Main_iPad.storyboard in Resources */,
 				6820F0EA1795E9AA00332A80 /* Images.xcassets in Resources */,
 				68CD047B1799C80E00CDCB40 /* Settings.bundle in Resources */,
 				6820F0E21795E9AA00332A80 /* Main_iPhone.storyboard in Resources */,
+				68F3667D17BECE7D00CBD657 /* BeepFinished.aif in Resources */,
 				6820F0D91795E9AA00332A80 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
