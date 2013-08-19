@@ -37,6 +37,11 @@ static NSString *const kTableCellIdLogDate = @"LogDateCell";
         for (NSDate *date in [defaults objectForKey:WRConstantsLogKey]) {
                 [_historyLog addObject:date];
         }
+        
+        // sort, showing most recent at the top
+        NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"self" ascending:NO];
+        NSArray *descriptors = [NSArray arrayWithObject: descriptor];
+        [_historyLog sortUsingDescriptors:descriptors];
     }
     
     return _historyLog;
