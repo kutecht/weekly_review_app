@@ -101,7 +101,6 @@ static NSString *const kTableCellIdTrigger = @"TriggerCell";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.debug = YES;
     [self.refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
 }
 
@@ -137,32 +136,10 @@ static NSString *const kTableCellIdTrigger = @"TriggerCell";
     }];
 }
 
-//
-// Following is based on CS193P lecture #14 Feb. 2013 -- TODO: remove debug (instructor code) before ship, research what NSFetchRequest docs say to add
-//
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return YES;
-}
-
-#pragma mark - Fetching
-
-- (void)performFetch
-{
-    if (self.fetchedResultsController) {
-        if (self.fetchedResultsController.fetchRequest.predicate) {
-            if (self.debug) NSLog(@"[%@ %@] fetching %@ with predicate: %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), self.fetchedResultsController.fetchRequest.entityName, self.fetchedResultsController.fetchRequest.predicate);
-        } else {
-            if (self.debug) NSLog(@"[%@ %@] fetching all %@ (i.e., no predicate)", NSStringFromClass([self class]), NSStringFromSelector(_cmd), self.fetchedResultsController.fetchRequest.entityName);
-        }
-        NSError *error;
-        [self.fetchedResultsController performFetch:&error];
-        if (error) NSLog(@"[%@ %@] %@ (%@)", NSStringFromClass([self class]), NSStringFromSelector(_cmd), [error localizedDescription], [error localizedFailureReason]);
-    } else {
-        if (self.debug) NSLog(@"[%@ %@] no NSFetchedResultsController (yet?)", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
-    }
-    [self.tableView reloadData];
 }
 
 - (void)setFetchedResultsController:(NSFetchedResultsController *)newfrc
@@ -171,18 +148,28 @@ static NSString *const kTableCellIdTrigger = @"TriggerCell";
     if (newfrc != oldfrc) {
         _fetchedResultsController = newfrc;
         newfrc.delegate = self;
-        if ((!self.title || [self.title isEqualToString:oldfrc.fetchRequest.entity.name]) && (!self.navigationController || !self.navigationItem.title)) {
+        if ((!self.title || [self.title isEqualToString:oldfrc.fetchRequest.entity.name]) && (!self.navigationController || !self.navigationItem.title))
+        {
             self.title = newfrc.fetchRequest.entity.name;
         }
-        if (newfrc) {
-            if (self.debug) NSLog(@"[%@ %@] %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), oldfrc ? @"updated" : @"set");
-            [self performFetch];
-        } else {
-            if (self.debug) NSLog(@"[%@ %@] reset to nil", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
+        
+        if (newfrc)
+        {
+            NSError *error;
+            [newfrc performFetch:&error];
+            if (error)
+            {
+                NSLog(@"[%@ %@] %@ (%@)", NSStringFromClass([self class]), NSStringFromSelector(_cmd), [error localizedDescription], [error localizedFailureReason]);
+            }
+            [self.tableView reloadData];
+        }
+        else
+        {
             [self.tableView reloadData];
         }
     }
 }
+
 
 #pragma mark - UITableViewDataSource
 
