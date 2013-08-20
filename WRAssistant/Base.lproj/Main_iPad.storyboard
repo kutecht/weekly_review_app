@@ -1244,7 +1244,7 @@
  - log of past reviews
 
 This app is not a GTD system.  The app works along side your system whether it be paper based or software based.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
