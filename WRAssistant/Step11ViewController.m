@@ -7,15 +7,19 @@
 //
 
 #import "Step11ViewController.h"
+#import "Step1ViewController.h"
 #import "ThoughtGuideTableViewController.h"
 #import "AddThoughtGuideViewController.h"
 
 @interface Step11ViewController ()
 @property (strong, nonatomic) ThoughtGuideTableViewController *thoughtGuideTVC;
-
 @end
 
 static NSString *const kSegueShowThoughtGuideTable = @"showThoughtGuideList";
+static NSString *const kSegueShowAddTrigger = @"showAddThoughtGuide";
+static NSString *const kSegueShowStep1 = @"showStep1";
+static NSString *const kStep1Title = @"1";
+
 
 @implementation Step11ViewController
 
@@ -34,7 +38,11 @@ static NSString *const kSegueShowThoughtGuideTable = @"showThoughtGuideList";
 {
     [super viewDidLoad];
     
-
+    UIBarButtonItem *step1BarButton = [[UIBarButtonItem alloc] initWithTitle:kStep1Title style:UIBarButtonItemStyleBordered target:self action:@selector(step1Pressed:)];
+    
+    UIBarButtonItem *addThoughtGuideBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addThoughtGuidePressed:)];
+    
+    self.navigationItem.rightBarButtonItems = @[step1BarButton, addThoughtGuideBarButton];
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -70,6 +78,7 @@ static NSString *const kSegueShowThoughtGuideTable = @"showThoughtGuideList";
     }
 }
 
+// iPad only method
 - (IBAction)weeklyReviewCompletedPressed:(UIBarButtonItem *)sender
 {
     [WRConstants logDateTime];
@@ -80,6 +89,17 @@ static NSString *const kSegueShowThoughtGuideTable = @"showThoughtGuideList";
 {
 }
 
+- (IBAction)addThoughtGuidePressed:(UIBarButtonItem *)sender
+{
+    [self performSegueWithIdentifier:@"showAddThoughtGuide" sender:self];
+}
 
+- (IBAction)step1Pressed:(UIBarButtonItem *)sender
+{
+    if ([self canPerformUnwindSegueAction:@selector(doneWithWeeklyReview:) fromViewController:self withSender:sender])
+    {
+        
+    }
+}
 
 @end

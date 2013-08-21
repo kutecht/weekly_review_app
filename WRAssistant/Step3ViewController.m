@@ -17,6 +17,8 @@
 
 static NSString *const kSegueShowTriggerList = @"showTriggerList";
 static NSString *const kSegueShowAddTrigger = @"showAddTrigger";
+static NSString *const kSegueShowStep4 = @"showStep4";
+static NSString *const kStep4Title = @"4";
 
 
 @implementation Step3ViewController
@@ -34,6 +36,11 @@ static NSString *const kSegueShowAddTrigger = @"showAddTrigger";
 {
     [super viewDidLoad];
     
+    UIBarButtonItem *step4BarButton = [[UIBarButtonItem alloc] initWithTitle:kStep4Title style:UIBarButtonItemStyleBordered target:self action:@selector(step4Pressed:)];
+    
+    UIBarButtonItem *addTriggerBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addTriggerPressed:)];
+    
+    self.navigationItem.rightBarButtonItems = @[step4BarButton, addTriggerBarButton];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -83,4 +90,14 @@ static NSString *const kSegueShowAddTrigger = @"showAddTrigger";
 {
 }
 
+- (IBAction)addTriggerPressed:(UIBarButtonItem *)sender
+{
+    [self performSegueWithIdentifier:kSegueShowAddTrigger sender:self];
+}
+
+- (IBAction)step4Pressed:(UIBarButtonItem *)sender
+{
+    [self performSegueWithIdentifier:kSegueShowStep4 sender:self];
+
+}
 @end

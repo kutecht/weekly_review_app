@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3715.3"/>
     </dependencies>
     <scenes>
-        <!--Step1 View Controller - 1 of 11-->
+        <!--Step1 View Controller - 1-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="Step1ViewController" sceneMemberID="viewController">
@@ -47,12 +47,6 @@
                                 <segue destination="2zO-ij-yMj" kind="push" id="ixh-5g-3fT"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="vFf-hX-6x8"/>
-                        <barButtonItem title="Log" id="Oka-vW-93B">
-                            <connections>
-                                <segue destination="uBk-GX-Gh8" kind="push" id="1eD-Ml-CVo"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="c9v-9N-8xh"/>
                         <barButtonItem title="0:00" id="tBr-OD-mfE">
                             <connections>
@@ -60,13 +54,19 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="VDE-lb-9gc"/>
-                        <barButtonItem title="Next" id="QAn-5o-a6q">
+                        <barButtonItem title="Log" id="Oka-vW-93B">
+                            <connections>
+                                <segue destination="uBk-GX-Gh8" kind="push" id="1eD-Ml-CVo"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="1" id="rxz-h9-twa">
+                        <barButtonItem key="rightBarButtonItem" title="2" id="QAn-5o-a6q">
                             <connections>
                                 <segue destination="B5r-65-V1F" kind="push" id="aKj-gG-W9B"/>
                             </connections>
                         </barButtonItem>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" title="1 of 11" id="rxz-h9-twa"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="timerButton" destination="tBr-OD-mfE" id="dqj-ja-BSt"/>
                     </connections>
@@ -112,7 +112,7 @@
             </objects>
             <point key="canvasLocation" x="1654" y="918"/>
         </scene>
-        <!--Step2 View Controller - 2 of 11-->
+        <!--Step2 View Controller - 2-->
         <scene sceneID="B1P-Rj-oBR">
             <objects>
                 <viewController id="B5r-65-V1F" customClass="Step2ViewController" sceneMemberID="viewController">
@@ -141,7 +141,6 @@
                         <gestureRecognizers/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Swd-D7-be5"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="STg-Ee-QcO"/>
                         <barButtonItem title="0:00" id="eMw-cz-CpN">
                             <connections>
@@ -149,13 +148,14 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="TYj-Ja-I3E"/>
-                        <barButtonItem title="Next" id="Dhm-jq-LJs">
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="2" id="hTF-A9-T3E">
+                        <barButtonItem key="rightBarButtonItem" title="3" id="Dhm-jq-LJs">
                             <connections>
                                 <segue destination="pjr-Fx-tE0" kind="push" id="sW4-po-x3B"/>
                             </connections>
                         </barButtonItem>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" title="2 of 11" id="hTF-A9-T3E"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="timerButton" destination="eMw-cz-CpN" id="cR8-Zd-K1n"/>
                     </connections>
@@ -164,7 +164,7 @@
             </objects>
             <point key="canvasLocation" x="2074" y="73"/>
         </scene>
-        <!--Step3 View Controller - 3 of 11-->
+        <!--Step3 View Controller - 3-->
         <scene sceneID="5cx-PY-NKD">
             <objects>
                 <viewController id="pjr-Fx-tE0" customClass="Step3ViewController" sceneMemberID="viewController">
@@ -193,7 +193,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="LIP-fl-4bZ" kind="embed" identifier="showTriggerList" id="6kx-Gc-b6M"/>
+                                    <segue destination="LIP-fl-4bZ" kind="embed" identifier="" id="6kx-Gc-b6M"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -201,7 +201,6 @@
                         <gestureRecognizers/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Og5-JO-VqA"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="eLO-9D-MQU"/>
                         <barButtonItem title="0:00" id="8SA-h9-rjE">
                             <connections>
@@ -209,21 +208,12 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="6ZL-nf-xGO"/>
-                        <barButtonItem title="Next" id="aaI-gr-Uzl">
-                            <connections>
-                                <segue destination="qiY-ei-8BN" kind="push" id="2uT-Se-J2e"/>
-                            </connections>
-                        </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="3 of 11" id="heF-Zd-rhO">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0l1-6w-1V1">
-                            <connections>
-                                <segue destination="k0V-7P-WUB" kind="modal" identifier="showAddTrigger" modalTransitionStyle="coverVertical" id="1uc-M3-kD8"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="3" id="heF-Zd-rhO"/>
                     <connections>
                         <outlet property="timerButton" destination="8SA-h9-rjE" id="Q3v-ne-gEZ"/>
+                        <segue destination="qiY-ei-8BN" kind="push" identifier="showStep4" id="AgF-jt-vBz"/>
+                        <segue destination="k0V-7P-WUB" kind="modal" identifier="showAddTrigger" modalTransitionStyle="coverVertical" id="xsK-O7-FCK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vFb-Ab-K3E" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -272,7 +262,7 @@
             </objects>
             <point key="canvasLocation" x="2475" y="808"/>
         </scene>
-        <!--Step4 View Controller - 4 of 11-->
+        <!--Step4 View Controller - 4-->
         <scene sceneID="ueX-45-Vig">
             <objects>
                 <viewController id="qiY-ei-8BN" customClass="Step4ViewController" sceneMemberID="viewController">
@@ -301,7 +291,6 @@
                         <gestureRecognizers/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="nta-RY-OTi"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="pup-ce-L4a"/>
                         <barButtonItem title="0:00" id="YYb-Lz-qqJ">
                             <connections>
@@ -309,13 +298,14 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="CoN-b2-JgN"/>
-                        <barButtonItem title="Next" id="99m-wU-eYi">
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="4" id="vEd-pv-akJ">
+                        <barButtonItem key="rightBarButtonItem" title="5" id="99m-wU-eYi">
                             <connections>
                                 <segue destination="fyK-eD-dl7" kind="push" id="RRv-tw-8HM"/>
                             </connections>
                         </barButtonItem>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" title="4 of 11" id="vEd-pv-akJ"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="timerButton" destination="YYb-Lz-qqJ" id="Ll2-1Y-Or3"/>
                     </connections>
@@ -324,7 +314,7 @@
             </objects>
             <point key="canvasLocation" x="2845" y="73"/>
         </scene>
-        <!--Step5 View Controller - 5 of 11-->
+        <!--Step5 View Controller - 5-->
         <scene sceneID="0lh-QF-7wF">
             <objects>
                 <viewController id="fyK-eD-dl7" customClass="Step5ViewController" sceneMemberID="viewController">
@@ -361,7 +351,6 @@
                         <gestureRecognizers/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="yOU-wO-yYc"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="WW8-RE-zdW"/>
                         <barButtonItem title="0:00" id="S7s-ZP-b7s">
                             <connections>
@@ -369,13 +358,14 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="nIT-Uh-KFn"/>
-                        <barButtonItem title="Next" id="gJI-M9-nDe">
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="5" id="BAY-hq-bYL">
+                        <barButtonItem key="rightBarButtonItem" title="6" id="gJI-M9-nDe">
                             <connections>
                                 <segue destination="pSz-7r-iHf" kind="push" id="yDE-NK-V4e"/>
                             </connections>
                         </barButtonItem>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" title="5 of 11" id="BAY-hq-bYL"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="timerButton" destination="S7s-ZP-b7s" id="nRC-MP-j3l"/>
                     </connections>
@@ -384,7 +374,7 @@
             </objects>
             <point key="canvasLocation" x="3197" y="78"/>
         </scene>
-        <!--Step6 View Controller - 6 of 11-->
+        <!--Step6 View Controller - 6-->
         <scene sceneID="Aux-Bk-jlk">
             <objects>
                 <viewController id="pSz-7r-iHf" customClass="Step6ViewController" sceneMemberID="viewController">
@@ -422,7 +412,6 @@
                         <gestureRecognizers/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="7hE-vV-ACo"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="HaX-dI-aOt"/>
                         <barButtonItem title="0:00" id="9pQ-Ix-hKn">
                             <connections>
@@ -430,13 +419,14 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="4yy-fR-Foj"/>
-                        <barButtonItem title="Next" id="JHN-IV-LRN">
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="6" id="cil-eH-MRL">
+                        <barButtonItem key="rightBarButtonItem" title="7" id="JHN-IV-LRN">
                             <connections>
                                 <segue destination="RLS-4f-Aks" kind="push" id="WOL-px-biH"/>
                             </connections>
                         </barButtonItem>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" title="6 of 11" id="cil-eH-MRL"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="timerButton" destination="9pQ-Ix-hKn" id="hSO-vn-Zxl"/>
                     </connections>
@@ -504,7 +494,7 @@
             </objects>
             <point key="canvasLocation" x="3987" y="760"/>
         </scene>
-        <!--Step7 View Controller - 7 of 11-->
+        <!--Step7 View Controller - 7-->
         <scene sceneID="NYN-p9-QcV">
             <objects>
                 <viewController id="RLS-4f-Aks" customClass="Step7ViewController" sceneMemberID="viewController">
@@ -533,7 +523,6 @@
                         <gestureRecognizers/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Hg3-Rk-aAT"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="HzB-An-eKB"/>
                         <barButtonItem title="0:00" id="LdE-Hc-2yo">
                             <connections>
@@ -541,13 +530,14 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="FWf-wJ-rjt"/>
-                        <barButtonItem title="Next" id="kgX-lY-Uwb">
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="7" id="Ft4-FS-pDo">
+                        <barButtonItem key="rightBarButtonItem" title="8" id="kgX-lY-Uwb">
                             <connections>
                                 <segue destination="97b-bP-4Ky" kind="push" id="HYD-2N-sSY"/>
                             </connections>
                         </barButtonItem>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" title="7 of 11" id="Ft4-FS-pDo"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="timerButton" destination="LdE-Hc-2yo" id="aPv-Qo-fTk"/>
                     </connections>
@@ -556,7 +546,7 @@
             </objects>
             <point key="canvasLocation" x="3965" y="78"/>
         </scene>
-        <!--Step8 View Controller - 8 of 11-->
+        <!--Step8 View Controller - 8-->
         <scene sceneID="ivc-oN-HNj">
             <objects>
                 <viewController id="97b-bP-4Ky" customClass="Step8ViewController" sceneMemberID="viewController">
@@ -585,7 +575,6 @@
                         <gestureRecognizers/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="11Q-F7-IVI"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Q4Q-u3-uXY"/>
                         <barButtonItem title="0:00" id="bEJ-wz-K8v">
                             <connections>
@@ -593,13 +582,14 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="6J3-wq-KRn"/>
-                        <barButtonItem title="Next" id="JxL-bs-GDV">
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="8" id="UaC-LG-a83">
+                        <barButtonItem key="rightBarButtonItem" title="9" id="JxL-bs-GDV">
                             <connections>
                                 <segue destination="J4X-9o-bQa" kind="push" id="6Mk-2Z-0et"/>
                             </connections>
                         </barButtonItem>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" title="8 of 11" id="UaC-LG-a83"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="timerButton" destination="bEJ-wz-K8v" id="q7q-EY-h7T"/>
                     </connections>
@@ -608,7 +598,7 @@
             </objects>
             <point key="canvasLocation" x="4367" y="78"/>
         </scene>
-        <!--Step9 View Controller - 9 of 11-->
+        <!--Step9 View Controller - 9-->
         <scene sceneID="Vyy-ha-fbe">
             <objects>
                 <viewController id="J4X-9o-bQa" customClass="Step9ViewController" sceneMemberID="viewController">
@@ -638,7 +628,6 @@
                         <gestureRecognizers/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="MqJ-YN-ODd"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Jsy-9C-RE3"/>
                         <barButtonItem title="0:00" id="rIn-W8-fR4">
                             <connections>
@@ -646,13 +635,14 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="nj7-vh-Omx"/>
-                        <barButtonItem title="Next" id="MFM-OI-pSH">
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="9" id="rGG-Ae-0sc">
+                        <barButtonItem key="rightBarButtonItem" title="10" id="MFM-OI-pSH">
                             <connections>
                                 <segue destination="VhK-n0-QdD" kind="push" id="HvS-bu-HfV"/>
                             </connections>
                         </barButtonItem>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" title="9 of 11" id="rGG-Ae-0sc"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="timerButton" destination="rIn-W8-fR4" id="WAy-u7-nBt"/>
                     </connections>
@@ -661,7 +651,7 @@
             </objects>
             <point key="canvasLocation" x="4760" y="78"/>
         </scene>
-        <!--Step10 View Controller - 10 of 11-->
+        <!--Step10 View Controller - 10-->
         <scene sceneID="0ye-8I-qml">
             <objects>
                 <viewController id="VhK-n0-QdD" customClass="Step10ViewController" sceneMemberID="viewController">
@@ -690,7 +680,6 @@
                         <gestureRecognizers/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="ie7-0n-grf"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="aEI-OW-r0e"/>
                         <barButtonItem title="0:00" id="P8w-kb-zYQ">
                             <connections>
@@ -698,13 +687,14 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="4p2-fL-XvR"/>
-                        <barButtonItem title="Next" id="LAZ-y2-gHM">
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="10" id="kYe-zs-aIg">
+                        <barButtonItem key="rightBarButtonItem" title="11" id="LAZ-y2-gHM">
                             <connections>
                                 <segue destination="PJF-Xm-NYJ" kind="push" id="ELn-9m-1lD"/>
                             </connections>
                         </barButtonItem>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" title="10 of 11" id="kYe-zs-aIg"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="timerButton" destination="P8w-kb-zYQ" id="sbi-84-2qV"/>
                     </connections>
@@ -713,7 +703,7 @@
             </objects>
             <point key="canvasLocation" x="5159" y="78"/>
         </scene>
-        <!--Step11 View Controller - 11 of 11-->
+        <!--Step11 View Controller - 11-->
         <scene sceneID="Kkb-Dt-cYi">
             <objects>
                 <viewController id="PJF-Xm-NYJ" customClass="Step11ViewController" sceneMemberID="viewController">
@@ -744,7 +734,6 @@
                         <gestureRecognizers/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="JMR-Ex-q7O"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="mb5-kC-qla"/>
                         <barButtonItem title="0:00" id="rpT-Eh-4Bu">
                             <connections>
@@ -752,25 +741,14 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="liI-0g-NTh"/>
-                        <barButtonItem title="Finished" id="iFx-AD-ZRl">
-                            <connections>
-                                <segue destination="1CA-1l-tB5" kind="unwind" unwindAction="doneWithWeeklyReview:" id="2RP-Tf-4lg"/>
-                            </connections>
-                        </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="11 of 11" id="mwV-Uu-E9X">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HM4-Qr-Iy6">
-                            <connections>
-                                <segue destination="Hiq-eU-gIF" kind="modal" identifier="showAddThoughtGuide" modalTransitionStyle="coverVertical" id="Nda-cz-AhF"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="11" id="mwV-Uu-E9X"/>
                     <connections>
                         <outlet property="timerButton" destination="rpT-Eh-4Bu" id="O7M-Yv-rIP"/>
+                        <segue destination="Hiq-eU-gIF" kind="modal" identifier="showAddThoughtGuide" modalTransitionStyle="coverVertical" id="Oy5-VR-Ytb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qzn-N2-3hx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="1CA-1l-tB5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5573" y="78"/>
         </scene>
