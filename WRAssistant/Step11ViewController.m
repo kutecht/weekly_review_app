@@ -18,7 +18,7 @@
 static NSString *const kSegueShowThoughtGuideTable = @"showThoughtGuideList";
 static NSString *const kSegueShowAddTrigger = @"showAddThoughtGuide";
 static NSString *const kSegueShowStep1 = @"showStep1";
-static NSString *const kStep1Title = @"1";
+static NSString *const kStep1Title = @"Restart";
 
 
 @implementation Step11ViewController
@@ -38,11 +38,24 @@ static NSString *const kStep1Title = @"1";
 {
     [super viewDidLoad];
     
-    UIBarButtonItem *step1BarButton = [[UIBarButtonItem alloc] initWithTitle:kStep1Title style:UIBarButtonItemStyleBordered target:self action:@selector(step1Pressed:)];
     
     UIBarButtonItem *addThoughtGuideBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addThoughtGuidePressed:)];
-    
-    self.navigationItem.rightBarButtonItems = @[step1BarButton, addThoughtGuideBarButton];
+
+    if (self.splitViewController)
+    {
+        // iPad
+        self.navigationItem.rightBarButtonItems = @[addThoughtGuideBarButton];
+    }
+    else
+    {
+        UIBarButtonItem *step1BarButton = [[UIBarButtonItem alloc] initWithTitle:kStep1Title style:UIBarButtonItemStyleBordered target:self action:@selector(step1Pressed:)];
+        
+        self.navigationItem.rightBarButtonItems = @[step1BarButton, addThoughtGuideBarButton];
+
+        // If user made it to Step 11 on iPhone, then log date indicating Weekly Review completed
+        // Note: thought about having a 'Finished' button but that seemed like a hack.  Also, removed log from iPad version.
+        [WRConstants logDateTime];
+    }
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -78,12 +91,6 @@ static NSString *const kStep1Title = @"1";
     }
 }
 
-// iPad only method
-- (IBAction)weeklyReviewCompletedPressed:(UIBarButtonItem *)sender
-{
-    [WRConstants logDateTime];
-    // TODO: Add an alert that time was logged -- popup
-}
 
 - (IBAction)cancelAddingThoughtGuide:(UIStoryboardSegue *)segue
 {
@@ -96,10 +103,7 @@ static NSString *const kStep1Title = @"1";
 
 - (IBAction)step1Pressed:(UIBarButtonItem *)sender
 {
-    if ([self canPerformUnwindSegueAction:@selector(doneWithWeeklyReview:) fromViewController:self withSender:sender])
-    {
-        
-    }
+    [self performSegueWithIdentifier:@"unwindDoneWithWeeklyReview" sender:self];
 }
 
 @end

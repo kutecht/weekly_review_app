@@ -255,26 +255,6 @@
                                             <segue destination="J3r-Qs-P3f" kind="replace" splitViewControllerTargetIndex="1" id="v13-gz-8SK"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="beX-8b-Web" style="IBUITableViewCellStyleDefault" id="jya-9g-cwl">
-                                        <rect key="frame" x="0.0" y="592" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="jya-9g-cwl" id="2Cy-Sb-XB1">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="Log" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="beX-8b-Web">
-                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="AMC-Kl-TnY" kind="replace" splitViewControllerTargetIndex="1" id="799-1M-OUC"/>
-                                        </connections>
-                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -680,11 +660,6 @@
                         <gestureRecognizers/>
                     </view>
                     <navigationItem key="navigationItem" title="Capture New Ideas" id="8vu-D2-q0q">
-                        <barButtonItem key="leftBarButtonItem" title="Weekly Review Completed" id="gI4-81-xDt">
-                            <connections>
-                                <action selector="weeklyReviewCompletedPressed:" destination="rNP-mS-jW2" id="VpU-se-VtQ"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="EvT-HV-Xjs">
                             <connections>
                                 <segue destination="jhP-AV-eoB" kind="modal" identifier="showAddThoughtGuide" modalTransitionStyle="coverVertical" id="qx2-3o-bHg"/>
@@ -1238,12 +1213,11 @@
                                 <rect key="frame" x="0.0" y="66" width="768" height="958"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">A Weekly Review is described by David Allen, in "Getting Things DONE" (GTD™), as a weekly behavior to review all open loops (i.e., projects), active project plans, and "Next Actions," "Agendas,"  ...  David provides a general outline for performing a Weekly Review.  The terminology of this app is based on the book so reading the book is highly recommended.  This app assists in performing a Weekly Review by providing:  
+                                <mutableString key="text">A Weekly Review is described by David Allen, in "Getting Things DONE" (GTD™), as a weekly behavior to review all open loops (i.e., projects), active project plans, and "Next Actions," "Agendas,"  ...  David provides a general outline for performing a Weekly Review.  The terminology of this app is based on the book so reading the book is highly recommended.  This app assists in performing a Weekly Review by providing:  
  - step timer, to keep user on track
  - relevant personal information (reminders, calendar events, customizable trigger list,...)
- - log of past reviews
 
-This app is not a GTD system.  The app works along side your system whether it be paper based or software based.</string>
+This app is not a GTD system.  The app works along side your system whether it be paper based or software based.</mutableString>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -1256,45 +1230,6 @@ This app is not a GTD system.  The app works along side your system whether it b
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GQy-4F-d3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2366" y="873"/>
-        </scene>
-        <!--Log Table View Controller - Log-->
-        <scene sceneID="IIU-ui-eiQ">
-            <objects>
-                <tableViewController id="S9g-rR-TKW" customClass="LogTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Xfe-aF-znk">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LogDateCell" textLabel="Ei5-NK-QNg" style="IBUITableViewCellStyleDefault" id="jws-6G-ZFC">
-                                <rect key="frame" x="0.0" y="86" width="768" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="jws-6G-ZFC" id="xKL-fV-5vP">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ei5-NK-QNg">
-                                            <rect key="frame" x="15" y="0.0" width="738" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="S9g-rR-TKW" id="Vit-qH-UMb"/>
-                            <outlet property="delegate" destination="S9g-rR-TKW" id="yJr-yU-ToC"/>
-                        </connections>
-                    </tableView>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Log" id="Gax-9L-hvO"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="X6Q-5j-cnW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2295" y="2189"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fq7-zN-w2h">
@@ -1313,24 +1248,6 @@ This app is not a GTD system.  The app works along side your system whether it b
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ki6-2j-mLU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3260" y="873"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="HdX-kD-y2f">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AMC-Kl-TnY" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xFs-rU-maR">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="S9g-rR-TKW" kind="relationship" relationship="rootViewController" id="2AO-q2-s7n"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mMR-lP-ZL8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3260" y="2165"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

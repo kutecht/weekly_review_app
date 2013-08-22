@@ -36,11 +36,20 @@ static NSString *const kStep4Title = @"4";
 {
     [super viewDidLoad];
     
-    UIBarButtonItem *step4BarButton = [[UIBarButtonItem alloc] initWithTitle:kStep4Title style:UIBarButtonItemStyleBordered target:self action:@selector(step4Pressed:)];
-    
+ 
     UIBarButtonItem *addTriggerBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addTriggerPressed:)];
     
-    self.navigationItem.rightBarButtonItems = @[step4BarButton, addTriggerBarButton];
+    if (self.splitViewController)
+    {
+        // iPad
+        self.navigationItem.rightBarButtonItems = @[addTriggerBarButton];
+    }
+    else
+    {
+        UIBarButtonItem *step4BarButton = [[UIBarButtonItem alloc] initWithTitle:kStep4Title style:UIBarButtonItemStyleBordered target:self action:@selector(step4Pressed:)];
+        
+        self.navigationItem.rightBarButtonItems = @[step4BarButton, addTriggerBarButton];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated

@@ -11,6 +11,7 @@
 
 @interface LogTableViewController ()
 @property (strong, nonatomic) NSMutableArray *historyLog;
+@property (strong, nonatomic) NSDateFormatter *dateFormatter;
 @end
 
 static NSString *const kTableCellIdLogDate = @"LogDateCell";
@@ -47,6 +48,18 @@ static NSString *const kTableCellIdLogDate = @"LogDateCell";
     return _historyLog;
 }
 
+- (NSDateFormatter *)dateFormatter
+{
+    if (!_dateFormatter)
+    {
+        _dateFormatter = [[NSDateFormatter alloc] init];
+        //[_dateFormatter setDateFormat:@"yyyy-MM-dd 'at' HH:mm"];
+        [_dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    }
+    
+    return _dateFormatter;
+}
+
 
 - (void)viewDidLoad
 {
@@ -57,7 +70,6 @@ static NSString *const kTableCellIdLogDate = @"LogDateCell";
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,7 +90,7 @@ static NSString *const kTableCellIdLogDate = @"LogDateCell";
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTableCellIdLogDate forIndexPath:indexPath];
 
-    cell.textLabel.text = [self.historyLog[indexPath.row] description];
+    cell.textLabel.text = [self.dateFormatter stringFromDate:self.historyLog[indexPath.row]];
     
     return cell;
 }
