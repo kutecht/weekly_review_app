@@ -32,6 +32,13 @@
     [super viewWillAppear:animated];
 }
 
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.timeCountdown reset];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

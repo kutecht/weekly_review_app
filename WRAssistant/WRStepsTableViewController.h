@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TimeCountdown.h"
 
-@interface WRStepsTableViewController : UITableViewController <TimeCountdownDelegate>
+@interface WRStepsTableViewController : UITableViewController
 
 @end

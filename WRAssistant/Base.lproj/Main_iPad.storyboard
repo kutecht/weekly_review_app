@@ -263,19 +263,8 @@
                             <outlet property="delegate" destination="RqR-1O-9Ap" id="pVq-GB-xpE"/>
                         </connections>
                     </tableView>
-                    <toolbarItems>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="RaV-ch-DL0"/>
-                        <barButtonItem title="0:00" id="wkY-jq-fkp">
-                            <connections>
-                                <action selector="toggleTimer:" destination="RqR-1O-9Ap" id="W24-qg-yeK"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="D85-Ja-bgD"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Weekly Review" id="oYM-bX-b6Y"/>
-                    <connections>
-                        <outlet property="timerButton" destination="wkY-jq-fkp" id="pBJ-Oi-ZmK"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3a9-ZS-AxE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -284,7 +273,7 @@
         <!--Navigation Controller-->
         <scene sceneID="yoW-1x-vg0">
             <objects>
-                <navigationController toolbarHidden="NO" id="5pt-LZ-jo3" sceneMemberID="viewController">
+                <navigationController id="5pt-LZ-jo3" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="7e0-sm-nnz">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -333,7 +322,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tmx-J3-4hG">
-                                <rect key="frame" x="0.0" y="162" width="768" height="862"/>
+                                <rect key="frame" x="0.0" y="162" width="768" height="817"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
@@ -344,7 +333,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="fzm-IW-a4d"/>
+                        <barButtonItem title="0:00" id="vzy-5e-OPE">
+                            <connections>
+                                <action selector="toggleTimer:" destination="Unv-Ol-0JT" id="4yh-TY-UtM"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="uLw-dT-zP7"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Collect Loose Paper" id="aTY-ce-BuS"/>
+                    <connections>
+                        <outlet property="timerButton" destination="vzy-5e-OPE" id="hy7-fu-MIE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRL-h8-Qnh" sceneMemberID="firstResponder"/>
             </objects>
@@ -372,7 +373,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="FS5-Lk-080"/>
+                        <barButtonItem title="0:00" id="BdR-6m-KVU">
+                            <connections>
+                                <action selector="toggleTimer:" destination="bPL-Fl-ZV2" id="3dA-1i-vbh"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="P4s-kq-QpV"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Get Into Zero" id="Yiq-o8-8VI"/>
+                    <connections>
+                        <outlet property="timerButton" destination="BdR-6m-KVU" id="t4H-oj-bm5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A1W-kN-wGP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -397,7 +410,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lH3-FU-YbY">
-                                <rect key="frame" x="0.0" y="161" width="768" height="863"/>
+                                <rect key="frame" x="0.0" y="161" width="768" height="818"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
@@ -408,6 +421,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="9so-qn-zIC"/>
+                        <barButtonItem title="0:00" id="SX5-bB-Lfo">
+                            <connections>
+                                <action selector="toggleTimer:" destination="GqO-Si-1ur" id="b9G-a8-OyV"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="7qj-tq-Zdw"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Empty Your Head" id="byk-cr-0EU">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8oK-MF-dyu">
                             <connections>
@@ -415,6 +437,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="timerButton" destination="SX5-bB-Lfo" id="Qqr-k3-RDX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6eR-Ml-OYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -442,7 +467,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="hbn-Vk-DPE"/>
+                        <barButtonItem title="0:00" id="pdD-ce-7P0">
+                            <connections>
+                                <action selector="toggleTimer:" destination="a0d-oR-9xn" id="yAq-hA-7zN"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="tEC-ok-9Z6"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Review Action Lists" id="eh0-b5-aKh"/>
+                    <connections>
+                        <outlet property="timerButton" destination="pdD-ce-7P0" id="Asf-cV-DBk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i2e-NG-SQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -467,7 +504,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SXw-9p-SpF">
-                                <rect key="frame" x="0.0" y="160" width="768" height="864"/>
+                                <rect key="frame" x="0.0" y="160" width="768" height="821"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
@@ -478,7 +515,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="fQc-MV-TtG"/>
+                        <barButtonItem title="0:00" id="LKg-Cc-WWc">
+                            <connections>
+                                <action selector="toggleTimer:" destination="wr2-Ny-nH8" id="jdF-CK-B7R"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="9LH-d5-nSF"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Review Previous Calendar" id="Gjk-fB-T6l"/>
+                    <connections>
+                        <outlet property="timerButton" destination="LKg-Cc-WWc" id="Q6Q-h6-iRT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PyW-Lf-OVu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -504,7 +553,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Im-Q1-oJQ">
-                                <rect key="frame" x="0.0" y="173" width="768" height="851"/>
+                                <rect key="frame" x="0.0" y="173" width="768" height="807"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
@@ -515,7 +564,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="ePf-6W-rpn"/>
+                        <barButtonItem title="0:00" id="hSq-an-LZR">
+                            <connections>
+                                <action selector="toggleTimer:" destination="UkR-2s-DYW" id="ViE-Zh-WWA"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="tmY-W9-i9M"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Review Upcoming Calendar" id="22O-xg-3EZ"/>
+                    <connections>
+                        <outlet property="timerButton" destination="hSq-an-LZR" id="qXV-Hd-Hm5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hC3-Ah-kyz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -543,7 +604,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="bz7-zY-yuJ"/>
+                        <barButtonItem title="0:00" id="FnH-rO-mQi">
+                            <connections>
+                                <action selector="toggleTimer:" destination="yuF-M9-kNf" id="b1z-Rh-VKJ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="9YG-bq-JpP"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Review Waiting-For List" id="p20-QJ-rk8"/>
+                    <connections>
+                        <outlet property="timerButton" destination="FnH-rO-mQi" id="zkj-4E-ncz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EzJ-Gp-tAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -571,7 +644,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="c1j-jn-ZzD"/>
+                        <barButtonItem title="0:00" id="RIb-mG-Ic9">
+                            <connections>
+                                <action selector="toggleTimer:" destination="zat-mn-akz" id="VfB-sG-0Nk"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="0To-bg-AFd"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Review Project Lists" id="iWi-Bd-UJh"/>
+                    <connections>
+                        <outlet property="timerButton" destination="RIb-mG-Ic9" id="zaW-vn-IfH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3n-I6-fkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -600,7 +685,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="HER-Bo-VzY"/>
+                        <barButtonItem title="0:00" id="YhM-jf-Far">
+                            <connections>
+                                <action selector="toggleTimer:" destination="3Qu-Ma-AAj" id="IgN-ww-MRF"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="1jh-9B-CeK"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Review Checklists" id="k3T-29-o7p"/>
+                    <connections>
+                        <outlet property="timerButton" destination="YhM-jf-Far" id="KhE-5X-5Px"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4HV-Xm-L89" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -628,8 +725,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
-                    <toolbarItems/>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="OL3-xK-W2n"/>
+                        <barButtonItem title="0:00" id="mAJ-tT-Qdf">
+                            <connections>
+                                <action selector="toggleTimer:" destination="UrV-mz-CkO" id="Zfe-Fm-uVT"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="deK-p1-5cs"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Review Someday/Maybe List" id="i0V-4D-bue"/>
+                    <connections>
+                        <outlet property="timerButton" destination="mAJ-tT-Qdf" id="t4a-t5-yio"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ac-sN-Zrj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -648,7 +756,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lwu-9u-Mvb">
-                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                                <rect key="frame" x="0.0" y="64" width="768" height="917"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
@@ -659,6 +767,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="SdD-JE-Mn0"/>
+                        <barButtonItem title="0:00" id="O76-1P-8ei">
+                            <connections>
+                                <action selector="toggleTimer:" destination="rNP-mS-jW2" id="Jqu-WT-2Ry"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Glc-t3-0Nl"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Capture New Ideas" id="8vu-D2-q0q">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="EvT-HV-Xjs">
                             <connections>
@@ -666,6 +783,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="timerButton" destination="O76-1P-8ei" id="Egm-DI-Lmp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJC-UL-wYF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -676,7 +796,7 @@
             <objects>
                 <tableViewController id="tcw-uz-74P" customClass="ReminderTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="y6I-aO-mKd">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="862"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="817"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -713,7 +833,7 @@
             <objects>
                 <tableViewController id="y4C-iB-6jT" customClass="TriggerListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qMi-bj-MWL">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="863"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="818"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -755,7 +875,7 @@
             <objects>
                 <tableViewController id="myV-ej-i3N" customClass="EventTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fDo-lR-vpL">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="851"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="807"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -799,7 +919,7 @@
                         <viewControllerLayoutGuide type="bottom" id="tCs-8P-vKB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BG3-8P-08X">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="851"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="807"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -814,7 +934,7 @@
             <objects>
                 <tableViewController id="XT9-Fv-zH3" customClass="ThoughtGuideTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="Q3T-qK-UZP">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="917"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -849,13 +969,17 @@
         <!--Navigation Controller-->
         <scene sceneID="UxA-XL-G8E">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CIb-RJ-0kv" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="CIb-RJ-0kv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jUq-r4-3To">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="wCG-cK-BHM">
+                        <rect key="frame" x="0.0" y="980" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="Unv-Ol-0JT" kind="relationship" relationship="rootViewController" id="B9y-0m-gnt"/>
                     </connections>
@@ -867,13 +991,17 @@
         <!--Navigation Controller-->
         <scene sceneID="5tL-Ps-LTL">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zQK-4N-kRH" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="zQK-4N-kRH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GmL-CC-MZe">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="rbK-iV-xzk">
+                        <rect key="frame" x="0.0" y="980" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="bPL-Fl-ZV2" kind="relationship" relationship="rootViewController" id="IPb-er-OE7"/>
                     </connections>
@@ -885,13 +1013,17 @@
         <!--Navigation Controller-->
         <scene sceneID="krz-Mg-IXN">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IYu-FP-JYz" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="IYu-FP-JYz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="w64-9X-dPd">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Hrn-A7-LWK">
+                        <rect key="frame" x="0.0" y="980" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="GqO-Si-1ur" kind="relationship" relationship="rootViewController" id="4Om-BF-CDd"/>
                     </connections>
@@ -903,13 +1035,17 @@
         <!--Navigation Controller-->
         <scene sceneID="EhT-dB-PpE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dwY-ye-Wff" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="dwY-ye-Wff" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tm5-be-RZP">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ewO-y5-Flp">
+                        <rect key="frame" x="0.0" y="980" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="a0d-oR-9xn" kind="relationship" relationship="rootViewController" id="TMb-gU-ytN"/>
                     </connections>
@@ -921,13 +1057,17 @@
         <!--Navigation Controller-->
         <scene sceneID="mHZ-La-B2c">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Oi9-IF-dgT" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="Oi9-IF-dgT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jRy-IS-l0C">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="yhX-gp-0Nu">
+                        <rect key="frame" x="0.0" y="980" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="wr2-Ny-nH8" kind="relationship" relationship="rootViewController" id="9iZ-Qj-7fp"/>
                     </connections>
@@ -939,13 +1079,17 @@
         <!--Navigation Controller-->
         <scene sceneID="Oed-u5-92q">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qxY-Y9-Xwh" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="qxY-Y9-Xwh" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xXJ-9t-0Gb">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="6tZ-S0-Rrz">
+                        <rect key="frame" x="0.0" y="980" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="UkR-2s-DYW" kind="relationship" relationship="rootViewController" id="bWh-aS-Tod"/>
                     </connections>
@@ -957,13 +1101,17 @@
         <!--Navigation Controller-->
         <scene sceneID="guN-3b-jBb">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gsC-XR-Jeu" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="gsC-XR-Jeu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0s8-HQ-gg5">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="pPn-dH-1HX">
+                        <rect key="frame" x="0.0" y="980" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="yuF-M9-kNf" kind="relationship" relationship="rootViewController" id="fGC-GZ-qCT"/>
                     </connections>
@@ -975,13 +1123,17 @@
         <!--Navigation Controller-->
         <scene sceneID="XgE-bE-uzO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cht-wj-CxE" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="cht-wj-CxE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xa0-Lj-Kqh">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ot9-T6-UAI">
+                        <rect key="frame" x="0.0" y="980" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="zat-mn-akz" kind="relationship" relationship="rootViewController" id="FSK-1v-xQa"/>
                     </connections>
@@ -993,13 +1145,17 @@
         <!--Navigation Controller-->
         <scene sceneID="5Bg-sc-FAJ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="925-WQ-gpL" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="925-WQ-gpL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1o7-gc-py6">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="tdC-4E-s81">
+                        <rect key="frame" x="0.0" y="980" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="3Qu-Ma-AAj" kind="relationship" relationship="rootViewController" id="e7i-lD-xHf"/>
                     </connections>
@@ -1011,13 +1167,17 @@
         <!--Navigation Controller-->
         <scene sceneID="dha-cs-5FA">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V0C-PG-Fok" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="V0C-PG-Fok" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Loz-De-ZQi">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="VFR-ma-kye">
+                        <rect key="frame" x="0.0" y="980" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="UrV-mz-CkO" kind="relationship" relationship="rootViewController" id="wQM-4h-ozY"/>
                     </connections>
@@ -1029,13 +1189,17 @@
         <!--Navigation Controller-->
         <scene sceneID="3fS-Cf-VKE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b27-Ue-kNi" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="b27-Ue-kNi" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MAR-Gq-fVd">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="512-Lf-qJt">
+                        <rect key="frame" x="0.0" y="980" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="rNP-mS-jW2" kind="relationship" relationship="rootViewController" id="Vfw-lp-D9O"/>
                     </connections>
@@ -1214,8 +1378,8 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <mutableString key="text">A Weekly Review is described by David Allen, in "Getting Things DONE" (GTD™), as a weekly behavior to review all open loops (i.e., projects), active project plans, and "Next Actions," "Agendas,"  ...  David provides a general outline for performing a Weekly Review.  The terminology of this app is based on the book so reading the book is highly recommended.  This app assists in performing a Weekly Review by providing:  
- - step timer, to keep user on track
- - relevant personal information (reminders, calendar events, customizable trigger list,...)
+ - step timer
+ - personal information (reminders, calendar events, ...)
 
 This app is not a GTD system.  The app works along side your system whether it be paper based or software based.</mutableString>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
