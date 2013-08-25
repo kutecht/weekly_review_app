@@ -433,7 +433,9 @@
                     <navigationItem key="navigationItem" title="Empty Your Head" id="byk-cr-0EU">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8oK-MF-dyu">
                             <connections>
-                                <segue destination="j0j-FN-898" kind="modal" identifier="showAddTrigger" modalTransitionStyle="coverVertical" id="9zW-fb-r5Q"/>
+                                <segue destination="j0j-FN-898" kind="popover" identifier="showAddTrigger" popoverAnchorBarButtonItem="8oK-MF-dyu" id="9zW-fb-r5Q">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -779,7 +781,9 @@
                     <navigationItem key="navigationItem" title="Capture New Ideas" id="8vu-D2-q0q">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="EvT-HV-Xjs">
                             <connections>
-                                <segue destination="jhP-AV-eoB" kind="modal" identifier="showAddThoughtGuide" modalTransitionStyle="coverVertical" id="qx2-3o-bHg"/>
+                                <segue destination="jhP-AV-eoB" kind="popover" identifier="showAddThoughtGuide" popoverAnchorBarButtonItem="EvT-HV-Xjs" id="qx2-3o-bHg">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1377,11 +1381,11 @@
                                 <rect key="frame" x="0.0" y="66" width="768" height="958"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">A Weekly Review is described by David Allen, in "Getting Things DONE" (GTD™), as a weekly behavior to review all open loops (i.e., projects), active project plans, and "Next Actions," "Agendas,"  ...  David provides a general outline for performing a Weekly Review.  The terminology of this app is based on the book so reading the book is highly recommended.  This app assists in performing a Weekly Review by providing:  
+                                <string key="text">A Weekly Review is described by David Allen, in "Getting Things DONE" (GTD™), as a weekly behavior to review all open loops (i.e., projects), active project plans, and "Next Actions," "Agendas,"  ...  David provides a general outline for performing a Weekly Review.  The terminology of this app is based on the book so reading the book is highly recommended.  This app assists in performing a Weekly Review by providing:  
  - step timer
  - personal information (reminders, calendar events, ...)
 
-This app is not a GTD system.  The app works along side your system whether it be paper based or software based.</mutableString>
+This app is not a GTD system.  The app works along side your system whether it be paper based or software based.</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

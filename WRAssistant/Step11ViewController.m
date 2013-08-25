@@ -41,13 +41,11 @@ static NSString *const kStep1Title = @"Restart";
     
     UIBarButtonItem *addThoughtGuideBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addThoughtGuidePressed:)];
 
-    if (self.splitViewController)
+    // Note: iPad has one item so the Add button is wired up in the storyboard
+    
+    if (!self.splitViewController)
     {
-        // iPad
-        self.navigationItem.rightBarButtonItems = @[addThoughtGuideBarButton];
-    }
-    else
-    {
+        // iPhone - programmatically adding bar button items
         UIBarButtonItem *step1BarButton = [[UIBarButtonItem alloc] initWithTitle:kStep1Title style:UIBarButtonItemStyleBordered target:self action:@selector(step1Pressed:)];
         
         self.navigationItem.rightBarButtonItems = @[step1BarButton, addThoughtGuideBarButton];

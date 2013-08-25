@@ -908,11 +908,11 @@
                                 <rect key="frame" x="0.0" y="65" width="320" height="457"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">A Weekly Review is described by David Allen, in "Getting Things DONE" (GTD™), as a weekly behavior to review all open loops (i.e., projects), active project plans, and "Next Actions," "Agendas,"  ...  David provides a general outline for performing a Weekly Review.  The terminology of this app is based on the book so reading the book is highly recommended.  This app assists in performing a Weekly Review by providing:  
+                                <string key="text">A Weekly Review is described by David Allen, in "Getting Things DONE" (GTD™), as a weekly behavior to review all open loops (i.e., projects), active project plans, and "Next Actions," "Agendas,"  ...  David provides a general outline for performing a Weekly Review.  The terminology of this app is based on the book so reading the book is highly recommended.  This app assists in performing a Weekly Review by providing:  
  - step timer
  - personal information (reminders, calendar events, ...)
 
-This app is not a GTD system.  The app works along side your system whether it be paper based or software based.</mutableString>
+This app is not a GTD system.  The app works along side your system whether it be paper based or software based.</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
