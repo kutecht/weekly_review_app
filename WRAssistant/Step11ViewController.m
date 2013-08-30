@@ -52,7 +52,7 @@ static NSString *const kStep1Title = @"Restart";
 
         // If user made it to Step 11 on iPhone, then log date indicating Weekly Review completed
         // Note: thought about having a 'Finished' button but that seemed like a hack.  Also, removed log from iPad version.
-        [WRConstants logDateTime];
+        [WRConstants sessionFinish];
     }
 }
 
@@ -102,6 +102,7 @@ static NSString *const kStep1Title = @"Restart";
 - (IBAction)step1Pressed:(UIBarButtonItem *)sender
 {
     [self performSegueWithIdentifier:@"unwindDoneWithWeeklyReview" sender:self];
+    [WRConstants sessionStart];
 }
 
 @end

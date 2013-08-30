@@ -9,7 +9,15 @@
 #import <Foundation/Foundation.h>
 
 // UserDefaults key strings
-extern NSString *const WRConstantsLogKey;
+extern NSString *const WRConstantsSessionKey; // dictionary of session information
+extern NSString *const WRConstantsSessionStartKey;
+extern NSString *const WRConstantsSessionFinishKey;
+extern NSString *const WRConstantsSessionRemindersKey; // Reminders on users attention
+extern NSString *const WRConstantsSessionTriggersKey; // Triggers on users attention
+extern NSString *const WRConstantsSessionPreviousEventsKey; // Previous events on users attention
+extern NSString *const WRConstantsSessionUpcomingEventsKey; // Upcoming events on users attention
+extern NSString *const WRConstantsSessionThoughtGuidesKey; // Though Guides on users attention
+extern NSString *const WRConstantsLogKey; // an array of session information
 extern NSString *const WRConstantsStepDurationInMinKey;
 
 // Dictionary strings
@@ -32,6 +40,7 @@ extern NSString *const WRConstantsThoughtGuideTitleKey;
 
 + (NSArray *)defaultTriggerList;
 + (NSArray *)defaultThoughtGuides;
-+ (void)logDateTime;
++ (void)sessionStart;
++ (void)sessionFinish;
 
 @end

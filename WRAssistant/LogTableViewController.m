@@ -35,8 +35,8 @@ static NSString *const kTableCellIdLogDate = @"LogDateCell";
     {
         _historyLog = [NSMutableArray array];
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        for (NSDate *date in [defaults objectForKey:WRConstantsLogKey]) {
-                [_historyLog addObject:date];
+        for (NSDictionary *session in [defaults objectForKey:WRConstantsLogKey]) {
+                [_historyLog addObject:[session objectForKey:WRConstantsSessionFinishKey]];
         }
         
         // sort, showing most recent at the top

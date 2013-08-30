@@ -10,7 +10,7 @@
 			<key>Title</key>
 			<string>Step Duration</string>
 			<key>Key</key>
-			<string>step_duration</string>
+			<string>weekly_review_assistant.step_duration</string>
 			<key>DefaultValue</key>
 			<real>5</real>
 			<key>Values</key>

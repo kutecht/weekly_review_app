@@ -17,8 +17,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
     
+    if (!self.splitViewController)
+    {
+        [WRConstants sessionStart];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -40,7 +43,6 @@
 
 - (IBAction)doneWithWeeklyReview:(UIStoryboardSegue *)segue
 {
-    [WRConstants logDateTime];
 }
 
 @end

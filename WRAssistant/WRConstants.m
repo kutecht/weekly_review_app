@@ -9,8 +9,16 @@
 #import "WRConstants.h"
 
 // UserDefaults key strings
+NSString *const WRConstantsSessionKey = @"weekly_review_assistant.session";
+NSString *const WRConstantsSessionStartKey = @"weekly_review_assistant.session.start";
+NSString *const WRConstantsSessionFinishKey = @"weekly_review_assistant.session.finish";
+NSString *const WRConstantsSessionRemindersKey = @"weekly_review_assistant.session.reminders";
+NSString *const WRConstantsSessionTriggersKey = @"weekly_review_assistant.session.triggers";
+NSString *const WRConstantsSessionPreviousEventsKey = @"weekly_review_assistant.session.previous_events";
+NSString *const WRConstantsSessionUpcomingEventsKey = @"weekly_review_assistant.session.upcoming_events";
+NSString *const WRConstantsSessionThoughtGuidesKey = @"weekly_review_assistant.session.thought_guides";
 NSString *const WRConstantsLogKey = @"weekly_review_assistant.log";
-NSString *const WRConstantsStepDurationInMinKey = @"step_duration";
+NSString *const WRConstantsStepDurationInMinKey = @"weekly_review_assistant.step_duration";
 
 // Dictionary strings
 NSString *const WRConstantsThoughtGuideKey = @"thought_guide";
@@ -164,16 +172,34 @@ static NSString *const kTGUpcomingEvents = @"Upcoming events";
       ];
 }
 
-+ (void)logDateTime
++ (void)sessionStart
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSMutableDictionary *session = [[defaults objectForKey:WRConstantsSessionKey] mutableCopy];
+    if (!session) session = [NSMutableDictionary dictionary];
+    session[WRConstantsSessionStartKey] = [NSDate date];
+    [defaults setObject:session forKey:WRConstantsSessionKey];
+    [defaults synchronize];
+    
+    //NSLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
+}
+
++ (void)sessionFinish
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSMutableArray *log = [[defaults objectForKey:WRConstantsLogKey] mutableCopy];
+    NSMutableDictionary *session = [[defaults objectForKey:WRConstantsSessionKey] mutableCopy];
     if (!log) log = [NSMutableArray array];
-    [log addObject:[NSDate date]];
+    if (!session) session = [NSMutableDictionary dictionary];
+    session[WRConstantsSessionFinishKey] = [NSDate date];
+    [log addObject:session];
     [defaults setObject:log forKey:WRConstantsLogKey];
+    [session removeAllObjects];
+    [defaults setObject:session forKey:WRConstantsSessionKey];
     [defaults synchronize];
+    
+    //NSLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
 }
-
 
 @end
 
