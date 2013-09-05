@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 kevin utecht. All rights reserved.
 //
 
+#import "TapsTableViewCell.h"
 #import "ThoughtGuideTableViewController.h"
 #import "ThoughtGuide+Create.h"
 
@@ -46,6 +47,25 @@ static NSString *const kTableCellIdThoughtGuide = @"ThoughtGuideCell";
     
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    TapsTableViewCell *cell = (TapsTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+    
+    if (cell.tapCount == 2) {
+        if (cell.accessoryType == UITableViewCellAccessoryCheckmark)
+        {
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
+        else
+        {
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        }
+    }
+}
+
 
 - (void)refreshWithDefaultData
 {

@@ -40,6 +40,7 @@
 		68301DE217B04C05009DA35B /* AddTriggerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68301DE117B04C05009DA35B /* AddTriggerViewController.m */; };
 		6831668A17B2A81D00BABF39 /* ThoughtGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831668917B2A81D00BABF39 /* ThoughtGuide.m */; };
 		6831668D17B2A99100BABF39 /* ThoughtGuide+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831668C17B2A99100BABF39 /* ThoughtGuide+Create.m */; };
+		683573FE17D6B74C00935480 /* TapsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 683573FD17D6B74C00935480 /* TapsTableViewCell.m */; };
 		6840AB2717A0C6C90067D4C9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6840AB2617A0C6C90067D4C9 /* CoreData.framework */; };
 		685240B017B6D93400BBE97E /* TimeCountdown.m in Sources */ = {isa = PBXBuildFile; fileRef = 685240AF17B6D93400BBE97E /* TimeCountdown.m */; };
 		6865BDC317B83844007EBB9F /* WRStepsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6865BDC217B83844007EBB9F /* WRStepsTableViewController.m */; };
@@ -127,6 +128,8 @@
 		6831668917B2A81D00BABF39 /* ThoughtGuide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThoughtGuide.m; sourceTree = "<group>"; };
 		6831668B17B2A99100BABF39 /* ThoughtGuide+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ThoughtGuide+Create.h"; sourceTree = "<group>"; };
 		6831668C17B2A99100BABF39 /* ThoughtGuide+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ThoughtGuide+Create.m"; sourceTree = "<group>"; };
+		683573FC17D6B74C00935480 /* TapsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapsTableViewCell.h; sourceTree = "<group>"; };
+		683573FD17D6B74C00935480 /* TapsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapsTableViewCell.m; sourceTree = "<group>"; };
 		6840AB2617A0C6C90067D4C9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		685240AE17B6D93400BBE97E /* TimeCountdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeCountdown.h; sourceTree = "<group>"; };
 		685240AF17B6D93400BBE97E /* TimeCountdown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeCountdown.m; sourceTree = "<group>"; };
@@ -285,6 +288,8 @@
 		68669CB717A970CF008167FE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				683573FC17D6B74C00935480 /* TapsTableViewCell.h */,
+				683573FD17D6B74C00935480 /* TapsTableViewCell.m */,
 				6821575217B6C1B60000E1A1 /* WRStepViewController.h */,
 				6821575317B6C1B60000E1A1 /* WRStepViewController.m */,
 				685240AE17B6D93400BBE97E /* TimeCountdown.h */,
@@ -556,6 +561,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68BA01AF17B1DEA40097F704 /* WeeklyReview.xcdatamodeld in Sources */,
+				683573FE17D6B74C00935480 /* TapsTableViewCell.m in Sources */,
 				6820F0DF1795E9AA00332A80 /* WRAppDelegate.m in Sources */,
 				6812A77E179EDDDC007609DC /* Trigger+Create.m in Sources */,
 				6821575417B6C1B60000E1A1 /* WRStepViewController.m in Sources */,

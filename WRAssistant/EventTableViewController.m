@@ -8,6 +8,7 @@
 
 #import <EventKit/EventKit.h>
 #import <EventKitUI/EventKitUI.h>
+#import "TapsTableViewCell.h"
 #import "EventTableViewController.h"
 
 @interface EventTableViewController () <EKEventViewDelegate>
@@ -15,6 +16,8 @@
 @property (nonatomic, strong) EKEventStore *eventStore;
 @property (nonatomic, strong) NSArray *allCalendars;
 @property (nonatomic, strong) NSMutableArray *eventsList;
+@property (nonatomic, strong) NSTimer *tapTimer;
+
 
 @end
 
@@ -46,11 +49,13 @@ static NSString *const kTableCellIdEvent = @"EventCell";
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:kSegueShowEventViewController])
+    if ([[segue identifier] isEqualToString:kSegueShowEventViewController] &&
+        [sender isKindOfClass:[NSNumber class]])
     {
+        NSNumber *row = (NSNumber *)sender;
+        NSLog(@"Row = %d", [row intValue]);
         EKEventViewController* eventViewController = (EKEventViewController *)[segue destinationViewController];
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        eventViewController.event = [self.eventsList objectAtIndex:indexPath.row];
+        eventViewController.event = [self.eventsList objectAtIndex:[row intValue]];
         eventViewController.allowsEditing = NO;
     }
 }
@@ -74,6 +79,45 @@ static NSString *const kTableCellIdEvent = @"EventCell";
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    TapsTableViewCell *cell = (TapsTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+    
+    if (cell.tapCount == 1)
+    {
+        //This is the first tap. If there is no tap till tapTimer is fired, it is a single tap
+        self.tapTimer = [NSTimer scheduledTimerWithTimeInterval:0.4 target:self selector:@selector(tapTimerFired:) userInfo:[NSNumber numberWithInt:(indexPath.row)] repeats:NO];
+    }
+    else if (cell.tapCount == 2)
+    {
+        //double tap - Put your double tap code here
+        if (self.tapTimer)
+        {
+            [self.tapTimer invalidate];
+            self.tapTimer = nil;
+        }
+        if ([cell.detailTextLabel.text isEqualToString:@""])
+        {
+            cell.detailTextLabel.text = @"✓";
+        }
+        else
+        {
+            cell.detailTextLabel.text = @"";
+        }
+    }
+}
+
+- (void)tapTimerFired:(NSTimer *)aTimer
+{
+    // single tap
+    [self performSegueWithIdentifier:kSegueShowEventViewController sender:aTimer.userInfo];
+    if (self.tapTimer != nil)
+    {
+        self.tapTimer = nil;
+    }
+}
 
 #pragma mark -
 #pragma mark Access Calendar

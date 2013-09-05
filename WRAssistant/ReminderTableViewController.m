@@ -8,6 +8,7 @@
 
 #import <EventKit/EventKit.h>
 #import <EventKitUI/EventKitUI.h>
+#import "TapsTableViewCell.h"
 #import "ReminderTableViewController.h"
 
 @interface ReminderTableViewController () 
@@ -15,6 +16,8 @@
 @property (nonatomic, strong) EKEventStore *eventStore;
 @property (nonatomic, strong) NSArray *allReminders; // similar to allCalendars
 @property (nonatomic, strong) NSArray *remindersList;
+@property (nonatomic) int tapCount;
+@property (nonatomic) NSIndexPath *tableSelection;
 
 @end
 
@@ -57,6 +60,26 @@ static NSString *const kTableCellIdReminder = @"ReminderCell";
     // Get the event at the row selected and display its title
     cell.textLabel.text = [[self.remindersList objectAtIndex:indexPath.row] title];
     return cell;
+}
+
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    TapsTableViewCell *cell = (TapsTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+    
+    if (cell.tapCount == 2) {
+        if (cell.accessoryType == UITableViewCellAccessoryCheckmark)
+        {
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
+        else
+        {
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        }
+    }
 }
 
 

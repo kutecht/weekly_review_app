@@ -7,6 +7,7 @@
 //
 
 #import "TriggerListTableViewController.h"
+#import "TapsTableViewCell.h"
 #import "Trigger+Create.h"
 
 
@@ -197,6 +198,25 @@ static NSString *const kTableCellIdTrigger = @"TriggerCell";
 {
     return [self.fetchedResultsController sectionIndexTitles];
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    TapsTableViewCell *cell = (TapsTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+    
+    if (cell.tapCount == 2) {
+        if (cell.accessoryType == UITableViewCellAccessoryCheckmark)
+        {
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
+        else
+        {
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        }
+    }
+}
+
 
 #pragma mark - NSFetchedResultsControllerDelegate
 
