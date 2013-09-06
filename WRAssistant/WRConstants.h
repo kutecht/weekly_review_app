@@ -10,13 +10,9 @@
 
 // UserDefaults key strings
 extern NSString *const WRConstantsSessionKey; // dictionary of session information
-extern NSString *const WRConstantsSessionStartKey;
-extern NSString *const WRConstantsSessionFinishKey;
-extern NSString *const WRConstantsSessionRemindersKey; // Reminders on users attention
-extern NSString *const WRConstantsSessionTriggersKey; // Triggers on users attention
-extern NSString *const WRConstantsSessionPreviousEventsKey; // Previous events on users attention
-extern NSString *const WRConstantsSessionUpcomingEventsKey; // Upcoming events on users attention
-extern NSString *const WRConstantsSessionThoughtGuidesKey; // Though Guides on users attention
+extern NSString *const WRConstantsSessionIdKey;
+extern NSString *const WRConstantsSessionStartKey; // start date-time
+extern NSString *const WRConstantsSessionFinishKey; // finish date-time
 extern NSString *const WRConstantsLogKey; // an array of session information
 extern NSString *const WRConstantsStepDurationInMinKey;
 
@@ -42,5 +38,6 @@ extern NSString *const WRConstantsThoughtGuideTitleKey;
 + (NSArray *)defaultThoughtGuides;
 + (void)sessionStart;
 + (void)sessionFinish;
++ (NSString *)getCurrentSessionId;
 
 @end

@@ -16,8 +16,9 @@
 @property (nonatomic, strong) EKEventStore *eventStore;
 @property (nonatomic, strong) NSArray *allReminders; // similar to allCalendars
 @property (nonatomic, strong) NSArray *remindersList;
-@property (nonatomic) int tapCount;
+@property (nonatomic, strong) NSMutableDictionary *checkmarkStates; // key is row (NSNumber), value is ON/OFF (NSNumber)
 @property (nonatomic) NSIndexPath *tableSelection;
+
 
 @end
 
@@ -37,12 +38,37 @@ static NSString *const kTableCellIdReminder = @"ReminderCell";
 }
 
 
--(void)viewDidAppear:(BOOL)animated
+- (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    [self.checkmarkStates removeAllObjects];
     [self checkEventStoreAccess];
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+
+    // add checkmarked items to SessionItem database table
+    for (NSNumber *rowNum in self.checkmarkStates)
+    {
+        if ([self.checkmarkStates[rowNum] boolValue] == YES)
+        {
+            NSLog("Row: %d, %@", [rowNum intValue], [[self.remindersList objectAtIndex:[rowNum intValue]] title]);
+        }
+    }
+}
+
+
+- (NSMutableDictionary *)checkmarkStates
+{
+    if (!_checkmarkStates)
+    {
+        _checkmarkStates = [[NSMutableDictionary alloc] init];
+    }
+    
+    return _checkmarkStates;
+}
 
 #pragma mark -
 #pragma mark Table View
@@ -59,6 +85,16 @@ static NSString *const kTableCellIdReminder = @"ReminderCell";
     
     // Get the event at the row selected and display its title
     cell.textLabel.text = [[self.remindersList objectAtIndex:indexPath.row] title];
+    
+    if ([self.checkmarkStates[@(indexPath.row)] boolValue] == YES)
+    {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    else
+    {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+
     return cell;
 }
 
@@ -74,10 +110,12 @@ static NSString *const kTableCellIdReminder = @"ReminderCell";
         if (cell.accessoryType == UITableViewCellAccessoryCheckmark)
         {
             cell.accessoryType = UITableViewCellAccessoryNone;
+            self.checkmarkStates[@(indexPath.row)] = @(NO);
         }
         else
         {
             cell.accessoryType = UITableViewCellAccessoryCheckmark;
+            self.checkmarkStates[@(indexPath.row)] = @(YES);
         }
     }
 }
@@ -92,9 +130,11 @@ static NSString *const kTableCellIdReminder = @"ReminderCell";
     
     switch (status)
     {
-        case EKAuthorizationStatusAuthorized: [self accessGranted];
+        case EKAuthorizationStatusAuthorized:
+            [self accessGranted];
             break;
-        case EKAuthorizationStatusNotDetermined: [self requestAccess];
+        case EKAuthorizationStatusNotDetermined:
+            [self requestAccess];
             break;
         case EKAuthorizationStatusDenied:
         case EKAuthorizationStatusRestricted:

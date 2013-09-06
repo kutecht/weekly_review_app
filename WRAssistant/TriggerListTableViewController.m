@@ -13,6 +13,7 @@
 
 @interface TriggerListTableViewController ()
 @property (nonatomic) BOOL beganUpdates;
+@property (nonatomic, strong) NSMutableDictionary *checkmarkStates; // key is trigger.unique (NSString), value is ON/OFF (NSNumber)
 @end
 
 static NSString *const kTableCellIdTrigger = @"TriggerCell";
@@ -39,12 +40,31 @@ static NSString *const kTableCellIdTrigger = @"TriggerCell";
     }
 }
 
+- (NSMutableDictionary *)checkmarkStates
+{
+    if (!_checkmarkStates)
+    {
+        _checkmarkStates = [[NSMutableDictionary alloc] init];
+    }
+    
+    return _checkmarkStates;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTableCellIdTrigger];
     
     Trigger *trigger = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = trigger.title;
+    
+    if ([self.checkmarkStates[trigger.unique] boolValue] == YES)
+    {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    else
+    {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
 
     return cell;
 }
@@ -63,6 +83,8 @@ static NSString *const kTableCellIdTrigger = @"TriggerCell";
 
 - (void)refresh
 {
+    [self.checkmarkStates removeAllObjects];
+    
     NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
     url = [url URLByAppendingPathComponent:WRConstantsTriggerListDoc];
     UIManagedDocument *document = [[UIManagedDocument alloc] initWithFileURL:url];
@@ -95,14 +117,11 @@ static NSString *const kTableCellIdTrigger = @"TriggerCell";
         // try to us it
         self.managedObjectContext = document.managedObjectContext;
     }
-
-    [self.refreshControl endRefreshing];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -111,6 +130,20 @@ static NSString *const kTableCellIdTrigger = @"TriggerCell";
     if (!self.managedObjectContext)
     {
         [self refresh];
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    // add checkmarked items to SessionItem database table
+    for (NSString *triggerUnique in self.checkmarkStates)
+    {
+        if ([self.checkmarkStates[triggerUnique] boolValue] == YES)
+        {
+            NSLog("Trigger: %@", triggerUnique);
+        }
     }
 }
 
@@ -201,20 +234,22 @@ static NSString *const kTableCellIdTrigger = @"TriggerCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
     TapsTableViewCell *cell = (TapsTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
-    
+    Trigger *trigger = [self.fetchedResultsController objectAtIndexPath:indexPath];
+
     if (cell.tapCount == 2) {
         if (cell.accessoryType == UITableViewCellAccessoryCheckmark)
         {
             cell.accessoryType = UITableViewCellAccessoryNone;
+            self.checkmarkStates[trigger.unique] = @(NO);
         }
         else
         {
             cell.accessoryType = UITableViewCellAccessoryCheckmark;
+            self.checkmarkStates[trigger.unique] = @(YES);
         }
     }
+    
 }
 
 

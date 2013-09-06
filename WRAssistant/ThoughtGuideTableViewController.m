@@ -12,13 +12,22 @@
 
 @interface ThoughtGuideTableViewController ()
 @property (nonatomic) BOOL beganUpdates;
+@property (nonatomic, strong) NSMutableDictionary *checkmarkStates; // key is row (NSNumber), value is ON/OFF (NSNumber)
 @end
 
 static NSString *const kTableCellIdThoughtGuide = @"ThoughtGuideCell";
 
 @implementation ThoughtGuideTableViewController
 
-
+- (NSMutableDictionary *)checkmarkStates
+{
+    if (!_checkmarkStates)
+    {
+        _checkmarkStates = [[NSMutableDictionary alloc] init];
+    }
+    
+    return _checkmarkStates;
+}
 
 - (void)setManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
 {
@@ -45,6 +54,15 @@ static NSString *const kTableCellIdThoughtGuide = @"ThoughtGuideCell";
     ThoughtGuide *thoughtGuide = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = thoughtGuide.title;
     
+    if ([self.checkmarkStates[@(indexPath.row)] boolValue] == YES)
+    {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    else
+    {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }    
+    
     return cell;
 }
 
@@ -58,10 +76,12 @@ static NSString *const kTableCellIdThoughtGuide = @"ThoughtGuideCell";
         if (cell.accessoryType == UITableViewCellAccessoryCheckmark)
         {
             cell.accessoryType = UITableViewCellAccessoryNone;
+            self.checkmarkStates[@(indexPath.row)] = @(NO);
         }
         else
         {
             cell.accessoryType = UITableViewCellAccessoryCheckmark;
+            self.checkmarkStates[@(indexPath.row)] = @(YES);
         }
     }
 }
@@ -81,6 +101,7 @@ static NSString *const kTableCellIdThoughtGuide = @"ThoughtGuideCell";
 
 - (void)refresh
 {
+    [self.checkmarkStates removeAllObjects];    
     NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
     url = [url URLByAppendingPathComponent:WRConstantsThoughtGuidesDoc];
     UIManagedDocument *document = [[UIManagedDocument alloc] initWithFileURL:url];
@@ -113,14 +134,11 @@ static NSString *const kTableCellIdThoughtGuide = @"ThoughtGuideCell";
         // try to us it
         self.managedObjectContext = document.managedObjectContext;
     }
-    
-    [self.refreshControl endRefreshing];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -129,6 +147,20 @@ static NSString *const kTableCellIdThoughtGuide = @"ThoughtGuideCell";
     if (!self.managedObjectContext)
     {
         [self refresh];
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    // add checkmarked items to SessionItem database table
+    for (NSNumber *rowNum in self.checkmarkStates)
+    {
+        if ([self.checkmarkStates[rowNum] boolValue] == YES)
+        {
+            NSLog("Row: %d", [rowNum intValue]);
+        }
     }
 }
 

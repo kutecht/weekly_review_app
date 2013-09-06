@@ -17,12 +17,14 @@
 @property (nonatomic, strong) NSArray *allCalendars;
 @property (nonatomic, strong) NSMutableArray *eventsList;
 @property (nonatomic, strong) NSTimer *tapTimer;
-
+@property (nonatomic, strong) NSMutableDictionary *checkmarkStates; // key is row (NSNumber), value is ON/OFF (NSNumber)
 
 @end
 
 static NSString *const kSegueShowEventViewController = @"showEventViewController";
 static NSString *const kTableCellIdEvent = @"EventCell";
+static NSString *const kCheckmark = @"✓";
+static NSString *const kNoDetail = @"";
 
 
 
@@ -42,10 +44,33 @@ static NSString *const kTableCellIdEvent = @"EventCell";
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    [self.checkmarkStates removeAllObjects];
     [self checkEventStoreAccessForCalendar];
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    // add checkmarked items to SessionItem database table
+    for (NSNumber *rowNum in self.checkmarkStates)
+    {
+        if ([self.checkmarkStates[rowNum] boolValue] == YES)
+        {
+            NSLog("Row: %d, %@", [rowNum intValue], [[self.eventsList objectAtIndex:[rowNum intValue]] title]);
+        }
+    }
+}
 
+- (NSMutableDictionary *)checkmarkStates
+{
+    if (!_checkmarkStates)
+    {
+        _checkmarkStates = [[NSMutableDictionary alloc] init];
+    }
+    
+    return _checkmarkStates;
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -76,6 +101,16 @@ static NSString *const kTableCellIdEvent = @"EventCell";
     
     // Get the event at the row selected and display its title
     cell.textLabel.text = [[self.eventsList objectAtIndex:indexPath.row] title];
+    
+    if ([self.checkmarkStates[@(indexPath.row)] boolValue] == YES)
+    {
+        cell.detailTextLabel.text = kCheckmark;
+    }
+    else
+    {
+        cell.detailTextLabel.text = kNoDetail;
+    }
+    
     return cell;
 }
 
@@ -98,13 +133,15 @@ static NSString *const kTableCellIdEvent = @"EventCell";
             [self.tapTimer invalidate];
             self.tapTimer = nil;
         }
-        if ([cell.detailTextLabel.text isEqualToString:@""])
+        if ([cell.detailTextLabel.text isEqualToString:kNoDetail])
         {
-            cell.detailTextLabel.text = @"✓";
+            cell.detailTextLabel.text = kCheckmark;
+            self.checkmarkStates[@(indexPath.row)] = @(YES);
         }
         else
         {
-            cell.detailTextLabel.text = @"";
+            cell.detailTextLabel.text = kNoDetail;
+            self.checkmarkStates[@(indexPath.row)] = @(NO);
         }
     }
 }

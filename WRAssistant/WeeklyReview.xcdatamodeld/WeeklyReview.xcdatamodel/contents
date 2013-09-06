@@ -4,6 +4,11 @@
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="triggers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Trigger" inverseName="group" inverseEntity="Trigger" syncable="YES"/>
     </entity>
+    <entity name="SessionItem" representedClassName="SessionItem" syncable="YES">
+        <attribute name="session_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="step" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="ThoughtGuide" representedClassName="ThoughtGuide" syncable="YES">
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -14,7 +19,8 @@
     </entity>
     <elements>
         <element name="Group" positionX="160" positionY="192" width="128" height="73"/>
+        <element name="ThoughtGuide" positionX="376" positionY="324" width="128" height="58"/>
         <element name="Trigger" positionX="367" positionY="192" width="128" height="88"/>
-        <element name="ThoughtGuide" positionX="252" positionY="365" width="128" height="58"/>
+        <element name="SessionItem" positionX="162" positionY="308" width="128" height="88"/>
     </elements>
 </model>

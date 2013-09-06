@@ -10,13 +10,10 @@
 
 // UserDefaults key strings
 NSString *const WRConstantsSessionKey = @"weekly_review_assistant.session";
+NSString *const WRConstantsSessionIdKey = @"weekly_review_assistant.session.id";
 NSString *const WRConstantsSessionStartKey = @"weekly_review_assistant.session.start";
 NSString *const WRConstantsSessionFinishKey = @"weekly_review_assistant.session.finish";
-NSString *const WRConstantsSessionRemindersKey = @"weekly_review_assistant.session.reminders";
-NSString *const WRConstantsSessionTriggersKey = @"weekly_review_assistant.session.triggers";
-NSString *const WRConstantsSessionPreviousEventsKey = @"weekly_review_assistant.session.previous_events";
-NSString *const WRConstantsSessionUpcomingEventsKey = @"weekly_review_assistant.session.upcoming_events";
-NSString *const WRConstantsSessionThoughtGuidesKey = @"weekly_review_assistant.session.thought_guides";
+
 NSString *const WRConstantsLogKey = @"weekly_review_assistant.log";
 NSString *const WRConstantsStepDurationInMinKey = @"weekly_review_assistant.step_duration";
 
@@ -46,6 +43,8 @@ static NSString *const kTGHousehold = @"Household";
 static NSString *const kTGLeisure = @"Leisure";
 static NSString *const kTGProfessionalDevelopment = @"Professional development";
 static NSString *const kTGUpcomingEvents = @"Upcoming events";
+
+static NSString *const kErrUndefined = @"Err: Undefined!";
 
 
 @implementation WRConstants
@@ -178,10 +177,26 @@ static NSString *const kTGUpcomingEvents = @"Upcoming events";
     NSMutableDictionary *session = [[defaults objectForKey:WRConstantsSessionKey] mutableCopy];
     if (!session) session = [NSMutableDictionary dictionary];
     session[WRConstantsSessionStartKey] = [NSDate date];
+    session[WRConstantsSessionIdKey] = [[NSUUID UUID] UUIDString];
     [defaults setObject:session forKey:WRConstantsSessionKey];
     [defaults synchronize];
     
     //NSLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
+}
+
++ (NSString *)getCurrentSessionId
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSMutableDictionary *session = [[defaults objectForKey:WRConstantsSessionKey] mutableCopy];
+    
+    if (session)
+    {
+        return session[WRConstantsSessionIdKey];
+    }
+    else
+    {
+        return kErrUndefined;
+    }
 }
 
 + (void)sessionFinish

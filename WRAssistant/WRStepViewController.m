@@ -69,5 +69,8 @@
     }
 }
 
-
+- (void)pause
+{
+    [self.timeCountdown pause];
+}
 @end

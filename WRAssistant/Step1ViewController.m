@@ -28,6 +28,7 @@
 {
     [super viewWillAppear:animated];
     
+    [self pause];
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,6 +44,11 @@
 
 - (IBAction)doneWithWeeklyReview:(UIStoryboardSegue *)segue
 {
+    // Starting over
+    if (!self.splitViewController)
+    {
+        [WRConstants sessionStart];
+    }
 }
 
 @end

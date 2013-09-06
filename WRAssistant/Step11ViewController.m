@@ -16,9 +16,9 @@
 @end
 
 static NSString *const kSegueShowThoughtGuideTable = @"showThoughtGuideList";
-static NSString *const kSegueShowAddTrigger = @"showAddThoughtGuide";
-static NSString *const kSegueShowStep1 = @"showStep1";
-static NSString *const kStep1Title = @"Restart";
+static NSString *const kSegueShowAddThoughtGuide = @"showAddThoughtGuide";
+static NSString *const kSegueDone = @"unwindDoneWithWeeklyReview";
+static NSString *const kCloseTitle = @"Done";
 
 
 @implementation Step11ViewController
@@ -46,13 +46,11 @@ static NSString *const kStep1Title = @"Restart";
     if (!self.splitViewController)
     {
         // iPhone - programmatically adding bar button items
-        UIBarButtonItem *step1BarButton = [[UIBarButtonItem alloc] initWithTitle:kStep1Title style:UIBarButtonItemStyleBordered target:self action:@selector(step1Pressed:)];
+        UIBarButtonItem *closeBarButton = [[UIBarButtonItem alloc] initWithTitle:kCloseTitle style:UIBarButtonItemStyleBordered target:self action:@selector(closePressed:)];
         
-        self.navigationItem.rightBarButtonItems = @[step1BarButton, addThoughtGuideBarButton];
+        self.navigationItem.rightBarButtonItems = @[closeBarButton, addThoughtGuideBarButton];
 
-        // If user made it to Step 11 on iPhone, then log date indicating Weekly Review completed
-        // Note: thought about having a 'Finished' button but that seemed like a hack.  Also, removed log from iPad version.
-        [WRConstants sessionFinish];
+
     }
 }
 
@@ -96,13 +94,16 @@ static NSString *const kStep1Title = @"Restart";
 
 - (IBAction)addThoughtGuidePressed:(UIBarButtonItem *)sender
 {
-    [self performSegueWithIdentifier:@"showAddThoughtGuide" sender:self];
+    [self performSegueWithIdentifier:kSegueShowAddThoughtGuide sender:self];
 }
 
-- (IBAction)step1Pressed:(UIBarButtonItem *)sender
+- (IBAction)closePressed:(UIBarButtonItem *)sender
 {
-    [self performSegueWithIdentifier:@"unwindDoneWithWeeklyReview" sender:self];
-    [WRConstants sessionStart];
+    // the Weekly Review is over.  Cleaning up.
+
+    [WRConstants sessionFinish];
+    
+    [self performSegueWithIdentifier:kSegueDone sender:self];
 }
 
 @end
