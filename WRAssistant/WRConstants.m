@@ -11,7 +11,6 @@
 // UserDefaults key strings
 NSString *const WRConstantsSessionKey = @"weekly_review_assistant.session";
 NSString *const WRConstantsSessionIdKey = @"weekly_review_assistant.session.id";
-NSString *const WRConstantsSessionStartKey = @"weekly_review_assistant.session.start";
 NSString *const WRConstantsSessionFinishKey = @"weekly_review_assistant.session.finish";
 
 NSString *const WRConstantsLogKey = @"weekly_review_assistant.log";
@@ -180,7 +179,6 @@ static NSString *const kErrUndefined = @"Err: Undefined!";
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSMutableDictionary *session = [[defaults objectForKey:WRConstantsSessionKey] mutableCopy];
     if (!session) session = [NSMutableDictionary dictionary];
-    session[WRConstantsSessionStartKey] = [NSDate date];
     session[WRConstantsSessionIdKey] = [[NSUUID UUID] UUIDString];
     [defaults setObject:session forKey:WRConstantsSessionKey];
     [defaults synchronize];

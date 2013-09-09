@@ -11,7 +11,6 @@
 // UserDefaults key strings
 extern NSString *const WRConstantsSessionKey; // dictionary of session information
 extern NSString *const WRConstantsSessionIdKey;
-extern NSString *const WRConstantsSessionStartKey; // start date-time
 extern NSString *const WRConstantsSessionFinishKey; // finish date-time
 extern NSString *const WRConstantsLogKey; // an array of session information
 extern NSString *const WRConstantsStepDurationInMinKey;
