@@ -60,5 +60,26 @@
     }
 }
 
++ (int)sessionItemsCount:(NSString *)sessionId inManagedObjectContex:(NSManagedObjectContext *)context
+{
+    int count = 0;
+
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:WRConstantsSessionItemEntity];
+    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:WRConstantsSessionItemTitleKey ascending:YES
+                                                               selector:@selector(localizedCaseInsensitiveCompare:)]];
+    request.predicate = [NSPredicate predicateWithFormat:@"session_id = %@", sessionId];
+
+    NSError *error = nil;
+    NSArray *matches = [context executeFetchRequest:request error:&error];
+    
+    NSLog(@"HERE 100");
+    if (matches)
+    {
+        NSLog(@"HERE 200: %d", [matches count]);
+        count = [matches count];
+    }
+    
+    return count;
+}
 
 @end

@@ -12,4 +12,6 @@
 
 + (void)createSessionItems:(NSString *)sessionId forStep:(int)step withTitles:(NSArray *)titles;
 
++ (int)sessionItemsCount:(NSString *)sessionId inManagedObjectContex:(NSManagedObjectContext *)context;
+
 @end

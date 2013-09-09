@@ -8,15 +8,18 @@
 
 #import "LogTableViewController.h"
 #import "SessionItemTableViewController.h"
+#import "SessionItem+Create.h"
 #import "Step11ViewController.h"
 
 @interface LogTableViewController ()
 @property (strong, nonatomic) NSMutableArray *historyLog;
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @end
 
 static NSString *const kTableCellIdLogDate = @"LogDateCell";
 static NSString *const kSegueShowSessionItems = @"showSessionItems";
+static NSString *const kDateFormat = @"MM/dd/yyyy  HH:mm";
 
 
 @implementation LogTableViewController
@@ -42,7 +45,7 @@ static NSString *const kSegueShowSessionItems = @"showSessionItems";
         }
         
         // sort, showing most recent at the top
-        NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"self" ascending:NO];
+        NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:WRConstantsSessionFinishKey ascending:NO];
         NSArray *descriptors = [NSArray arrayWithObject: descriptor];
         [_historyLog sortUsingDescriptors:descriptors];
     }
@@ -55,7 +58,7 @@ static NSString *const kSegueShowSessionItems = @"showSessionItems";
     if (!_dateFormatter)
     {
         _dateFormatter = [[NSDateFormatter alloc] init];
-        [_dateFormatter setDateFormat:@"yyyy-MM-dd 'at' HH:mm"];
+        [_dateFormatter setDateFormat:kDateFormat];
     }
     
     return _dateFormatter;
@@ -66,13 +69,56 @@ static NSString *const kSegueShowSessionItems = @"showSessionItems";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
 }
+
+- (void)refresh
+{
+    NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+    url = [url URLByAppendingPathComponent:WRConstantsSessionItemsDoc];
+    UIManagedDocument *document = [[UIManagedDocument alloc] initWithFileURL:url];
+
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[url path]])
+    {
+        // create trigger list document
+        [document saveToURL:url forSaveOperation:UIDocumentSaveForCreating
+          completionHandler:^(BOOL success) {
+              if (success)
+              {
+                  self.managedObjectContext = document.managedObjectContext;
+                  [self.tableView reloadData];
+              }
+          }];
+    }
+    else if (document.documentState == UIDocumentStateClosed)
+    {
+        // open it
+        [document openWithCompletionHandler:^(BOOL success) {
+            if (success)
+            {
+                self.managedObjectContext = document.managedObjectContext;
+                [self.tableView reloadData];
+            }
+        }];
+    }
+    else
+    {
+        // try to us it
+        self.managedObjectContext = document.managedObjectContext;
+    }
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    if (!self.managedObjectContext)
+    {
+        [self refresh];
+    }
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -106,7 +152,9 @@ static NSString *const kSegueShowSessionItems = @"showSessionItems";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTableCellIdLogDate forIndexPath:indexPath];
 
     cell.textLabel.text = [self.dateFormatter stringFromDate:[self.historyLog[indexPath.row] objectForKey:WRConstantsSessionFinishKey]];
-    
+
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%d", [SessionItem sessionItemsCount:[self.historyLog[indexPath.row] objectForKey:WRConstantsSessionIdKey] inManagedObjectContex:self.managedObjectContext]];
+
     return cell;
 }
 
