@@ -154,7 +154,6 @@ static NSString *const kTableCellIdThoughtGuide = @"ThoughtGuideCell";
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    NSLog(@"HERE 2");
 
     // add checkmarked items to SessionItem database table
     NSMutableArray *titles = [[NSMutableArray alloc] init];
@@ -165,7 +164,9 @@ static NSString *const kTableCellIdThoughtGuide = @"ThoughtGuideCell";
             [titles addObject:[[self.fetchedResultsController objectAtIndexPath:indexPath] title]];
         }
     }
-    [SessionItem createSessionItems:[WRConstants getCurrentSessionId] forStep:11 withTitles:titles];
+    [SessionItem createSessionItems:[WRConstants getCurrentSessionId]
+                            forStep:WRConstantsStep11
+                         withTitles:titles];
     
     [WRConstants sessionFinish];
     

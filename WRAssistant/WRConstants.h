@@ -33,7 +33,18 @@ extern NSString *const WRConstantsSessionItemEntity;
 extern NSString *const WRConstantsSessionItemTitleKey;
 extern NSString *const WRConstantsSessionItemsDoc;
 
-
+// Weekly Revew Steps
+extern const unsigned int WRConstantsStep1;
+extern const unsigned int WRConstantsStep2;
+extern const unsigned int WRConstantsStep3;
+extern const unsigned int WRConstantsStep4;
+extern const unsigned int WRConstantsStep5;
+extern const unsigned int WRConstantsStep6;
+extern const unsigned int WRConstantsStep7;
+extern const unsigned int WRConstantsStep8;
+extern const unsigned int WRConstantsStep9;
+extern const unsigned int WRConstantsStep10;
+extern const unsigned int WRConstantsStep11;
 
 @interface WRConstants : NSObject
 

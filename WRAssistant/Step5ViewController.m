@@ -12,8 +12,7 @@
 @interface Step5ViewController ()
 @end
 
-static const unsigned int kWeeklyReviewStep5 = 5;
-static const unsigned int kPastEventsInWeeks = -3;
+static const int kPastEventsInWeeks = -3;
 static NSString *const kSegueShowPastEvents = @"showPastEvents";
 
 
@@ -46,7 +45,7 @@ static NSString *const kSegueShowPastEvents = @"showPastEvents";
     {
         // Show events for the next two weeks
         EventTableViewController* eventTableViewController = (EventTableViewController *)[segue destinationViewController];
-        eventTableViewController.wrStep = kWeeklyReviewStep5;
+        eventTableViewController.wrStep = WRConstantsStep5;
         eventTableViewController.endDate = [NSDate date];
         NSDateComponents *spanDateComponents = [[NSDateComponents alloc] init];
         spanDateComponents.week = kPastEventsInWeeks;

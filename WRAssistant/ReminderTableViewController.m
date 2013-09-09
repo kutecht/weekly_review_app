@@ -43,6 +43,7 @@ static NSString *const kTableCellIdReminder = @"ReminderCell";
 {
     [super viewDidAppear:animated];
     [self.checkmarkStates removeAllObjects];
+    [SessionItem deleteSessionItems:[WRConstants getCurrentSessionId] forStep:WRConstantsStep1];
     [self checkEventStoreAccess];
 }
 
@@ -59,7 +60,9 @@ static NSString *const kTableCellIdReminder = @"ReminderCell";
             [titles addObject:[[self.remindersList objectAtIndex:[rowNum intValue]] title]];
         }
     }
-    [SessionItem createSessionItems:[WRConstants getCurrentSessionId] forStep:1 withTitles:titles];
+    [SessionItem createSessionItems:[WRConstants getCurrentSessionId]
+                            forStep:WRConstantsStep1
+                         withTitles:titles];
 }
 
 

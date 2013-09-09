@@ -14,4 +14,6 @@
 
 + (int)sessionItemsCount:(NSString *)sessionId inManagedObjectContex:(NSManagedObjectContext *)context;
 
++ (void)deleteSessionItems:(NSString *)sessionId forStep:(int)step;
+
 @end

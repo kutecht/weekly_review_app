@@ -34,6 +34,18 @@ NSString *const WRConstantsSessionItemEntity = @"SessionItem";
 NSString *const WRConstantsSessionItemTitleKey = @"title";
 NSString *const WRConstantsSessionItemsDoc = @"SessionItems";
 
+const unsigned int WRConstantsStep1 = 1;
+const unsigned int WRConstantsStep2 = 2;
+const unsigned int WRConstantsStep3 = 3;
+const unsigned int WRConstantsStep4 = 4;
+const unsigned int WRConstantsStep5 = 5;
+const unsigned int WRConstantsStep6 = 6;
+const unsigned int WRConstantsStep7 = 7;
+const unsigned int WRConstantsStep8 = 8;
+const unsigned int WRConstantsStep9 = 9;
+const unsigned int WRConstantsStep10 = 10;
+const unsigned int WRConstantsStep11 = 11;
+
 
 // Trigger group title strings
 static NSString *const kTGAdministration = @"Administration";

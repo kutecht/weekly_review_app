@@ -46,8 +46,11 @@ static NSString *const kNoDetail = @"";
 {
     [super viewDidAppear:animated];
     [self.checkmarkStates removeAllObjects];
+    [SessionItem deleteSessionItems:[WRConstants getCurrentSessionId] forStep:self.wrStep];
     [self checkEventStoreAccessForCalendar];
 }
+
+
 
 - (void)viewWillDisappear:(BOOL)animated
 {

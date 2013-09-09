@@ -60,6 +60,47 @@
     }
 }
 
++ (void)deleteData:(NSString *)sessionId forStep:(int)step inManagedObjectContex:(NSManagedObjectContext *)context
+{
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:WRConstantsSessionItemEntity];
+    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:WRConstantsSessionItemTitleKey ascending:YES
+                                                               selector:@selector(localizedCaseInsensitiveCompare:)]];
+    request.predicate = [NSPredicate predicateWithFormat:@"session_id = %@ AND step = %d", sessionId, step];
+    
+    NSError *error = nil;
+    NSArray *matches = [context executeFetchRequest:request error:&error];
+    
+    for (NSManagedObject *managedObject in matches)
+    {
+        [context deleteObject:managedObject];
+    }
+}
+
+
++ (void)deleteSessionItems:(NSString *)sessionId forStep:(int)step
+{
+    NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+    url = [url URLByAppendingPathComponent:WRConstantsSessionItemsDoc];
+    UIManagedDocument *document = [[UIManagedDocument alloc] initWithFileURL:url];
+    
+    if (document.documentState == UIDocumentStateClosed)
+    {
+        // open it
+        [document openWithCompletionHandler:^(BOOL success) {
+            if (success)
+            {
+                [self deleteData:sessionId forStep:step inManagedObjectContex:document.managedObjectContext];
+            }
+        }];
+    }
+    else
+    {
+        // try to us it
+        [self deleteData:sessionId forStep:step inManagedObjectContex:document.managedObjectContext];
+    }
+    
+}
+
 + (int)sessionItemsCount:(NSString *)sessionId inManagedObjectContex:(NSManagedObjectContext *)context
 {
     int count = 0;
@@ -72,10 +113,8 @@
     NSError *error = nil;
     NSArray *matches = [context executeFetchRequest:request error:&error];
     
-    NSLog(@"HERE 100");
     if (matches)
     {
-        NSLog(@"HERE 200: %d", [matches count]);
         count = [matches count];
     }
     

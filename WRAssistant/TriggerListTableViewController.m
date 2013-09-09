@@ -84,8 +84,6 @@ static NSString *const kTableCellIdTrigger = @"TriggerCell";
 
 - (void)refresh
 {
-    [self.checkmarkStates removeAllObjects];
-    
     NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
     url = [url URLByAppendingPathComponent:WRConstantsTriggerListDoc];
     UIManagedDocument *document = [[UIManagedDocument alloc] initWithFileURL:url];
@@ -128,6 +126,11 @@ static NSString *const kTableCellIdTrigger = @"TriggerCell";
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    [self.checkmarkStates removeAllObjects];
+    [SessionItem deleteSessionItems:[WRConstants getCurrentSessionId] forStep:WRConstantsStep3];
+    [self.tableView reloadData];
+
     if (!self.managedObjectContext)
     {
         [self refresh];
@@ -147,7 +150,7 @@ static NSString *const kTableCellIdTrigger = @"TriggerCell";
             [titles addObject:[[self.fetchedResultsController objectAtIndexPath:indexPath] title]];
         }
     }
-    [SessionItem createSessionItems:[WRConstants getCurrentSessionId] forStep:3 withTitles:titles];
+    [SessionItem createSessionItems:[WRConstants getCurrentSessionId] forStep:WRConstantsStep3 withTitles:titles];
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
