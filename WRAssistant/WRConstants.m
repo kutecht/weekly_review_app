@@ -31,6 +31,10 @@ NSString *const WRConstantsTriggerListDoc = @"TriggerList";
 NSString *const WRConstantsThoughtGuidesDoc = @"ThoughtGuides";
 NSString *const WRConstantsRelationshipGroupTitleKey = @"group.title";
 NSString *const WRConstantsThoughtGuideTitleKey = @"title";
+NSString *const WRConstantsSessionItemEntity = @"SessionItem";
+NSString *const WRConstantsSessionItemTitleKey = @"title";
+NSString *const WRConstantsSessionItemsDoc = @"SessionItems";
+
 
 // Trigger group title strings
 static NSString *const kTGAdministration = @"Administration";

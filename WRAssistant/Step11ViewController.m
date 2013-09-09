@@ -98,11 +98,7 @@ static NSString *const kCloseTitle = @"Done";
 }
 
 - (IBAction)closePressed:(UIBarButtonItem *)sender
-{
-    // the Weekly Review is over.  Cleaning up.
-
-    [WRConstants sessionFinish];
-    
+{    
     [self performSegueWithIdentifier:kSegueDone sender:self];
 }
 

@@ -9,6 +9,7 @@
 #import <EventKit/EventKit.h>
 #import <EventKitUI/EventKitUI.h>
 #import "TapsTableViewCell.h"
+#import "SessionItem+Create.h"
 #import "ReminderTableViewController.h"
 
 @interface ReminderTableViewController () 
@@ -50,13 +51,15 @@ static NSString *const kTableCellIdReminder = @"ReminderCell";
     [super viewWillDisappear:animated];
 
     // add checkmarked items to SessionItem database table
+    NSMutableArray *titles = [[NSMutableArray alloc] init];
     for (NSNumber *rowNum in self.checkmarkStates)
     {
         if ([self.checkmarkStates[rowNum] boolValue] == YES)
         {
-            NSLog("Row: %d, %@", [rowNum intValue], [[self.remindersList objectAtIndex:[rowNum intValue]] title]);
+            [titles addObject:[[self.remindersList objectAtIndex:[rowNum intValue]] title]];
         }
     }
+    [SessionItem createSessionItems:[WRConstants getCurrentSessionId] forStep:1 withTitles:titles];
 }
 
 
@@ -81,7 +84,7 @@ static NSString *const kTableCellIdReminder = @"ReminderCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTableCellIdReminder forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTableCellIdReminder forIndexPath:indexPath];
     
     // Get the event at the row selected and display its title
     cell.textLabel.text = [[self.remindersList objectAtIndex:indexPath.row] title];

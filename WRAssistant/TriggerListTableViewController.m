@@ -8,12 +8,13 @@
 
 #import "TriggerListTableViewController.h"
 #import "TapsTableViewCell.h"
+#import "SessionItem+Create.h"
 #import "Trigger+Create.h"
 
 
 @interface TriggerListTableViewController ()
 @property (nonatomic) BOOL beganUpdates;
-@property (nonatomic, strong) NSMutableDictionary *checkmarkStates; // key is trigger.unique (NSString), value is ON/OFF (NSNumber)
+@property (nonatomic, strong) NSMutableDictionary *checkmarkStates; // key is indexPath, value is ON/OFF (NSNumber)
 @end
 
 static NSString *const kTableCellIdTrigger = @"TriggerCell";
@@ -57,7 +58,7 @@ static NSString *const kTableCellIdTrigger = @"TriggerCell";
     Trigger *trigger = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = trigger.title;
     
-    if ([self.checkmarkStates[trigger.unique] boolValue] == YES)
+    if ([self.checkmarkStates[indexPath] boolValue] == YES)
     {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
@@ -138,13 +139,15 @@ static NSString *const kTableCellIdTrigger = @"TriggerCell";
     [super viewWillDisappear:animated];
     
     // add checkmarked items to SessionItem database table
-    for (NSString *triggerUnique in self.checkmarkStates)
+    NSMutableArray *titles = [[NSMutableArray alloc] init];
+    for (NSIndexPath *indexPath in self.checkmarkStates)
     {
-        if ([self.checkmarkStates[triggerUnique] boolValue] == YES)
+        if ([self.checkmarkStates[indexPath] boolValue] == YES)
         {
-            NSLog("Trigger: %@", triggerUnique);
+            [titles addObject:[[self.fetchedResultsController objectAtIndexPath:indexPath] title]];
         }
     }
+    [SessionItem createSessionItems:[WRConstants getCurrentSessionId] forStep:3 withTitles:titles];
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -234,19 +237,20 @@ static NSString *const kTableCellIdTrigger = @"TriggerCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
     TapsTableViewCell *cell = (TapsTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
-    Trigger *trigger = [self.fetchedResultsController objectAtIndexPath:indexPath];
 
     if (cell.tapCount == 2) {
         if (cell.accessoryType == UITableViewCellAccessoryCheckmark)
         {
             cell.accessoryType = UITableViewCellAccessoryNone;
-            self.checkmarkStates[trigger.unique] = @(NO);
+            self.checkmarkStates[indexPath] = @(NO);
         }
         else
         {
             cell.accessoryType = UITableViewCellAccessoryCheckmark;
-            self.checkmarkStates[trigger.unique] = @(YES);
+            self.checkmarkStates[indexPath] = @(YES);
         }
     }
     

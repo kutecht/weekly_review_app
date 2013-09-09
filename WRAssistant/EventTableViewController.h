@@ -10,5 +10,6 @@
 
 @property (strong, nonatomic) NSDate *startDate;
 @property (strong, nonatomic) NSDate *endDate;
+@property (nonatomic) int wrStep;
 
 @end

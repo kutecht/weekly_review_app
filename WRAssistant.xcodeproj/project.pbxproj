@@ -46,10 +46,12 @@
 		6865BDC317B83844007EBB9F /* WRStepsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6865BDC217B83844007EBB9F /* WRStepsTableViewController.m */; };
 		68669CB517A96A2E008167FE /* TriggerListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68669CB217A96A2E008167FE /* TriggerListTableViewController.m */; };
 		68669CB617A96A2E008167FE /* ReminderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68669CB317A96A2E008167FE /* ReminderTableViewController.m */; };
+		6877E19B17DAB7B1004CDF57 /* SessionItem+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 6877E19A17DAB7B1004CDF57 /* SessionItem+Create.m */; };
 		68884C7017A58E0F0063CF02 /* LogTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68884C6F17A58E0F0063CF02 /* LogTableViewController.m */; };
 		689A07D617A9A2900087A9CC /* WRConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 689A07D517A9A2900087A9CC /* WRConstants.m */; };
 		68A721651796406500BDA9EE /* UITopLeftLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A721641796406500BDA9EE /* UITopLeftLabel.m */; };
-		68AAEA4817D8FB8600533964 /* SessionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AAEA4717D8FB8600533964 /* SessionItem.m */; };
+		68B4979417DBD0AC00E648E9 /* SessionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B4979317DBD0AC00E648E9 /* SessionItem.m */; };
+		68B4979717DD06B300E648E9 /* SessionItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B4979617DD06B300E648E9 /* SessionItemTableViewController.m */; };
 		68BA01AF17B1DEA40097F704 /* WeeklyReview.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68BA01AD17B1DEA40097F704 /* WeeklyReview.xcdatamodeld */; };
 		68CD047B1799C80E00CDCB40 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 68CD047A1799C80E00CDCB40 /* Settings.bundle */; };
 		68CFBE8C17A86582002C6C6E /* EventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CFBE8A17A86582002C6C6E /* EventTableViewController.m */; };
@@ -140,6 +142,8 @@
 		68669CB217A96A2E008167FE /* TriggerListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TriggerListTableViewController.m; sourceTree = "<group>"; };
 		68669CB317A96A2E008167FE /* ReminderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderTableViewController.m; sourceTree = "<group>"; };
 		68669CB417A96A2E008167FE /* ReminderTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderTableViewController.h; sourceTree = "<group>"; };
+		6877E19917DAB7B1004CDF57 /* SessionItem+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SessionItem+Create.h"; sourceTree = "<group>"; };
+		6877E19A17DAB7B1004CDF57 /* SessionItem+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SessionItem+Create.m"; sourceTree = "<group>"; };
 		68884C6E17A58E0F0063CF02 /* LogTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogTableViewController.h; sourceTree = "<group>"; };
 		68884C6F17A58E0F0063CF02 /* LogTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogTableViewController.m; sourceTree = "<group>"; };
 		689A07D417A9A2900087A9CC /* WRConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRConstants.h; sourceTree = "<group>"; };
@@ -147,8 +151,10 @@
 		689A07D717A9A80C0087A9CC /* WRMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRMacros.h; sourceTree = "<group>"; };
 		68A721631796406500BDA9EE /* UITopLeftLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITopLeftLabel.h; sourceTree = "<group>"; };
 		68A721641796406500BDA9EE /* UITopLeftLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITopLeftLabel.m; sourceTree = "<group>"; };
-		68AAEA4617D8FB8600533964 /* SessionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionItem.h; sourceTree = "<group>"; };
-		68AAEA4717D8FB8600533964 /* SessionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionItem.m; sourceTree = "<group>"; };
+		68B4979217DBD0AC00E648E9 /* SessionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionItem.h; sourceTree = "<group>"; };
+		68B4979317DBD0AC00E648E9 /* SessionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionItem.m; sourceTree = "<group>"; };
+		68B4979517DD06B300E648E9 /* SessionItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionItemTableViewController.h; sourceTree = "<group>"; };
+		68B4979617DD06B300E648E9 /* SessionItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionItemTableViewController.m; sourceTree = "<group>"; };
 		68BA01AE17B1DEA40097F704 /* WeeklyReview.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeeklyReview.xcdatamodel; sourceTree = "<group>"; };
 		68CD047A1799C80E00CDCB40 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		68CFBE8A17A86582002C6C6E /* EventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewController.m; sourceTree = "<group>"; };
@@ -302,6 +308,8 @@
 				689A07D417A9A2900087A9CC /* WRConstants.h */,
 				689A07D517A9A2900087A9CC /* WRConstants.m */,
 				689A07D717A9A80C0087A9CC /* WRMacros.h */,
+				6877E19917DAB7B1004CDF57 /* SessionItem+Create.h */,
+				6877E19A17DAB7B1004CDF57 /* SessionItem+Create.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -309,8 +317,8 @@
 		68669CB917A9713A008167FE /* Autogenerated */ = {
 			isa = PBXGroup;
 			children = (
-				68AAEA4617D8FB8600533964 /* SessionItem.h */,
-				68AAEA4717D8FB8600533964 /* SessionItem.m */,
+				68B4979217DBD0AC00E648E9 /* SessionItem.h */,
+				68B4979317DBD0AC00E648E9 /* SessionItem.m */,
 				6831668817B2A81D00BABF39 /* ThoughtGuide.h */,
 				6831668917B2A81D00BABF39 /* ThoughtGuide.m */,
 				68FDE0C217B1E5F300A60A53 /* Group.h */,
@@ -344,6 +352,8 @@
 			children = (
 				68884C6F17A58E0F0063CF02 /* LogTableViewController.m */,
 				68884C6E17A58E0F0063CF02 /* LogTableViewController.h */,
+				68B4979517DD06B300E648E9 /* SessionItemTableViewController.h */,
+				68B4979617DD06B300E648E9 /* SessionItemTableViewController.m */,
 			);
 			name = "App Information";
 			sourceTree = "<group>";
@@ -569,20 +579,22 @@
 				683573FE17D6B74C00935480 /* TapsTableViewCell.m in Sources */,
 				6820F0DF1795E9AA00332A80 /* WRAppDelegate.m in Sources */,
 				6812A77E179EDDDC007609DC /* Trigger+Create.m in Sources */,
+				6877E19B17DAB7B1004CDF57 /* SessionItem+Create.m in Sources */,
 				6821575417B6C1B60000E1A1 /* WRStepViewController.m in Sources */,
+				68B4979717DD06B300E648E9 /* SessionItemTableViewController.m in Sources */,
 				68669CB517A96A2E008167FE /* TriggerListTableViewController.m in Sources */,
 				6820F1171795EC9800332A80 /* Step7ViewController.m in Sources */,
 				68669CB617A96A2E008167FE /* ReminderTableViewController.m in Sources */,
 				6820F1141795EC8700332A80 /* Step6ViewController.m in Sources */,
 				6831668A17B2A81D00BABF39 /* ThoughtGuide.m in Sources */,
 				68A721651796406500BDA9EE /* UITopLeftLabel.m in Sources */,
+				68B4979417DBD0AC00E648E9 /* SessionItem.m in Sources */,
 				6820F1081795EBF800332A80 /* Step2ViewController.m in Sources */,
 				6820F11D1795ECCA00332A80 /* Step9ViewController.m in Sources */,
 				6820F10B1795EC2800332A80 /* Step3ViewController.m in Sources */,
 				6820F1231795ECEC00332A80 /* Step11ViewController.m in Sources */,
 				6806B8B617ACADFD007F7A37 /* ThoughtGuideTableViewController.m in Sources */,
 				6820F10E1795EC3F00332A80 /* Step4ViewController.m in Sources */,
-				68AAEA4817D8FB8600533964 /* SessionItem.m in Sources */,
 				68FDE0C117B1E5F300A60A53 /* Trigger.m in Sources */,
 				68301DE217B04C05009DA35B /* AddTriggerViewController.m in Sources */,
 				6806B8B917ACB164007F7A37 /* AddThoughtGuideViewController.m in Sources */,

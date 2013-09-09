@@ -1,34 +1,22 @@
 //
-//  ThoughtGuideTableViewController.m
+//  SessionItemTableViewController.m
 //  WRAssistant
 //
-//  Created by Kevin Utecht on 8/2/13.
+//  Created by Kevin Utecht on 9/8/13.
 //  Copyright (c) 2013 kevin utecht. All rights reserved.
 //
 
-#import "TapsTableViewCell.h"
-#import "ThoughtGuideTableViewController.h"
-#import "SessionItem+Create.h"
-#import "ThoughtGuide+Create.h"
+#import "SessionItemTableViewController.h"
+#import "SessionItem.h"
 
-@interface ThoughtGuideTableViewController ()
+@interface SessionItemTableViewController ()
 @property (nonatomic) BOOL beganUpdates;
-@property (nonatomic, strong) NSMutableDictionary *checkmarkStates; // key is indexPath, value is ON/OFF (NSNumber)
 @end
 
-static NSString *const kTableCellIdThoughtGuide = @"ThoughtGuideCell";
+static NSString *const kTableCellIdSessionItem = @"SessionItemCell";
 
-@implementation ThoughtGuideTableViewController
 
-- (NSMutableDictionary *)checkmarkStates
-{
-    if (!_checkmarkStates)
-    {
-        _checkmarkStates = [[NSMutableDictionary alloc] init];
-    }
-    
-    return _checkmarkStates;
-}
+@implementation SessionItemTableViewController
 
 - (void)setManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
 {
@@ -36,10 +24,11 @@ static NSString *const kTableCellIdThoughtGuide = @"ThoughtGuideCell";
     
     if (managedObjectContext)
     {
-        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:WRConstantsThoughtGuideEntity];
-        request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:WRConstantsThoughtGuideTitleKey ascending:YES
+        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:WRConstantsSessionItemEntity];
+        request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:WRConstantsSessionItemTitleKey ascending:YES
                                                                    selector:@selector(localizedCaseInsensitiveCompare:)]];
-        request.predicate = nil; // all ThoughtGuides
+        request.predicate = [NSPredicate predicateWithFormat:@"session_id = %@", self.sessionId];
+
         self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:managedObjectContext sectionNameKeyPath:nil cacheName:nil];
     }
     else
@@ -50,61 +39,19 @@ static NSString *const kTableCellIdThoughtGuide = @"ThoughtGuideCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTableCellIdThoughtGuide];
-    
-    ThoughtGuide *thoughtGuide = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = thoughtGuide.title;
-    
-    if ([self.checkmarkStates[indexPath] boolValue] == YES)
-    {
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    }
-    else
-    {
-        cell.accessoryType = UITableViewCellAccessoryNone;
-    }    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTableCellIdSessionItem];
+
+    SessionItem *sessionItem = [self.fetchedResultsController objectAtIndexPath:indexPath];
+
+    cell.textLabel.text = sessionItem.title;
     
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    TapsTableViewCell *cell = (TapsTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
-    
-    if (cell.tapCount == 2) {
-        if (cell.accessoryType == UITableViewCellAccessoryCheckmark)
-        {
-            cell.accessoryType = UITableViewCellAccessoryNone;
-            self.checkmarkStates[indexPath] = @(NO);
-        }
-        else
-        {
-            cell.accessoryType = UITableViewCellAccessoryCheckmark;
-            self.checkmarkStates[indexPath] = @(YES);
-        }
-    }
-}
-
-
-- (void)refreshWithDefaultData
-{
-    NSArray *thoughtGuides = [WRConstants defaultThoughtGuides];
-    
-    [self.managedObjectContext performBlock:^{
-        for (NSDictionary *thoughtGuide in thoughtGuides)
-        {
-            [ThoughtGuide thoughtGuideWithInfo:thoughtGuide[WRConstantsThoughtGuideKey] inManagedObjectContex:self.managedObjectContext];
-        }
-    }];
-}
-
 - (void)refresh
 {
-    [self.checkmarkStates removeAllObjects];    
     NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
-    url = [url URLByAppendingPathComponent:WRConstantsThoughtGuidesDoc];
+    url = [url URLByAppendingPathComponent:WRConstantsSessionItemsDoc];
     UIManagedDocument *document = [[UIManagedDocument alloc] initWithFileURL:url];
     
     if (![[NSFileManager defaultManager] fileExistsAtPath:[url path]])
@@ -115,7 +62,6 @@ static NSString *const kTableCellIdThoughtGuide = @"ThoughtGuideCell";
               if (success)
               {
                   self.managedObjectContext = document.managedObjectContext;
-                  [self refreshWithDefaultData];
               }
           }];
     }
@@ -151,32 +97,6 @@ static NSString *const kTableCellIdThoughtGuide = @"ThoughtGuideCell";
     }
 }
 
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    NSLog(@"HERE 2");
-
-    // add checkmarked items to SessionItem database table
-    NSMutableArray *titles = [[NSMutableArray alloc] init];
-    for (NSIndexPath *indexPath in self.checkmarkStates)
-    {
-        if ([self.checkmarkStates[indexPath] boolValue] == YES)
-        {
-            [titles addObject:[[self.fetchedResultsController objectAtIndexPath:indexPath] title]];
-        }
-    }
-    [SessionItem createSessionItems:[WRConstants getCurrentSessionId] forStep:11 withTitles:titles];
-    
-    [WRConstants sessionFinish];
-    
-    // Starting over
-    if (!self.splitViewController)
-    {
-        [WRConstants sessionStart];
-    }
-}
-
-
 #pragma mark - Table view data source
 
 
@@ -189,14 +109,7 @@ static NSString *const kTableCellIdThoughtGuide = @"ThoughtGuideCell";
     }
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-
-- (void)addThoughtGuide:(NSString *)title
-{
-    [self.managedObjectContext performBlock:^{
-        [ThoughtGuide thoughtGuideWithInfo:title  inManagedObjectContex:self.managedObjectContext];
-    }];
+    }
 }
 
 
@@ -340,5 +253,6 @@ static NSString *const kTableCellIdThoughtGuide = @"ThoughtGuideCell";
         [self performSelector:@selector(endSuspensionOfUpdatesDueToContextChanges) withObject:0 afterDelay:0];
     }
 }
+
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "LogTableViewController.h"
+#import "SessionItemTableViewController.h"
 #import "Step11ViewController.h"
 
 @interface LogTableViewController ()
@@ -15,6 +16,7 @@
 @end
 
 static NSString *const kTableCellIdLogDate = @"LogDateCell";
+static NSString *const kSegueShowSessionItems = @"showSessionItems";
 
 
 @implementation LogTableViewController
@@ -36,7 +38,7 @@ static NSString *const kTableCellIdLogDate = @"LogDateCell";
         _historyLog = [NSMutableArray array];
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         for (NSDictionary *session in [defaults objectForKey:WRConstantsLogKey]) {
-                [_historyLog addObject:[session objectForKey:WRConstantsSessionFinishKey]];
+                [_historyLog addObject:session];
         }
         
         // sort, showing most recent at the top
@@ -53,12 +55,12 @@ static NSString *const kTableCellIdLogDate = @"LogDateCell";
     if (!_dateFormatter)
     {
         _dateFormatter = [[NSDateFormatter alloc] init];
-        //[_dateFormatter setDateFormat:@"yyyy-MM-dd 'at' HH:mm"];
-        [_dateFormatter setDateFormat:@"yyyy-MM-dd"];
+        [_dateFormatter setDateFormat:@"yyyy-MM-dd 'at' HH:mm"];
     }
     
     return _dateFormatter;
 }
+
 
 
 - (void)viewDidLoad
@@ -78,6 +80,19 @@ static NSString *const kTableCellIdLogDate = @"LogDateCell";
     // Dispose of any resources that can be recreated.
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:kSegueShowSessionItems] &&
+        [[segue destinationViewController] isKindOfClass:[SessionItemTableViewController class]] &&
+        [sender isKindOfClass:[NSNumber class]])
+    {
+        NSNumber *row = (NSNumber *)sender;
+        SessionItemTableViewController* sessionItemTableViewController = (SessionItemTableViewController *)[segue destinationViewController];
+        sessionItemTableViewController.sessionId = [self.historyLog[[row intValue]] objectForKey:WRConstantsSessionIdKey];
+    }
+}
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -90,60 +105,16 @@ static NSString *const kTableCellIdLogDate = @"LogDateCell";
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTableCellIdLogDate forIndexPath:indexPath];
 
-    cell.textLabel.text = [self.dateFormatter stringFromDate:self.historyLog[indexPath.row]];
+    cell.textLabel.text = [self.dateFormatter stringFromDate:[self.historyLog[indexPath.row] objectForKey:WRConstantsSessionFinishKey]];
     
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [self performSegueWithIdentifier:kSegueShowSessionItems sender:@(indexPath.row)];
 }
 
- */
+
 
 @end

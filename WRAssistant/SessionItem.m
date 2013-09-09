@@ -2,7 +2,7 @@
 //  SessionItem.m
 //  WRAssistant
 //
-//  Created by Kevin Utecht on 9/5/13.
+//  Created by Kevin Utecht on 9/7/13.
 //  Copyright (c) 2013 kevin utecht. All rights reserved.
 //
 

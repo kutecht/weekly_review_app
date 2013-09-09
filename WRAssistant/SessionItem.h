@@ -2,7 +2,7 @@
 //  SessionItem.h
 //  WRAssistant
 //
-//  Created by Kevin Utecht on 9/5/13.
+//  Created by Kevin Utecht on 9/7/13.
 //  Copyright (c) 2013 kevin utecht. All rights reserved.
 //
 
@@ -13,7 +13,7 @@
 @interface SessionItem : NSManagedObject
 
 @property (nonatomic, retain) NSString * session_id;
-@property (nonatomic, retain) NSString * step;
+@property (nonatomic, retain) NSNumber * step;
 @property (nonatomic, retain) NSString * title;
 
 @end

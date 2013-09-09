@@ -30,6 +30,10 @@ extern NSString *const WRConstantsTriggerListDoc;
 extern NSString *const WRConstantsThoughtGuidesDoc;
 extern NSString *const WRConstantsRelationshipGroupTitleKey;
 extern NSString *const WRConstantsThoughtGuideTitleKey;
+extern NSString *const WRConstantsSessionItemEntity;
+extern NSString *const WRConstantsSessionItemTitleKey;
+extern NSString *const WRConstantsSessionItemsDoc;
+
 
 
 @interface WRConstants : NSObject

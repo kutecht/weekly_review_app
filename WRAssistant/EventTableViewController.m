@@ -9,6 +9,7 @@
 #import <EventKit/EventKit.h>
 #import <EventKitUI/EventKitUI.h>
 #import "TapsTableViewCell.h"
+#import "SessionItem+Create.h"
 #import "EventTableViewController.h"
 
 @interface EventTableViewController () <EKEventViewDelegate>
@@ -53,13 +54,15 @@ static NSString *const kNoDetail = @"";
     [super viewWillDisappear:animated];
     
     // add checkmarked items to SessionItem database table
+    NSMutableArray *titles = [[NSMutableArray alloc] init];    
     for (NSNumber *rowNum in self.checkmarkStates)
     {
         if ([self.checkmarkStates[rowNum] boolValue] == YES)
         {
-            NSLog("Row: %d, %@", [rowNum intValue], [[self.eventsList objectAtIndex:[rowNum intValue]] title]);
+            [titles addObject:[[self.eventsList objectAtIndex:[rowNum intValue]] title]];
         }
     }
+    [SessionItem createSessionItems:[WRConstants getCurrentSessionId] forStep:self.wrStep withTitles:titles];
 }
 
 - (NSMutableDictionary *)checkmarkStates
