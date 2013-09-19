@@ -18,10 +18,7 @@
 {
     [super viewDidLoad];
     
-    if (!self.splitViewController)
-    {
-        [WRConstants sessionStart];
-    }
+    [WRConstants sessionStart];
 }
 
 - (void)viewWillAppear:(BOOL)animated

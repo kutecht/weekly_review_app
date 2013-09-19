@@ -41,17 +41,10 @@ static NSString *const kCloseTitle = @"Done";
     
     UIBarButtonItem *addThoughtGuideBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addThoughtGuidePressed:)];
 
-    // Note: iPad has one item so the Add button is wired up in the storyboard
+    // programmatically adding bar button items
+    UIBarButtonItem *closeBarButton = [[UIBarButtonItem alloc] initWithTitle:kCloseTitle style:UIBarButtonItemStyleBordered target:self action:@selector(closePressed:)];
     
-    if (!self.splitViewController)
-    {
-        // iPhone - programmatically adding bar button items
-        UIBarButtonItem *closeBarButton = [[UIBarButtonItem alloc] initWithTitle:kCloseTitle style:UIBarButtonItemStyleBordered target:self action:@selector(closePressed:)];
-        
-        self.navigationItem.rightBarButtonItems = @[closeBarButton, addThoughtGuideBarButton];
-
-
-    }
+    self.navigationItem.rightBarButtonItems = @[closeBarButton, addThoughtGuideBarButton];
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

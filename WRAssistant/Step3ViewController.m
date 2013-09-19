@@ -19,6 +19,7 @@ static NSString *const kSegueShowTriggerList = @"showTriggerList";
 static NSString *const kSegueShowAddTrigger = @"showAddTrigger";
 static NSString *const kSegueShowStep4 = @"showStep4";
 static NSString *const kStep4Title = @"4";
+static NSString *const kStep4IPadTitle = @"4. Review Action Lists";
 
 
 @implementation Step3ViewController
@@ -36,19 +37,13 @@ static NSString *const kStep4Title = @"4";
 {
     [super viewDidLoad];
     
+    // multiple buttons need to be added programmatically
+    UIBarButtonItem *addTriggerBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addTriggerPressed:)];
+
+    NSString *step4Title = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? kStep4IPadTitle : kStep4Title;
+    UIBarButtonItem *step4BarButton = [[UIBarButtonItem alloc] initWithTitle:step4Title style:UIBarButtonItemStyleBordered target:self action:@selector(step4Pressed:)];
     
-    
-    // Note: iPad has one item so the Add button is wired up in the storyboard
-    
-    if (!self.splitViewController)
-    {
-        // iPhone - buttons added programmatically
-        UIBarButtonItem *addTriggerBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addTriggerPressed:)];
-        
-        UIBarButtonItem *step4BarButton = [[UIBarButtonItem alloc] initWithTitle:kStep4Title style:UIBarButtonItemStyleBordered target:self action:@selector(step4Pressed:)];
-        
-        self.navigationItem.rightBarButtonItems = @[step4BarButton, addTriggerBarButton];
-    }
+    self.navigationItem.rightBarButtonItems = @[step4BarButton, addTriggerBarButton];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -98,9 +93,6 @@ static NSString *const kStep4Title = @"4";
 {
 }
 
-
-
-// iPhone only
 - (IBAction)addTriggerPressed:(UIBarButtonItem *)sender
 {
     [self performSegueWithIdentifier:kSegueShowAddTrigger sender:self];

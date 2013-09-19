@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4488.2" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Vbe-vK-1Xr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Vbe-vK-1Xr">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3715.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
         <!--Step1 View Controller - 1-->
@@ -63,7 +63,7 @@
                     <navigationItem key="navigationItem" title="1" id="rxz-h9-twa">
                         <barButtonItem key="rightBarButtonItem" title="2" id="QAn-5o-a6q">
                             <connections>
-                                <segue destination="B5r-65-V1F" kind="push" id="aKj-gG-W9B"/>
+                                <segue destination="B5r-65-V1F" kind="push" identifier="showStep2" id="aKj-gG-W9B"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -79,19 +79,19 @@
         <scene sceneID="qDt-gK-S8M">
             <objects>
                 <tableViewController id="2B1-EQ-BJy" customClass="ReminderTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Z6I-qq-gTC">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Z6I-qq-gTC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="284"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReminderCell" textLabel="b5t-r1-pUc" style="IBUITableViewCellStyleDefault" id="WSB-Hm-05Y" customClass="TapsTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReminderCell" textLabel="b5t-r1-pUc" style="IBUITableViewCellStyleDefault" id="WSB-Hm-05Y" customClass="TapsTableViewCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="WSB-Hm-05Y" id="2SW-Uy-ZV1">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WSB-Hm-05Y" id="2SW-Uy-ZV1">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b5t-r1-pUc">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b5t-r1-pUc">
                                             <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -152,7 +152,7 @@
                     <navigationItem key="navigationItem" title="2" id="hTF-A9-T3E">
                         <barButtonItem key="rightBarButtonItem" title="3" id="Dhm-jq-LJs">
                             <connections>
-                                <segue destination="pjr-Fx-tE0" kind="push" id="sW4-po-x3B"/>
+                                <segue destination="pjr-Fx-tE0" kind="push" identifier="showStep3" id="sW4-po-x3B"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -224,19 +224,19 @@
         <scene sceneID="icJ-MQ-hgA">
             <objects>
                 <tableViewController id="LIP-fl-4bZ" customClass="TriggerListTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OiY-v6-pTE">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OiY-v6-pTE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="312"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TriggerCell" textLabel="cR2-mh-ExL" style="IBUITableViewCellStyleDefault" id="VHY-N9-JuH" customClass="TapsTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TriggerCell" textLabel="cR2-mh-ExL" style="IBUITableViewCellStyleDefault" id="VHY-N9-JuH" customClass="TapsTableViewCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="VHY-N9-JuH" id="ILr-53-OKj">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VHY-N9-JuH" id="ILr-53-OKj">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cR2-mh-ExL">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cR2-mh-ExL">
                                             <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -299,7 +299,7 @@
                     <navigationItem key="navigationItem" title="4" id="vEd-pv-akJ">
                         <barButtonItem key="rightBarButtonItem" title="5" id="99m-wU-eYi">
                             <connections>
-                                <segue destination="fyK-eD-dl7" kind="push" id="RRv-tw-8HM"/>
+                                <segue destination="fyK-eD-dl7" kind="push" identifier="showStep5" id="RRv-tw-8HM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -359,7 +359,7 @@
                     <navigationItem key="navigationItem" title="5" id="BAY-hq-bYL">
                         <barButtonItem key="rightBarButtonItem" title="6" id="gJI-M9-nDe">
                             <connections>
-                                <segue destination="pSz-7r-iHf" kind="push" id="yDE-NK-V4e"/>
+                                <segue destination="pSz-7r-iHf" kind="push" identifier="showStep6" id="yDE-NK-V4e"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -369,7 +369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUb-Km-J8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3197" y="78"/>
+            <point key="canvasLocation" x="3225" y="73"/>
         </scene>
         <!--Step6 View Controller - 6-->
         <scene sceneID="Aux-Bk-jlk">
@@ -420,7 +420,7 @@
                     <navigationItem key="navigationItem" title="6" id="cil-eH-MRL">
                         <barButtonItem key="rightBarButtonItem" title="7" id="JHN-IV-LRN">
                             <connections>
-                                <segue destination="RLS-4f-Aks" kind="push" id="WOL-px-biH"/>
+                                <segue destination="RLS-4f-Aks" kind="push" identifier="showStep7" id="WOL-px-biH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -436,26 +436,26 @@
         <scene sceneID="IsK-7F-3Z4">
             <objects>
                 <tableViewController id="um9-Ug-Fev" customClass="EventTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OX3-AX-jC1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="269"/>
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OX3-AX-jC1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="294"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EventCell" textLabel="b7X-4t-eVk" detailTextLabel="B4O-gF-JJ7" style="IBUITableViewCellStyleValue1" id="Rfh-vz-l8k" customClass="TapsTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EventCell" textLabel="b7X-4t-eVk" detailTextLabel="B4O-gF-JJ7" style="IBUITableViewCellStyleValue1" id="Rfh-vz-l8k" customClass="TapsTableViewCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="Rfh-vz-l8k" id="qcx-of-YyC">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rfh-vz-l8k" id="qcx-of-YyC">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b7X-4t-eVk">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b7X-4t-eVk">
                                             <rect key="frame" x="15" y="11" width="33" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="B4O-gF-JJ7">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="B4O-gF-JJ7">
                                             <rect key="frame" x="241" y="11" width="44" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -488,7 +488,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ngv-91-ZuJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3WV-ZK-xf9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="269"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="294"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -538,7 +538,7 @@
                     <navigationItem key="navigationItem" title="7" id="Ft4-FS-pDo">
                         <barButtonItem key="rightBarButtonItem" title="8" id="kgX-lY-Uwb">
                             <connections>
-                                <segue destination="97b-bP-4Ky" kind="push" id="HYD-2N-sSY"/>
+                                <segue destination="97b-bP-4Ky" kind="push" identifier="showStep8" id="HYD-2N-sSY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -590,7 +590,7 @@
                     <navigationItem key="navigationItem" title="8" id="UaC-LG-a83">
                         <barButtonItem key="rightBarButtonItem" title="9" id="JxL-bs-GDV">
                             <connections>
-                                <segue destination="J4X-9o-bQa" kind="push" id="6Mk-2Z-0et"/>
+                                <segue destination="J4X-9o-bQa" kind="push" identifier="showStep9" id="6Mk-2Z-0et"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -643,7 +643,7 @@
                     <navigationItem key="navigationItem" title="9" id="rGG-Ae-0sc">
                         <barButtonItem key="rightBarButtonItem" title="10" id="MFM-OI-pSH">
                             <connections>
-                                <segue destination="VhK-n0-QdD" kind="push" id="HvS-bu-HfV"/>
+                                <segue destination="VhK-n0-QdD" kind="push" identifier="showStep10" id="HvS-bu-HfV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -695,7 +695,7 @@
                     <navigationItem key="navigationItem" title="10" id="kYe-zs-aIg">
                         <barButtonItem key="rightBarButtonItem" title="11" id="LAZ-y2-gHM">
                             <connections>
-                                <segue destination="PJF-Xm-NYJ" kind="push" id="ELn-9m-1lD"/>
+                                <segue destination="PJF-Xm-NYJ" kind="push" identifier="showStep11" id="ELn-9m-1lD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -792,7 +792,6 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZz-y1-gg8">
                                 <rect key="frame" x="213" y="179" width="37" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Done">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -803,7 +802,6 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZf-Uy-OvX">
                                 <rect key="frame" x="61" y="179" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -840,19 +838,19 @@
         <scene sceneID="Gfy-v7-ro5">
             <objects>
                 <tableViewController id="sIZ-uA-zpK" customClass="ThoughtGuideTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="KEy-Eg-ivO">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="KEy-Eg-ivO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="386"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ThoughtGuideCell" textLabel="RPa-eC-Odu" rowHeight="70" style="IBUITableViewCellStyleDefault" id="1Os-W8-F0f" customClass="TapsTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ThoughtGuideCell" textLabel="RPa-eC-Odu" rowHeight="70" style="IBUITableViewCellStyleDefault" id="1Os-W8-F0f" customClass="TapsTableViewCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="1Os-W8-F0f" id="C4c-Bb-Oag">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Os-W8-F0f" id="C4c-Bb-Oag">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="290" id="RPa-eC-Odu">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="290" id="RPa-eC-Odu">
                                             <rect key="frame" x="15" y="0.0" width="290" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -952,7 +950,6 @@ This app is not a GTD system.  The app works along side your system whether it b
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f19-Z6-aUp">
                                 <rect key="frame" x="61" y="176" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -963,7 +960,6 @@ This app is not a GTD system.  The app works along side your system whether it b
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kT8-OX-vf6">
                                 <rect key="frame" x="222" y="176" width="37" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Done">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1009,15 +1005,15 @@ This app is not a GTD system.  The app works along side your system whether it b
         <scene sceneID="ow4-sK-2b5">
             <objects>
                 <tableViewController id="uBk-GX-Gh8" customClass="LogTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Lm8-th-Cu5">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Lm8-th-Cu5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LogDateCell" textLabel="6v5-Tn-jWm" detailTextLabel="kz1-gn-vmY" style="IBUITableViewCellStyleValue1" id="f6Y-n3-kZf">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LogDateCell" textLabel="6v5-Tn-jWm" detailTextLabel="kz1-gn-vmY" style="IBUITableViewCellStyleValue1" id="f6Y-n3-kZf">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="f6Y-n3-kZf" id="qpW-PL-OHr">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f6Y-n3-kZf" id="qpW-PL-OHr">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -1028,7 +1024,7 @@ This app is not a GTD system.  The app works along side your system whether it b
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kz1-gn-vmY">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kz1-gn-vmY">
                                             <rect key="frame" x="241" y="11" width="44" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1058,19 +1054,19 @@ This app is not a GTD system.  The app works along side your system whether it b
         <scene sceneID="ql2-rG-Y4n">
             <objects>
                 <tableViewController id="Crt-3y-6AH" customClass="SessionItemTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="htb-FI-8Kv">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="htb-FI-8Kv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SessionItemCell" textLabel="owv-8e-hFt" style="IBUITableViewCellStyleDefault" id="7vc-WL-dj6">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SessionItemCell" textLabel="owv-8e-hFt" style="IBUITableViewCellStyleDefault" id="7vc-WL-dj6">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="7vc-WL-dj6" id="R8j-Ad-oOP">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7vc-WL-dj6" id="R8j-Ad-oOP">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="owv-8e-hFt">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="owv-8e-hFt">
                                             <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -1099,6 +1095,6 @@ This app is not a GTD system.  The app works along side your system whether it b
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="qcC-rU-J6V"/>
+        <segue reference="dBX-hA-aZD"/>
     </inferredMetricsTieBreakers>
 </document>

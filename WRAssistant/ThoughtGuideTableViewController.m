@@ -171,10 +171,7 @@ static NSString *const kTableCellIdThoughtGuide = @"ThoughtGuideCell";
     [WRConstants sessionFinish];
     
     // Starting over
-    if (!self.splitViewController)
-    {
-        [WRConstants sessionStart];
-    }
+    [WRConstants sessionStart];
 }
 
 

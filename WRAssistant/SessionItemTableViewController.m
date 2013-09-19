@@ -30,6 +30,8 @@ static NSString *const kTableCellIdSessionItem = @"SessionItemCell";
         request.predicate = [NSPredicate predicateWithFormat:@"session_id = %@", self.sessionId];
 
         self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+        
+        
     }
     else
     {
@@ -91,10 +93,12 @@ static NSString *const kTableCellIdSessionItem = @"SessionItemCell";
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
     if (!self.managedObjectContext)
     {
         [self refresh];
     }
+   
 }
 
 #pragma mark - Table view data source
@@ -137,6 +141,17 @@ static NSString *const kTableCellIdSessionItem = @"SessionItemCell";
             {
                 NSLog(@"[%@ %@] %@ (%@)", NSStringFromClass([self class]), NSStringFromSelector(_cmd), [error localizedDescription], [error localizedFailureReason]);
             }
+/* Sample code if decide to share/email the contents
+            NSMutableString *msgBody = [[NSMutableString alloc] init];
+            NSArray *sessionItems = [newfrc fetchedObjects];
+            
+            for (SessionItem *sessionItem in sessionItems)
+            {
+                [msgBody appendString:[NSString stringWithFormat:@"%@\n\n", sessionItem.title]];
+            }
+            NSLog(@"|%@|", [msgBody capitalizedString]);
+*/
+            
             [self.tableView reloadData];
         }
         else
