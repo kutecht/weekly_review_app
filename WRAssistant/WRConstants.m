@@ -110,7 +110,7 @@ static NSString *const kErrUndefined = @"Err: Undefined!";
       
       // Health
       @{ WRConstantsTriggerKey: @"doctors", WRConstantsTriggerGroupKey: kTGHealth},
-      @{ WRConstantsTriggerKey: @"dentists", WRConstantsTriggerGroupKey: kTGHealth},
+      @{ WRConstantsTriggerKey: @"dentist", WRConstantsTriggerGroupKey: kTGHealth},
       @{ WRConstantsTriggerKey: @"specialists", WRConstantsTriggerGroupKey: kTGHealth},
       @{ WRConstantsTriggerKey: @"checkups", WRConstantsTriggerGroupKey: kTGHealth},
       @{ WRConstantsTriggerKey: @"diet", WRConstantsTriggerGroupKey: kTGHealth},

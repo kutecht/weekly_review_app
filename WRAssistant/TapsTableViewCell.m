@@ -29,7 +29,7 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *aTouch = [touches anyObject];
-    self.tapCount = [aTouch tapCount];
+    self.tapCount = (int)[aTouch tapCount];
     [super touchesEnded:touches withEvent:event];
 }
 

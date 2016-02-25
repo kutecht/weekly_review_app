@@ -115,7 +115,7 @@
     
     if (matches)
     {
-        count = [matches count];
+        count = (int)[matches count];
     }
     
     return count;

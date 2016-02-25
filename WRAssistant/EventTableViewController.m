@@ -129,7 +129,7 @@ static NSString *const kNoDetail = @"";
     if (cell.tapCount == 1)
     {
         //This is the first tap. If there is no tap till tapTimer is fired, it is a single tap
-        self.tapTimer = [NSTimer scheduledTimerWithTimeInterval:0.4 target:self selector:@selector(tapTimerFired:) userInfo:[NSNumber numberWithInt:(indexPath.row)] repeats:NO];
+        self.tapTimer = [NSTimer scheduledTimerWithTimeInterval:0.4 target:self selector:@selector(tapTimerFired:) userInfo:[NSNumber numberWithInt:((int)indexPath.row)] repeats:NO];
     }
     else if (cell.tapCount == 2)
     {

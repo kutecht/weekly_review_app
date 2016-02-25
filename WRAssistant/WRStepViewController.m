@@ -22,7 +22,7 @@
     [super viewDidLoad];
     
     self.timeCountdown = [[TimeCountdown alloc]
-                          initWithDurationInMinutes:[[NSUserDefaults standardUserDefaults] integerForKey:WRConstantsStepDurationInMinKey]];
+                          initWithDurationInMinutes:(int)[[NSUserDefaults standardUserDefaults] integerForKey:WRConstantsStepDurationInMinKey]];
     self.timerButton.title = [self.timeCountdown description];
     self.timeCountdown.delegate = self;
 }

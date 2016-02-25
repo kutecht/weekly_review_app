@@ -51,7 +51,7 @@ static NSString *const kSegueShowFutureEvents = @"showFutureEvents";
         eventTableViewController.wrStep = WRConstantsStep6;
         eventTableViewController.startDate = [NSDate date];
         NSDateComponents *spanDateComponents = [[NSDateComponents alloc] init];
-        spanDateComponents.week = kFutureEventsInWeeks;
+        spanDateComponents.weekOfYear = kFutureEventsInWeeks;
         eventTableViewController.endDate =
         [[NSCalendar currentCalendar] dateByAddingComponents:spanDateComponents
                                                       toDate:eventTableViewController.startDate

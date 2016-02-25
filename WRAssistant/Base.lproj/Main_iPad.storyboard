@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="CIb-RJ-0kv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="CIb-RJ-0kv">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--Step1 View Controller - 1. Collect Loose Paper-->
+        <!--1. Collect Loose Paper-->
         <scene sceneID="0kI-hS-31q">
             <objects>
                 <viewController id="Unv-Ol-0JT" customClass="Step1ViewController" sceneMemberID="viewController">
@@ -18,13 +19,11 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gather everything that's loose into an inbox, tray, or folder.  Below are your reminders." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="728" translatesAutoresizingMaskIntoConstraints="NO" id="qGw-9C-wQl" customClass="UITopLeftLabel">
                                 <rect key="frame" x="20" y="90" width="728" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tmx-J3-4hG">
                                 <rect key="frame" x="0.0" y="162" width="768" height="817"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="tcw-uz-74P" kind="embed" identifier="showReminders" id="mbP-hj-M0K"/>
@@ -68,7 +67,7 @@
             </objects>
             <point key="canvasLocation" x="337" y="-2273"/>
         </scene>
-        <!--Step2 View Controller - 2. Get Into Zero-->
+        <!--2. Get Into Zero-->
         <scene sceneID="Umx-uG-BRi">
             <objects>
                 <viewController id="bPL-Fl-ZV2" customClass="Step2ViewController" sceneMemberID="viewController">
@@ -82,7 +81,6 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose the inbox (i.e email, paper, voice mail, ...) that you can make good progress on in the allotted time." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="728" translatesAutoresizingMaskIntoConstraints="NO" id="mfU-AU-qjV" customClass="UITopLeftLabel">
                                 <rect key="frame" x="20" y="87" width="728" height="137"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -114,7 +112,7 @@
             </objects>
             <point key="canvasLocation" x="1345" y="-2278"/>
         </scene>
-        <!--Step3 View Controller - 3. Empty Your Head-->
+        <!--3. Empty Your Head-->
         <scene sceneID="M4E-LI-xPF">
             <objects>
                 <viewController id="GqO-Si-1ur" customClass="Step3ViewController" sceneMemberID="viewController">
@@ -128,13 +126,11 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Open a document, or grab a pad and clear your head. Below is a list of trigger terms." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="728" translatesAutoresizingMaskIntoConstraints="NO" id="uwc-sZ-5RO" customClass="UITopLeftLabel">
                                 <rect key="frame" x="20" y="80" width="728" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lH3-FU-YbY">
                                 <rect key="frame" x="0.0" y="161" width="768" height="818"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="y4C-iB-6jT" kind="embed" identifier="showTriggerList" id="1Yy-Zk-2l4"/>
@@ -164,7 +160,7 @@
             </objects>
             <point key="canvasLocation" x="2390" y="-2278"/>
         </scene>
-        <!--Step4 View Controller - 4. Review Action Lists-->
+        <!--4. Review Action Lists-->
         <scene sceneID="a7x-AE-1Dk">
             <objects>
                 <viewController id="a0d-oR-9xn" customClass="Step4ViewController" sceneMemberID="viewController">
@@ -178,7 +174,6 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Are they current? Anything to mark done? anything trigger you to add?" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="728" translatesAutoresizingMaskIntoConstraints="NO" id="sAF-tZ-7wq" customClass="UITopLeftLabel">
                                 <rect key="frame" x="26" y="80" width="728" height="116"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -210,7 +205,7 @@
             </objects>
             <point key="canvasLocation" x="3585" y="-2273"/>
         </scene>
-        <!--Step5 View Controller - 5. Review Previous Calendar-->
+        <!--5. Review Previous Calendar-->
         <scene sceneID="foi-ts-ImV">
             <objects>
                 <viewController id="wr2-Ny-nH8" customClass="Step5ViewController" sceneMemberID="viewController">
@@ -224,13 +219,11 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Go back about 3 weeks.  Catches things you meant to do.  Any triggers?" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="728" translatesAutoresizingMaskIntoConstraints="NO" id="QYs-9I-igI" customClass="UITopLeftLabel">
                                 <rect key="frame" x="20" y="82" width="728" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SXw-9p-SpF">
                                 <rect key="frame" x="0.0" y="160" width="768" height="821"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="myV-ej-i3N" kind="embed" identifier="showPastEvents" id="h8a-tW-71b"/>
@@ -264,7 +257,7 @@
             </objects>
             <point key="canvasLocation" x="4591" y="-2266"/>
         </scene>
-        <!--Step6 View Controller - 6. Review Upcoming Calendar-->
+        <!--6. Review Upcoming Calendar-->
         <scene sceneID="HE8-eT-jWG">
             <objects>
                 <viewController id="UkR-2s-DYW" customClass="Step6ViewController" sceneMemberID="viewController">
@@ -278,14 +271,12 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="728" translatesAutoresizingMaskIntoConstraints="NO" id="cF6-Mq-mYW" customClass="UITopLeftLabel">
                                 <rect key="frame" x="20" y="85" width="728" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Anything you should start getting ready for?  If you find something you need to process, you can add it to your mindsweep for now.</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Im-Q1-oJQ">
                                 <rect key="frame" x="0.0" y="173" width="768" height="807"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="myV-ej-i3N" kind="embed" identifier="showFutureEvents" id="gsJ-9B-A9E"/>
@@ -319,7 +310,7 @@
             </objects>
             <point key="canvasLocation" x="5733" y="-2297"/>
         </scene>
-        <!--Step7 View Controller - 7. Review Waiting-For List-->
+        <!--7. Review Waiting-For List-->
         <scene sceneID="Nrx-t0-tpx">
             <objects>
                 <viewController id="yuF-M9-kNf" customClass="Step7ViewController" sceneMemberID="viewController">
@@ -333,7 +324,6 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What are you waiting on?  For some, their Sent email folder contains hidden waiting-for's." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="728" translatesAutoresizingMaskIntoConstraints="NO" id="Lfe-nP-VuY" customClass="UITopLeftLabel">
                                 <rect key="frame" x="20" y="84" width="728" height="113"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -365,7 +355,7 @@
             </objects>
             <point key="canvasLocation" x="6867" y="-2297"/>
         </scene>
-        <!--Step8 View Controller - 8. Review Project Lists-->
+        <!--8. Review Project Lists-->
         <scene sceneID="vOG-Kx-zL9">
             <objects>
                 <viewController id="zat-mn-akz" customClass="Step8ViewController" sceneMemberID="viewController">
@@ -379,7 +369,6 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="If you are not willing to take any next action on a current project, are you sure it's not a Someday/Maybe?" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="728" translatesAutoresizingMaskIntoConstraints="NO" id="mta-u3-DDL" customClass="UITopLeftLabel">
                                 <rect key="frame" x="20" y="88" width="728" height="134"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -411,7 +400,7 @@
             </objects>
             <point key="canvasLocation" x="7899" y="-2297"/>
         </scene>
-        <!--Step9 View Controller - 9. Review Checklists-->
+        <!--9. Review Checklists-->
         <scene sceneID="4bM-RT-qbE">
             <objects>
                 <viewController id="3Qu-Ma-AAj" customClass="Step9ViewController" sceneMemberID="viewController">
@@ -425,7 +414,6 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="728" translatesAutoresizingMaskIntoConstraints="NO" id="HdN-af-JAO" customClass="UITopLeftLabel">
                                 <rect key="frame" x="20" y="88" width="728" height="148"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Birthday checklist? Travel checklist? Home maintenance? ...  Maybe, you want to create a checklist? Anything recurring that would be good?</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="highlightedColor"/>
@@ -458,7 +446,7 @@
             </objects>
             <point key="canvasLocation" x="8928" y="-2297"/>
         </scene>
-        <!--Step10 View Controller - 10. Review Someday/Maybe List-->
+        <!--10. Review Someday/Maybe List-->
         <scene sceneID="H2s-fQ-Q8W">
             <objects>
                 <viewController id="UrV-mz-CkO" customClass="Step10ViewController" sceneMemberID="viewController">
@@ -470,9 +458,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Someday/Maybe list not just a &quot;fantasy wish&quot; list.  It can be a fantastic place to stage &quot;not yet&quot; projects." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="728" translatesAutoresizingMaskIntoConstraints="NO" id="7sN-9X-Le5" customClass="UITopLeftLabel">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Someday/Maybe list is not just a &quot;fantasy wish&quot; list.  It can be a fantastic place to stage &quot;not yet&quot; projects." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="728" translatesAutoresizingMaskIntoConstraints="NO" id="7sN-9X-Le5" customClass="UITopLeftLabel">
                                 <rect key="frame" x="20" y="88" width="728" height="147"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -504,7 +491,7 @@
             </objects>
             <point key="canvasLocation" x="9961" y="-2297"/>
         </scene>
-        <!--Step11 View Controller - 11. Capture New Ideas-->
+        <!--11. Capture New Ideas-->
         <scene sceneID="ire-3P-bAr">
             <objects>
                 <viewController id="rNP-mS-jW2" customClass="Step11ViewController" sceneMemberID="viewController">
@@ -518,7 +505,6 @@
                         <subviews>
                             <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lwu-9u-Mvb">
                                 <rect key="frame" x="0.0" y="64" width="768" height="917"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="XT9-Fv-zH3" kind="embed" identifier="showThoughtGuideList" id="zgP-uQ-hHt"/>
@@ -753,7 +739,7 @@
             </objects>
             <point key="canvasLocation" x="-621" y="-2260"/>
         </scene>
-        <!--Add Thought Guide View Controller - Add Thought Guide-->
+        <!--Add Thought Guide-->
         <scene sceneID="mcn-ds-pqZ">
             <objects>
                 <viewController id="jhP-AV-eoB" customClass="AddThoughtGuideViewController" sceneMemberID="viewController">
@@ -767,26 +753,22 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iiw-mj-afK">
                                 <rect key="frame" x="20" y="136" width="280" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Thought Guide" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNM-FT-IQa">
                                 <rect key="frame" x="82" y="91" width="156" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="For example: What adventure will I go on next week?" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="mdv-dy-lhX">
                                 <rect key="frame" x="20" y="161" width="280" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBa-3N-QiJ">
                                 <rect key="frame" x="213" y="250" width="37" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -796,7 +778,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyK-RH-tJa">
                                 <rect key="frame" x="61" y="250" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -843,14 +824,12 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Trigger" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVU-4p-b3T">
                                 <rect key="frame" x="61" y="101" width="198" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d55-zA-Owv">
                                 <rect key="frame" x="61" y="253" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -860,7 +839,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ia5-bS-JNs">
                                 <rect key="frame" x="222" y="253" width="37" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -870,20 +848,17 @@
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="P3o-qV-yUN">
                                 <rect key="frame" x="20" y="139" width="280" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pIj-O4-lO3">
                                 <rect key="frame" x="20" y="215" width="280" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Section" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJT-mb-Nki">
                                 <rect key="frame" x="61" y="177" width="198" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -902,7 +877,7 @@
             </objects>
             <point key="canvasLocation" x="2964" y="-929"/>
         </scene>
-        <!--View Controller - About Weekly Review Assistant-->
+        <!--About Weekly Review Assistant-->
         <scene sceneID="lTP-BK-ZTH">
             <objects>
                 <viewController id="tZn-R1-103" sceneMemberID="viewController">
@@ -916,7 +891,6 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dr-BN-q0G">
                                 <rect key="frame" x="0.0" y="66" width="768" height="958"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">A Weekly Review is described by David Allen, in "Getting Things DONE" (GTD™), as a weekly behavior to review all open loops (i.e., projects), active project plans, and "Next Actions," "Agendas,"  ...  David provides a general outline for performing a Weekly Review.  The terminology of this app is based on the book so reading the book is highly recommended.  This app assists in performing a Weekly Review by providing:  
  - step timer
@@ -936,7 +910,7 @@ This app is not a GTD system.  The app works along side your system whether it b
             </objects>
             <point key="canvasLocation" x="-608" y="-797"/>
         </scene>
-        <!--Log Table View Controller - Log-->
+        <!--Log-->
         <scene sceneID="Z5v-2u-h5e">
             <objects>
                 <tableViewController id="Q5r-yi-Y8f" customClass="LogTableViewController" sceneMemberID="viewController">
@@ -985,7 +959,7 @@ This app is not a GTD system.  The app works along side your system whether it b
             </objects>
             <point key="canvasLocation" x="285" y="-797"/>
         </scene>
-        <!--Session Item Table View Controller - Items of Interest-->
+        <!--Items of Interest-->
         <scene sceneID="SBR-5n-b2e">
             <objects>
                 <tableViewController id="Keg-cP-0jI" customClass="SessionItemTableViewController" sceneMemberID="viewController">
